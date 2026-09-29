@@ -3,2314 +3,2818 @@
 
 <head>
 
+    <!-- =====================================================
+         BASIC INFORMATION
+    ====================================================== -->
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore the menu at Guntur Gongura, serving authentic Andhra and South Indian cuisine in Egattur, Chennai."
+    >
+
+    <meta
+        name="keywords"
+        content="Guntur Gongura menu, Andhra restaurant Chennai, biryani Chennai, South Indian food, Egattur restaurant"
+    >
 
     <title>Menu | Guntur Gongura</title>
 
-    <meta name="description"
-          content="Explore the complete authentic Andhra and South Indian menu at Guntur Gongura, Chennai.">
 
-    <!-- GOOGLE FONTS -->
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
 
 
-<style>
+    <!-- =====================================================
+         ICONS
+    ====================================================== -->
 
-/* =========================================================
-   GUNTUR GONGURA
-   MENU PAGE
-   RED / CREAM / GOLD THEME
-========================================================= */
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
-:root {
 
-    --red: #8b0000;
-    --dark-red: #570000;
-    --light-red: #b71c1c;
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
 
-    --gold: #d4af37;
-    --light-gold: #f0d889;
+    <link rel="stylesheet" href="css/style.css">
 
-    --cream: #fff8ed;
-    --cream-dark: #f7ead8;
+    <link rel="stylesheet" href="css/responsive.css">
 
-    --white: #ffffff;
 
-    --text: #2b1712;
-    --muted: #75635d;
+    <!-- =====================================================
+         MENU PAGE CSS
+    ====================================================== -->
 
-    --border: #ead7c8;
+    <style>
 
-    --shadow:
-        0 10px 30px rgba(90, 0, 0, 0.12);
-}
+        /* =====================================================
+           VARIABLES
+        ====================================================== */
 
+        :root {
+            --primary: #0b1f3a;
+            --secondary: #d4af37;
+            --white: #ffffff;
+            --light: #faf6ef;
+            --text: #222222;
+            --gray: #666666;
+            --border: #e5e5e5;
+            --red: #8b1e1e;
+        }
 
-/* =========================================================
-   RESET
-========================================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        /* =====================================================
+           PAGE
+        ====================================================== */
 
+        .menu-page {
+            min-height: 100vh;
+            background: var(--light);
+            color: var(--text);
+        }
 
-html {
-    scroll-behavior: smooth;
-}
 
+        /* =====================================================
+           TOP BAR
+        ====================================================== */
 
-body {
+        .simple-topbar {
+            max-width: 1100px;
+            margin: auto;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-    font-family: "Poppins", sans-serif;
 
-    background: var(--cream);
+        /* =====================================================
+           BACK HOME BUTTON
+        ====================================================== */
 
-    color: var(--text);
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
 
-    line-height: 1.6;
-}
+            padding: 10px 17px;
 
+            color: var(--primary);
+            background: var(--white);
 
-/* =========================================================
-   HEADER
-========================================================= */
+            border: 1.5px solid var(--primary);
+            border-radius: 6px;
 
-.header {
+            text-decoration: none;
 
-    position: sticky;
+            font-size: 0.9rem;
+            font-weight: 600;
 
-    top: 0;
+            cursor: pointer;
 
-    z-index: 1000;
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.15s ease;
+        }
 
-    background:
-        linear-gradient(
-            135deg,
-            #4d0000,
-            #700000,
-            #8b0000,
-            #a71919
-        );
+        .back-home i {
+            font-size: 0.85rem;
+        }
 
-    padding: 16px 6%;
+        .back-home:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
 
-    display: flex;
+        .back-home:active {
+            transform: scale(0.97);
+        }
 
-    align-items: center;
+        .back-home:focus-visible {
+            outline: 2px solid var(--secondary);
+            outline-offset: 3px;
+        }
 
-    justify-content: space-between;
 
-    box-shadow:
-        0 5px 25px rgba(70, 0, 0, 0.3);
-}
+        /* =====================================================
+           LOGO
+        ====================================================== */
 
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
 
-.logo {
+        .top-logo {
+            width: 180px;
+            height: auto;
+            display: block;
+        }
 
-    width: 150px;
 
-    height: auto;
+        /* =====================================================
+           MAIN MENU CONTAINER
+        ====================================================== */
 
-    display: block;
-}
+        .menu-container {
+            width: min(1200px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 15px 0 80px;
+        }
 
 
-.back-home {
+        /* =====================================================
+           MENU INTRO
+        ====================================================== */
 
-    display: inline-flex;
+        .menu-intro {
+            text-align: center;
+            padding: 25px 0 45px;
+            border-bottom: 1px solid #ddd3c4;
+        }
 
-    align-items: center;
+        .menu-intro .label {
+            display: inline-block;
 
-    gap: 8px;
+            color: var(--red);
 
-    padding: 11px 21px;
+            font-size: 0.75rem;
+            font-weight: 600;
 
-    background: var(--cream);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
 
-    color: var(--red);
+        .menu-intro h1 {
+            font-family: "Playfair Display", serif;
 
-    text-decoration: none;
+            color: var(--primary);
 
-    border-radius: 30px;
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
 
-    font-size: 14px;
+            line-height: 1.1;
 
-    font-weight: 700;
+            margin: 12px 0 18px;
+        }
 
-    transition: 0.3s ease;
-}
+        .menu-intro p {
+            max-width: 650px;
+            margin: 0 auto;
 
+            color: var(--gray);
 
-.back-home:hover {
+            font-size: 0.98rem;
+            line-height: 1.8;
+        }
 
-    background: var(--gold);
 
-    color: var(--dark-red);
+        /* =====================================================
+           SEARCH
+        ====================================================== */
 
-    transform: translateY(-2px);
-}
+        .menu-search {
+            max-width: 600px;
+            margin: 35px auto 55px;
 
+            position: relative;
+        }
 
-/* =========================================================
-   HERO
-========================================================= */
+        .menu-search i {
+            position: absolute;
 
-.menu-hero {
+            left: 18px;
+            top: 50%;
 
-    background:
-        linear-gradient(
-            rgba(82, 0, 0, 0.88),
-            rgba(139, 0, 0, 0.92)
-        );
+            transform: translateY(-50%);
 
-    color: white;
+            color: var(--gray);
 
-    text-align: center;
+            font-size: 0.95rem;
 
-    padding: 70px 20px 65px;
+            pointer-events: none;
+        }
 
-    position: relative;
+        .menu-search input {
+            width: 100%;
 
-    overflow: hidden;
-}
+            padding: 15px 18px 15px 48px;
 
+            border: 1px solid var(--border);
+            border-radius: 6px;
 
-.menu-hero::before {
+            background: var(--white);
 
-    content: "";
+            color: var(--text);
 
-    position: absolute;
+            font-family: "Poppins", sans-serif;
+            font-size: 0.9rem;
 
-    width: 220px;
+            outline: none;
 
-    height: 220px;
+            transition:
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
 
-    border: 1px solid rgba(212, 175, 55, 0.35);
+        .menu-search input:focus {
+            border-color: var(--secondary);
 
-    border-radius: 50%;
+            box-shadow:
+                0 0 0 3px rgba(212, 175, 55, 0.12);
+        }
 
-    top: -100px;
 
-    left: -80px;
-}
+        /* =====================================================
+           CATEGORY
+        ====================================================== */
 
+        .menu-category {
+            margin-bottom: 60px;
+        }
 
-.menu-hero::after {
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
 
-    content: "";
+            margin-bottom: 25px;
+        }
 
-    position: absolute;
+        .category-title h2 {
+            font-family: "Playfair Display", serif;
 
-    width: 300px;
+            color: var(--primary);
 
-    height: 300px;
+            font-size: 2rem;
 
-    border: 1px solid rgba(212, 175, 55, 0.25);
+            margin: 0;
 
-    border-radius: 50%;
+            white-space: nowrap;
+        }
 
-    right: -120px;
+        .category-title::after {
+            content: "";
 
-    bottom: -170px;
-}
+            height: 1px;
 
+            flex: 1;
 
-.menu-small-title {
+            background:
+                linear-gradient(
+                    to right,
+                    var(--secondary),
+                    transparent
+                );
+        }
 
-    color: var(--gold);
 
-    font-size: 13px;
+        /* =====================================================
+           SUB CATEGORY
+        ====================================================== */
 
-    font-weight: 800;
+        .menu-subcategory {
+            margin-bottom: 32px;
+        }
 
-    letter-spacing: 3px;
+        .menu-subcategory h3 {
+            font-family: "Playfair Display", serif;
 
-    margin-bottom: 10px;
+            color: var(--red);
 
-    position: relative;
+            font-size: 1.25rem;
 
-    z-index: 1;
-}
+            margin: 0 0 16px;
 
+            padding-bottom: 8px;
 
-.menu-hero h1 {
+            border-bottom: 1px solid #e8ded0;
+        }
 
-    font-family: "Playfair Display", serif;
 
-    font-size: 52px;
+        /* =====================================================
+           ITEMS GRID
+        ====================================================== */
 
-    margin-bottom: 12px;
+        .menu-grid {
+            display: grid;
 
-    position: relative;
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
 
-    z-index: 1;
-}
+            gap: 13px;
+        }
 
 
-.menu-hero p {
+        /* =====================================================
+           MENU ITEM
+        ====================================================== */
 
-    max-width: 700px;
+        .item {
+            display: flex;
 
-    margin: auto;
+            align-items: center;
 
-    color: #fff1dc;
+            justify-content: space-between;
 
-    font-size: 15px;
+            gap: 15px;
 
-    position: relative;
+            min-height: 68px;
 
-    z-index: 1;
-}
+            padding: 14px 16px;
 
+            background: var(--white);
 
-/* =========================================================
-   MAIN
-========================================================= */
+            border: 1px solid var(--border);
 
-.container {
+            border-radius: 7px;
 
-    width: min(1400px, 92%);
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+        }
 
-    margin: auto;
-}
+        .item:hover {
+            transform: translateY(-2px);
 
+            border-color: #d8c79a;
 
-/* =========================================================
-   SEARCH AREA
-========================================================= */
+            box-shadow:
+                0 7px 20px rgba(11, 31, 58, 0.07);
+        }
 
-.menu-tools {
+        .item-name {
+            color: var(--text);
 
-    background: white;
+            font-size: 0.84rem;
 
-    padding: 25px;
+            line-height: 1.45;
 
-    margin-top: 35px;
+            font-weight: 500;
+        }
 
-    margin-bottom: 30px;
+        .item-price {
+            flex-shrink: 0;
 
-    border-radius: 18px;
+            color: var(--primary);
 
-    box-shadow: var(--shadow);
+            font-size: 0.88rem;
 
-    display: flex;
+            font-weight: 600;
 
-    align-items: center;
+            white-space: nowrap;
+        }
 
-    justify-content: space-between;
+        .item-price::before {
+            content: "₹";
+        }
 
-    gap: 20px;
+        .item-price.mrp::before {
+            content: "";
+        }
 
-    flex-wrap: wrap;
-}
 
+        /* =====================================================
+           NOTE
+        ====================================================== */
 
-.menu-tools-title h2 {
+        .menu-note {
+            margin-top: -35px;
+            margin-bottom: 55px;
 
-    font-family: "Playfair Display", serif;
+            text-align: center;
 
-    color: var(--red);
+            color: #777;
 
-    font-size: 28px;
-}
+            font-size: 0.78rem;
 
+            line-height: 1.6;
+        }
 
-.menu-tools-title p {
 
-    color: var(--muted);
+        /* =====================================================
+           NO RESULTS
+        ====================================================== */
 
-    font-size: 13px;
+        .no-results {
+            display: none;
 
-    margin-top: 3px;
-}
+            padding: 35px 20px;
 
+            text-align: center;
 
-.search-wrapper {
+            color: var(--gray);
 
-    position: relative;
+            font-size: 0.9rem;
+        }
 
-    width: 350px;
 
-    max-width: 100%;
-}
+        /* =====================================================
+           FOOTER
+        ====================================================== */
 
+        .menu-footer {
+            background: var(--primary);
 
-.search-wrapper i {
+            color: var(--white);
 
-    position: absolute;
+            padding: 45px 20px 25px;
+        }
 
-    left: 15px;
+        .footer-inner {
+            width: min(1100px, 100%);
 
-    top: 50%;
+            margin: auto;
 
-    transform: translateY(-50%);
+            display: grid;
 
-    color: var(--red);
-}
+            grid-template-columns:
+                1.5fr 1fr 1fr;
 
+            gap: 35px;
+        }
 
-.search-wrapper input {
+        .footer-brand img {
+            width: 150px;
 
-    width: 100%;
+            height: auto;
 
-    padding: 13px 15px 13px 43px;
+            display: block;
 
-    border: 1px solid var(--border);
+            margin-bottom: 18px;
+        }
 
-    border-radius: 30px;
+        .footer-brand p {
+            max-width: 360px;
 
-    outline: none;
+            color: rgba(255,255,255,0.72);
 
-    font-family: inherit;
+            font-size: 0.83rem;
 
-    font-size: 14px;
-}
+            line-height: 1.8;
 
+            margin: 0;
+        }
 
-.search-wrapper input:focus {
+        .footer-column h3 {
+            color: var(--secondary);
 
-    border-color: var(--red);
+            font-family: "Playfair Display", serif;
 
-    box-shadow:
-        0 0 0 3px rgba(139, 0, 0, 0.08);
-}
+            font-size: 1.15rem;
 
+            margin: 0 0 15px;
+        }
 
-/* =========================================================
-   CATEGORY NAVIGATION
-========================================================= */
+        .footer-column a {
+            display: block;
 
-.category-nav {
+            color: rgba(255,255,255,0.78);
 
-    display: flex;
+            text-decoration: none;
 
-    gap: 10px;
+            font-size: 0.82rem;
 
-    flex-wrap: wrap;
+            margin-bottom: 9px;
 
-    justify-content: center;
+            transition: color 0.2s ease;
+        }
 
-    margin-bottom: 35px;
-}
+        .footer-column a:hover {
+            color: var(--secondary);
+        }
 
+        .footer-column p {
+            color: rgba(255,255,255,0.78);
 
-.category-nav a {
+            font-size: 0.82rem;
 
-    text-decoration: none;
+            line-height: 1.7;
 
-    color: var(--red);
+            margin: 0 0 10px;
+        }
 
-    background: white;
+        .footer-column i {
+            width: 20px;
 
-    border: 1px solid var(--border);
+            color: var(--secondary);
+        }
 
-    padding: 9px 15px;
+        .footer-bottom {
+            width: min(1100px, 100%);
 
-    border-radius: 25px;
+            margin: 35px auto 0;
 
-    font-size: 12px;
+            padding-top: 20px;
 
-    font-weight: 600;
+            border-top:
+                1px solid rgba(255,255,255,0.15);
 
-    transition: 0.25s ease;
-}
+            text-align: center;
 
+            color: rgba(255,255,255,0.55);
 
-.category-nav a:hover {
+            font-size: 0.75rem;
+        }
 
-    background: var(--red);
 
-    color: white;
+        /* =====================================================
+           MOBILE
+        ====================================================== */
 
-    border-color: var(--red);
-}
+        @media (max-width: 900px) {
 
+            .menu-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
 
-/* =========================================================
-   CATEGORY SECTION
-========================================================= */
+            .footer-inner {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
 
-.menu-category {
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
 
-    margin-bottom: 45px;
 
-    scroll-margin-top: 100px;
-}
+        /* =====================================================
+           TABLET / MOBILE
+        ====================================================== */
 
+        @media (max-width: 700px) {
 
-.category-title {
+            .simple-topbar {
+                padding: 18px;
 
-    display: flex;
+                gap: 15px;
+            }
 
-    align-items: center;
+            .top-logo {
+                width: 150px;
+            }
 
-    gap: 12px;
+            .back-home {
+                padding: 9px 13px;
 
-    margin-bottom: 20px;
-}
+                font-size: 0.8rem;
+            }
 
+            .menu-container {
+                width: min(100% - 32px, 1200px);
 
-.category-title h2 {
+                padding:
+                    20px 0 60px;
+            }
 
-    font-family: "Playfair Display", serif;
+            .menu-intro {
+                padding:
+                    20px 0 40px;
+            }
 
-    color: var(--red);
+            .menu-intro h1 {
+                font-size: 2.5rem;
+            }
 
-    font-size: 30px;
-}
+            .menu-intro p {
+                font-size: 0.9rem;
 
+                line-height: 1.8;
+            }
 
-.category-title::after {
+            .menu-search {
+                margin:
+                    30px auto 45px;
+            }
 
-    content: "";
+            .category-title h2 {
+                font-size: 1.7rem;
+            }
 
-    height: 2px;
+            .menu-category {
+                margin-bottom: 45px;
+            }
+        }
 
-    flex: 1;
 
-    background:
-        linear-gradient(
-            to right,
-            var(--gold),
-            transparent
-        );
-}
+        /* =====================================================
+           SMALL MOBILE
+        ====================================================== */
 
+        @media (max-width: 600px) {
 
-.subcategory {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
 
-    margin-bottom: 28px;
-}
+            .footer-inner {
+                grid-template-columns: 1fr;
 
+                gap: 25px;
+            }
 
-.subcategory h3 {
+            .footer-brand {
+                grid-column: auto;
+            }
 
-    color: white;
+            .category-title h2 {
+                font-size: 1.55rem;
 
-    background:
-        linear-gradient(
-            135deg,
-            var(--dark-red),
-            var(--red),
-            var(--light-red)
-        );
+                white-space: normal;
+            }
 
-    padding: 11px 17px;
+            .item {
+                min-height: 62px;
 
-    border-radius: 9px;
+                padding: 13px 14px;
+            }
 
-    margin-bottom: 14px;
+            .item-name {
+                font-size: 0.82rem;
+            }
 
-    font-size: 18px;
+            .item-price {
+                font-size: 0.84rem;
+            }
+        }
 
-    box-shadow:
-        0 5px 15px rgba(139, 0, 0, 0.12);
-}
 
+        /* =====================================================
+           VERY SMALL MOBILE
+        ====================================================== */
 
-/* =========================================================
-   FOOD GRID
-========================================================= */
+        @media (max-width: 420px) {
 
-.food-grid {
+            .simple-topbar {
+                padding: 15px;
+            }
 
-    display: grid;
+            .top-logo {
+                width: 150px;
+            }
 
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+            .back-home {
+                padding: 8px 11px;
 
-    gap: 13px;
-}
+                font-size: 0.75rem;
 
+                gap: 6px;
+            }
 
-/* =========================================================
-   FOOD CARD
-========================================================= */
+            .menu-container {
+                width: calc(100% - 28px);
+            }
 
-.food-card {
+            .menu-intro h1 {
+                font-size: 2.15rem;
+            }
 
-    background: white;
+            .menu-intro .label {
+                font-size: 0.68rem;
 
-    border: 1px solid var(--border);
+                letter-spacing: 2px;
+            }
 
-    border-radius: 11px;
+            .category-title {
+                gap: 10px;
+            }
 
-    padding: 15px 16px;
+            .category-title h2 {
+                font-size: 1.4rem;
+            }
+        }
 
-    min-height: 94px;
 
-    display: flex;
+        /* =====================================================
+           EXTRA SMALL
+        ====================================================== */
 
-    flex-direction: column;
+        @media (max-width: 340px) {
 
-    justify-content: space-between;
+            .simple-topbar {
+                gap: 8px;
+            }
 
-    transition: 0.25s ease;
-}
+            .top-logo {
+                width: 150px;
+            }
 
+            .back-home {
+                padding: 7px 9px;
 
-.food-card:hover {
+                font-size: 0.7rem;
+            }
 
-    border-color: var(--red);
+            .menu-intro h1 {
+                font-size: 1.95rem;
+            }
 
-    transform: translateY(-3px);
+            .item {
+                padding: 12px;
+            }
+        }
 
-    box-shadow:
-        0 7px 18px rgba(139, 0, 0, 0.10);
-}
-
-
-.food-name {
-
-    font-weight: 600;
-
-    color: #3b211b;
-
-    font-size: 14px;
-
-    line-height: 1.4;
-}
-
-
-.food-price {
-
-    color: var(--red);
-
-    font-size: 18px;
-
-    font-weight: 800;
-
-    margin-top: 7px;
-}
-
-
-.description {
-
-    color: var(--muted);
-
-    font-size: 11px;
-
-    margin-top: 3px;
-}
-
-
-/* =========================================================
-   MRP
-========================================================= */
-
-.mrp {
-
-    display: inline-block;
-
-    background: #fff1cf;
-
-    color: #805f00;
-
-    padding: 5px 10px;
-
-    border-radius: 20px;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    margin-top: 7px;
-
-    width: fit-content;
-}
-
-
-/* =========================================================
-   NO RESULTS
-========================================================= */
-
-.no-results {
-
-    display: none;
-
-    text-align: center;
-
-    padding: 60px 20px;
-
-    background: white;
-
-    border-radius: 15px;
-
-    color: var(--muted);
-}
-
-
-.no-results i {
-
-    font-size: 40px;
-
-    color: var(--red);
-
-    margin-bottom: 15px;
-}
-
-
-/* =========================================================
-   CTA
-========================================================= */
-
-.order-cta {
-
-    background:
-        linear-gradient(
-            135deg,
-            #570000,
-            #8b0000
-        );
-
-    color: white;
-
-    padding: 40px 25px;
-
-    text-align: center;
-
-    border-radius: 20px;
-
-    margin: 20px 0 50px;
-
-    box-shadow:
-        0 10px 30px rgba(90, 0, 0, 0.2);
-}
-
-
-.order-cta h2 {
-
-    font-family: "Playfair Display", serif;
-
-    font-size: 30px;
-
-    margin-bottom: 8px;
-}
-
-
-.order-cta p {
-
-    color: #ffe9cf;
-
-    margin-bottom: 20px;
-
-    font-size: 14px;
-}
-
-
-.order-button {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    background: var(--gold);
-
-    color: var(--dark-red);
-
-    text-decoration: none;
-
-    padding: 12px 25px;
-
-    border-radius: 30px;
-
-    font-weight: 800;
-
-    font-size: 14px;
-
-    transition: 0.3s;
-}
-
-
-.order-button:hover {
-
-    background: white;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.footer {
-
-    background: #4b0000;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 35px 20px;
-}
-
-
-.footer img {
-
-    width: 150px;
-
-    margin-bottom: 12px;
-}
-
-
-.footer p {
-
-    margin: 5px 0;
-
-    font-size: 13px;
-
-    opacity: 0.9;
-}
-
-
-.footer .phone {
-
-    margin-top: 10px;
-
-    color: var(--light-gold);
-
-    font-weight: 600;
-}
-
-
-/* =========================================================
-   SEARCH HIDDEN
-========================================================= */
-
-.hidden {
-
-    display: none !important;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width: 1050px) {
-
-    .food-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-}
-
-
-@media (max-width: 700px) {
-
-    .header {
-
-        padding: 14px 5%;
-    }
-
-
-    .logo {
-
-        width: 120px;
-    }
-
-
-    .back-home {
-
-        padding: 9px 14px;
-
-        font-size: 12px;
-    }
-
-
-    .menu-hero {
-
-        padding: 55px 20px;
-    }
-
-
-    .menu-hero h1 {
-
-        font-size: 38px;
-    }
-
-
-    .menu-tools {
-
-        padding: 20px 15px;
-    }
-
-
-    .menu-tools-title h2 {
-
-        font-size: 24px;
-    }
-
-
-    .search-wrapper {
-
-        width: 100%;
-    }
-
-
-    .food-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .category-title h2 {
-
-        font-size: 25px;
-    }
-
-
-    .category-title::after {
-
-        display: none;
-    }
-
-
-    .category-nav {
-
-        justify-content: flex-start;
-
-        overflow-x: auto;
-
-        flex-wrap: nowrap;
-
-        padding-bottom: 8px;
-    }
-
-
-    .category-nav a {
-
-        white-space: nowrap;
-    }
-
-}
-
-</style>
+    </style>
 
 </head>
 
 
-<body>
+<body class="menu-page">
 
 
-<!-- =========================================================
-     HEADER
-========================================================= -->
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
 
-<header class="header">
+    <header class="simple-topbar">
 
-    <a href="index.html">
+        <!-- Back to Home -->
 
-        <img
-            src="images/logo.png"
-            alt="Guntur Gongura"
-            class="logo"
+        <a
+            href="index.html"
+            class="back-home"
         >
-
-    </a>
-
-
-    <a
-        href="index.html"
-        class="back-home"
-    >
-
-        <i class="fa-solid fa-house"></i>
-
-        Back to Home
-
-    </a>
-
-</header>
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Home
+        </a>
 
 
+        <!-- Restaurant Logo -->
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+        <a
+            href="index.html"
+            class="logo-link"
+        >
+            <img
+                src="images/logo.png"
+                alt="Guntur Gongura"
+                class="top-logo"
+            >
+        </a>
 
-<section class="menu-hero">
-
-    <div class="menu-small-title">
-        AUTHENTIC ANDHRA • SOUTH INDIAN
-    </div>
-
-    <h1>
-        Our Menu
-    </h1>
-
-    <p>
-        Bold flavours, traditional recipes and authentic
-        Andhra cuisine prepared with carefully selected
-        ingredients.
-    </p>
-
-</section>
+    </header>
 
 
 
-<main class="container">
+    <!-- =====================================================
+         MAIN MENU
+    ====================================================== -->
+
+    <main class="menu-container">
 
 
-<!-- =========================================================
-     SEARCH
-========================================================= -->
+        <!-- =================================================
+             INTRO
+        ================================================== -->
 
-<section class="menu-tools">
+        <section class="menu-intro">
 
-    <div class="menu-tools-title">
+            <span class="label">
+                Guntur Gongura
+            </span>
 
-        <h2>
-            Explore Our Menu
-        </h2>
+            <h1>
+                Our Menu
+            </h1>
 
-        <p>
-            Browse our complete selection of dishes.
+            <p>
+                Explore our selection of authentic Andhra
+                flavours, biryanis, starters, Indian classics,
+                seafood and more.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SEARCH
+        ================================================== -->
+
+        <div class="menu-search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="search"
+                id="menuSearch"
+                placeholder="Search for a dish..."
+                aria-label="Search menu"
+            >
+
+        </div>
+
+
+
+        <!-- =================================================
+             BIRYANI
+        ================================================== -->
+
+        <section class="menu-category">
+
+            <div class="category-title">
+                <h2>Biryani</h2>
+            </div>
+
+
+            <!-- Biryani Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Biryani Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Veg Biryani</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gongura Veg Biryani</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Ulavacharu Veg Biryani</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mushroom Biryani</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Paneer Biryani</span>
+                        <span class="item-price">219</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Baby Corn Biryani</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Cashewnut Biryani</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gongura Paneer Biryani</span>
+                        <span class="item-price">219</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Ulavacharu Paneer Biryani</span>
+                        <span class="item-price">219</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Special Biryanis -->
+
+            <div class="menu-subcategory">
+
+                <h3>Special Biryani's</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Chicken Tikka Biryani</span>
+                        <span class="item-price">359</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Lahori Chicken Biryani</span>
+                        <span class="item-price">339</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Palnadu Mutton Biryani</span>
+                        <span class="item-price">399</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Guntur Spl Mutton Biryani</span>
+                        <span class="item-price">409</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gongura Spl Chicken Biryani</span>
+                        <span class="item-price">359</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gongura Spl Mutton Biryani</span>
+                        <span class="item-price">399</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Ulavacharu Special Chicken Biryani</span>
+                        <span class="item-price">359</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Potlam Chicken Biryani</span>
+                        <span class="item-price">379</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Potlam Mutton Biryani</span>
+                        <span class="item-price">400</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Biryani Non Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Biryani Non Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Plain Biryani</span>
+                        <span class="item-price">175</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Egg Biryani</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Dum Biryani</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Fry Biryani</span>
+                        <span class="item-price">248</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Spl Chicken Biryani</span>
+                        <span class="item-price">269</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Guntur Spl Chicken Biryani</span>
+                        <span class="item-price">319</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gongura Chicken Biryani</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Lollipop Biryani</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Ulavacharu Chicken Biryani</span>
+                        <span class="item-price">289</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Natukodi Biryani</span>
+                        <span class="item-price">289</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Palnadu Chicken Biryani</span>
+                        <span class="item-price">309</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mughlai Chicken Biryani</span>
+                        <span class="item-price">299</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Avakai Chicken Biryani</span>
+                        <span class="item-price">299</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mutton Dum Biryani</span>
+                        <span class="item-price">340</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mutton Kheema Biryani</span>
+                        <span class="item-price">340</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mutton Fry Biryani</span>
+                        <span class="item-price">360</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gongura Mutton Biryani</span>
+                        <span class="item-price">380</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Spl Mutton Biryani</span>
+                        <span class="item-price">380</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mughalai Mutton Biryani</span>
+                        <span class="item-price">380</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Prawn Biryani</span>
+                        <span class="item-price">330</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gongura Prawn Biryani</span>
+                        <span class="item-price">350</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Fish Biryani</span>
+                        <span class="item-price">310</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mixed Biryani</span>
+                        <span class="item-price">350</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Egg Fry Biryani</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Wings Biryani</span>
+                        <span class="item-price">329</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SOUPS & STARTERS
+        ================================================== -->
+
+        <section class="menu-category">
+
+            <div class="category-title">
+                <h2>Soups &amp; Starters</h2>
+            </div>
+
+
+            <!-- Soups Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Soups Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Sweet Corn Soup</span>
+                        <span class="item-price">119</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mushroom Soup</span>
+                        <span class="item-price">129</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Lemon Coriander Soup</span>
+                        <span class="item-price">129</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Manchow soup</span>
+                        <span class="item-price">129</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Veg Hot &amp; Sour Soup</span>
+                        <span class="item-price">129</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Soups Non Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Soups Non Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Sweet Corn Chicken Soup</span>
+                        <span class="item-price">149</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Lemon Coriander Chicken Soup</span>
+                        <span class="item-price">149</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Manchow Soup</span>
+                        <span class="item-price">149</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Hot &amp; Sour Soup</span>
+                        <span class="item-price">149</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Starters Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Starters Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Mushroom 65 Hyderabad</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Paneer 65 Hyderabad</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Veg manchurian</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gobi manchurian</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Paneer manchurian</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Baby corn manchurian</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mushroom manchurian</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chilly gobi</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chilly mushroom</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chilly babycorn</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chilly paneer</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Golden fry baby corn</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Crispy mushroom</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Babycorn pepper salt</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mushroom peppersalt</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Crispy corn</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Panner Majestic</span>
+                        <span class="item-price">219</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Chicken Starters -->
+
+            <div class="menu-subcategory">
+
+                <h3>Chicken Starters</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Chilly Chicken</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken 65 Hyderabad</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken 555</span>
+                        <span class="item-price">219</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Manchurian</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Salt &amp; pepper</span>
+                        <span class="item-price">219</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Dry Pepper</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Pepper Chicken(roast)</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Dragon Chicken</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Chicken</span>
+                        <span class="item-price">219</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Shanghai Chicken</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Lemon Chicken</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Thai Pai Chicken</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Majestic</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Lollypop (Saucy-5pc)</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Drumstick Dry-5pc</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Crispy Chicken</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Honey Chicken</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">RR Chicken</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FRIED RICE & NOODLES
+        ================================================== -->
+
+        <section class="menu-category">
+
+            <div class="category-title">
+                <h2>Fried Rice &amp; Noodles</h2>
+            </div>
+
+
+            <!-- Fried Rice Non Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Fried Rice Non Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Egg Fried Rice</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Egg Fried Rice</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Fried Rice</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Chicken Fried Rice</span>
+                        <span class="item-price">219</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mutton Fried Rice</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Mutton Fried Rice</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Prawn Fried Rice</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Prawn Fried Rice</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Spl Chicken Fried Rice</span>
+                        <span class="item-price">289</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Non Veg Mixed Fried Rice</span>
+                        <span class="item-price">289</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Noodles Non Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Noodles Non Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Egg Noodles</span>
+                        <span class="item-price">179</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Egg Noodles</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Noodles</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Chicken Noodles</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mutton Noodles</span>
+                        <span class="item-price">230</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Mutton Noodles</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Prawn Noodles</span>
+                        <span class="item-price">230</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Prawn Noodles</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Non Veg Mixed Noodles</span>
+                        <span class="item-price">269</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Fried Rice Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Fried Rice Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Veg Fried Rice</span>
+                        <span class="item-price">169</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Veg Fried Rice</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Paneer Fried Rice</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Paneer Fried Rice</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mushroom Fried Rice</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Mushroom Fried Rice</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gobi Fried Rice</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Gobi Fried Rice</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Manchurian Fried Rice</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Veg Mixed Fried Rice</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Noodles Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Noodles Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Veg Noodles</span>
+                        <span class="item-price">169</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Paneer Noodles</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gobi Noodles</span>
+                        <span class="item-price">179</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mushroom Noodles</span>
+                        <span class="item-price">179</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Veg Noodles</span>
+                        <span class="item-price">179</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Gobi Noodles</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Mushroom Noodles</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Paneer Noodles</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INDIAN GRAVIES
+        ================================================== -->
+
+        <section class="menu-category">
+
+            <div class="category-title">
+                <h2>Indian Gravies</h2>
+            </div>
+
+
+            <!-- Indian Gravy Non Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Indian Gravy Non Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Chicken Masala</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Boneless Chicken Curry</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Butter Chicken</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kadai Chicken</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Achari Chicken</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Punjabi Chicken</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Afghani</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Maharani</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kadai Mutton</span>
+                        <span class="item-price">319</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Prawn Curry</span>
+                        <span class="item-price">289</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kadai Prawn</span>
+                        <span class="item-price">289</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Butter Prawn</span>
+                        <span class="item-price">309</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Fish Curry</span>
+                        <span class="item-price">269</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kadai Fish</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Indian Gravy Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Indian Gravy Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Matar Masala</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Aloo Gobi Masala</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Aloo Gobi Mutter Masala</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gobi Masala</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mixed Veg Curry</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kadai Veg</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kadai Baby Corn</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Baby Corn Masala</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Dal Fry</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Dal Tadka</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Mushroom Masala</span>
+                        <span class="item-price">209</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kaju Tomato</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kaju Masala</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Paneer Kaju Masala</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Paneer Butter Masala</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kadai Paneer</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Palak Paneer</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Paneer Tikka Masala</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gongura Paneer Curry</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Achari Paneer</span>
+                        <span class="item-price">229</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Methi Chaman</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Egg Dishes -->
+
+            <div class="menu-subcategory">
+
+                <h3>Egg Dishes</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Chilly Egg</span>
+                        <span class="item-price">199</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Egg Burji</span>
+                        <span class="item-price">149</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Egg Masala</span>
+                        <span class="item-price">159</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Egg Tomato Curry</span>
+                        <span class="item-price">159</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Egg Fry</span>
+                        <span class="item-price">169</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Boiled Egg</span>
+                        <span class="item-price">20</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Rice Items -->
+
+            <div class="menu-subcategory">
+
+                <h3>Rice Items</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Jeera Rice</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Ghee Rice</span>
+                        <span class="item-price">189</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Curd Rice</span>
+                        <span class="item-price">115</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Steam Rice</span>
+                        <span class="item-price">130</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANDHRA DELICIOUS
+        ================================================== -->
+
+        <section class="menu-category">
+
+            <div class="category-title">
+                <h2>Andhra Delicious</h2>
+            </div>
+
+            <div class="menu-grid">
+
+                <div class="item">
+                    <span class="item-name">Andhra Chicken Curry</span>
+                    <span class="item-price">229</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Andhra Chicken Fry</span>
+                    <span class="item-price">249</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Rayalaseema Chicken Curry</span>
+                    <span class="item-price">249</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Rayalaseema Chicken Fry</span>
+                    <span class="item-price">259</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Chicken Pepper Fry</span>
+                    <span class="item-price">269</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Chicken Mughlai Fry</span>
+                    <span class="item-price">289</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Cashew Chicken Fry</span>
+                    <span class="item-price">319</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Cashew Chicken Curry</span>
+                    <span class="item-price">309</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Natu Kodi Chicken Curry</span>
+                    <span class="item-price">289</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Gongura Chicken Fry Semi</span>
+                    <span class="item-price">259</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Gongura Chicken Curry</span>
+                    <span class="item-price">239</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Ulavacharu Chicken Curry</span>
+                    <span class="item-price">259</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Andhra Mutton Fry</span>
+                    <span class="item-price">330</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Andhra Mutton Curry</span>
+                    <span class="item-price">310</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Mutton Pepper Fry</span>
+                    <span class="item-price">330</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Gongura Mutton Curry</span>
+                    <span class="item-price">330</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Gongura Prawn Curry</span>
+                    <span class="item-price">330</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Prawn Fry</span>
+                    <span class="item-price">340</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INDIAN BREADS
+        ================================================== -->
+
+        <section class="menu-category">
+
+            <div class="category-title">
+                <h2>Indian Breads</h2>
+            </div>
+
+            <div class="menu-grid">
+
+                <div class="item">
+                    <span class="item-name">Roti</span>
+                    <span class="item-price">50</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Butter Roti</span>
+                    <span class="item-price">60</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Butter Pulka</span>
+                    <span class="item-price">30</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Naan</span>
+                    <span class="item-price">50</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Butter Naan</span>
+                    <span class="item-price">60</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Stuffed Naan</span>
+                    <span class="item-price">85</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Garlic Naan</span>
+                    <span class="item-price">80</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Plain Kulcha</span>
+                    <span class="item-price">60</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Butter Kulcha</span>
+                    <span class="item-price">70</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Masala Kulcha</span>
+                    <span class="item-price">70</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Paneer Kulcha</span>
+                    <span class="item-price">85</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Cheese Paneer Kulcha</span>
+                    <span class="item-price">95</span>
+                </div>
+
+                <div class="item">
+                    <span class="item-name">Phulka 1pc</span>
+                    <span class="item-price">25</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MUTTON & SEAFOOD
+        ================================================== -->
+
+        <section class="menu-category">
+
+            <div class="category-title">
+                <h2>Mutton &amp; Seafood</h2>
+            </div>
+
+
+            <!-- Mutton Starters -->
+
+            <div class="menu-subcategory">
+
+                <h3>Mutton Starters</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Manchurian Lamb</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Crispy Lamb</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Ginger Lamb</span>
+                        <span class="item-price">289</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Roast Lamb</span>
+                        <span class="item-price">299</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Lamb Salt &amp; pepper</span>
+                        <span class="item-price">299</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Lamb Dry Pepper</span>
+                        <span class="item-price">299</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Seafood Starters -->
+
+            <div class="menu-subcategory">
+
+                <h3>Seafood Starters</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Fish 65 Hyderabad</span>
+                        <span class="item-price">239</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Crispy Fish</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chilly Fish</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Pepper Fish</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Fish Finger</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Lemon Fish</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Apollo Fish</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Apollo Prawn</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Prawn 65 Hyderabad</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Golden Prawn</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Schezwan Prawn</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Prawn Manchurian</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Dry Pepper Prawn</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Prawn Salt &amp; Pepper</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TANDOORI STARTERS
+        ================================================== -->
+
+        <section class="menu-category">
+
+            <div class="category-title">
+                <h2>Tandoori Starters</h2>
+            </div>
+
+
+            <!-- Tandoori Non Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Tandoori Starters Non Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Tandoori Half</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Tandoori Full</span>
+                        <span class="item-price">420</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Grill Half</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Grill Full</span>
+                        <span class="item-price">420</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Tikka</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Achari Chicken Tikka</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Kabab</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kali Mirchi Kebab</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Reshmi Kebab</span>
+                        <span class="item-price">269</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Chicken Malai Hyderabadi</span>
+                        <span class="item-price">289</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Fish Tikka</span>
+                        <span class="item-price">269</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Garlic Fish Kebab</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">BBQ Fish Half</span>
+                        <span class="item-price">269</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">BBQ Chicken Half</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Pepper BBQ Chicken</span>
+                        <span class="item-price">269</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Pepper BBQ Fish Half</span>
+                        <span class="item-price">279</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tandoori Veg -->
+
+            <div class="menu-subcategory">
+
+                <h3>Tandoori Starters Veg</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Paneer Tikka</span>
+                        <span class="item-price">219</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Achari Paneer Tikka</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Malai Paneer Tikka</span>
+                        <span class="item-price">249</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Kaju Paneer Tikka</span>
+                        <span class="item-price">259</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DRINKS & DESSERTS
+        ================================================== -->
+
+        <section class="menu-category">
+
+            <div class="category-title">
+                <h2>Drinks &amp; Desserts</h2>
+            </div>
+
+
+            <!-- Fruit Juice -->
+
+            <div class="menu-subcategory">
+
+                <h3>Fruit Juice</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Butter Milk</span>
+                        <span class="item-price">65</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Lassi</span>
+                        <span class="item-price">85</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Cool Drinks</span>
+                        <span class="item-price mrp">MRP</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Water Bottle</span>
+                        <span class="item-price mrp">MRP</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Desserts -->
+
+            <div class="menu-subcategory">
+
+                <h3>Desserts</h3>
+
+                <div class="menu-grid">
+
+                    <div class="item">
+                        <span class="item-name">Junnu</span>
+                        <span class="item-price">130</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Apricot Delight</span>
+                        <span class="item-price">140</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Badam Kheer</span>
+                        <span class="item-price">120</span>
+                    </div>
+
+                    <div class="item">
+                        <span class="item-name">Gulab Jammun</span>
+                        <span class="item-price">50</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NOTE
+        ================================================== -->
+
+        <p class="menu-note">
+            Prices shown are in Indian Rupees. Availability of
+            individual dishes may vary.
         </p>
 
-    </div>
 
+        <!-- =================================================
+             NO SEARCH RESULTS
+        ================================================== -->
 
-    <div class="search-wrapper">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-        <input
-            type="text"
-            id="menuSearch"
-            placeholder="Search for a dish..."
-            oninput="searchMenu()"
+        <div
+            class="no-results"
+            id="noResults"
         >
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CATEGORY NAVIGATION
-========================================================= -->
-
-<nav class="category-nav">
-
-    <a href="#biryani">
-        Biryani
-    </a>
-
-    <a href="#soups-starters">
-        Soups & Starters
-    </a>
-
-    <a href="#fried-noodles">
-        Fried Rice & Noodles
-    </a>
-
-    <a href="#drinks-desserts">
-        Drinks & Desserts
-    </a>
-
-    <a href="#gravies">
-        Gravies
-    </a>
-
-    <a href="#andhra">
-        Andhra Delicious
-    </a>
-
-    <a href="#breads">
-        Indian Breads
-    </a>
-
-    <a href="#tandoori">
-        Tandoori
-    </a>
-
-</nav>
-
-
-
-<!-- =========================================================
-     BIRYANI
-========================================================= -->
-
-<section
-    class="menu-category searchable-section"
-    id="biryani"
->
-
-    <div class="category-title">
-
-        <h2>
-            <i class="fa-solid fa-bowl-food"></i>
-            Biryani
-        </h2>
-
-    </div>
-
-
-    <!-- BIRYANI VEG -->
-
-    <div class="subcategory">
-
-        <h3>
-            Biryani Veg
-        </h3>
-
-
-        <div class="food-grid">
-
-            <div class="food-card">
-                <span class="food-name">Veg Biryani</span>
-                <span class="food-price">₹189</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Gongura Veg Biryani</span>
-                <span class="food-price">₹209</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Ulavacharu Veg Biryani</span>
-                <span class="food-price">₹209</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Mushroom Biryani</span>
-                <span class="food-price">₹209</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Paneer Biryani</span>
-                <span class="food-price">₹219</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Baby Corn Biryani</span>
-                <span class="food-price">₹209</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Cashewnut Biryani</span>
-                <span class="food-price">₹229</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Gongura Paneer Biryani</span>
-                <span class="food-price">₹219</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Ulavacharu Paneer Biryani</span>
-                <span class="food-price">₹219</span>
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- SPECIAL BIRYANI -->
-
-    <div class="subcategory">
-
-        <h3>
-            Special Biryani's
-        </h3>
-
-
-        <div class="food-grid">
-
-            <div class="food-card">
-                <span class="food-name">Chicken Tikka Biryani</span>
-                <span class="food-price">₹359</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Lahori Chicken Biryani</span>
-                <span class="food-price">₹339</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Palnadu Mutton Biryani</span>
-                <span class="food-price">₹399</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Guntur Spl Mutton Biryani</span>
-                <span class="food-price">₹409</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Gongura Spl Chicken Biryani</span>
-                <span class="food-price">₹359</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Gongura Spl Mutton Biryani</span>
-                <span class="food-price">₹399</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Ulavacharu Special Chicken Biryani</span>
-                <span class="food-price">₹359</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Potlam Chicken Biryani</span>
-                <span class="food-price">₹379</span>
-            </div>
-
-            <div class="food-card">
-                <span class="food-name">Potlam Mutton Biryani</span>
-                <span class="food-price">₹400</span>
-            </div>
-
-        </div>
-
-    </div>
-
-
-
-    <!-- BIRYANI NON VEG -->
-
-    <div class="subcategory">
-
-        <h3>
-            Biryani Non Veg
-        </h3>
-
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Plain Biryani</span><span class="food-price">₹175</span></div>
-
-            <div class="food-card"><span class="food-name">Egg Biryani</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Dum Biryani</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Fry Biryani</span><span class="food-price">₹248</span></div>
-
-            <div class="food-card"><span class="food-name">Spl Chicken Biryani</span><span class="food-price">₹269</span></div>
-
-            <div class="food-card"><span class="food-name">Guntur Spl Chicken Biryani</span><span class="food-price">₹319</span></div>
-
-            <div class="food-card"><span class="food-name">Gongura Chicken Biryani</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Lollipop Biryani</span><span class="food-price">₹279</span></div>
-
-            <div class="food-card"><span class="food-name">Ulavacharu Chicken Biryani</span><span class="food-price">₹289</span></div>
-
-            <div class="food-card"><span class="food-name">Natukodi Biryani</span><span class="food-price">₹289</span></div>
-
-            <div class="food-card"><span class="food-name">Palnadu Chicken Biryani</span><span class="food-price">₹309</span></div>
-
-            <div class="food-card"><span class="food-name">Mughlai Chicken Biryani</span><span class="food-price">₹299</span></div>
-
-            <div class="food-card"><span class="food-name">Avakai Chicken Biryani</span><span class="food-price">₹299</span></div>
-
-            <div class="food-card"><span class="food-name">Mutton Dum Biryani</span><span class="food-price">₹340</span></div>
-
-            <div class="food-card"><span class="food-name">Mutton Kheema Biryani</span><span class="food-price">₹340</span></div>
-
-            <div class="food-card"><span class="food-name">Mutton Fry Biryani</span><span class="food-price">₹360</span></div>
-
-            <div class="food-card"><span class="food-name">Gongura Mutton Biryani</span><span class="food-price">₹380</span></div>
-
-            <div class="food-card"><span class="food-name">Spl Mutton Biryani</span><span class="food-price">₹380</span></div>
-
-            <div class="food-card"><span class="food-name">Mughalai Mutton Biryani</span><span class="food-price">₹380</span></div>
-
-            <div class="food-card"><span class="food-name">Prawn Biryani</span><span class="food-price">₹330</span></div>
-
-            <div class="food-card"><span class="food-name">Gongura Prawn Biryani</span><span class="food-price">₹350</span></div>
-
-            <div class="food-card"><span class="food-name">Fish Biryani</span><span class="food-price">₹310</span></div>
-
-            <div class="food-card"><span class="food-name">Mixed Biryani</span><span class="food-price">₹350</span></div>
-
-            <div class="food-card"><span class="food-name">Egg Fry Biryani</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Wings Biryani</span><span class="food-price">₹329</span></div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SOUPS & STARTERS
-========================================================= -->
-
-<section
-    class="menu-category searchable-section"
-    id="soups-starters"
->
-
-    <div class="category-title">
-
-        <h2>
-            <i class="fa-solid fa-bowl-food"></i>
-            Soups & Starters
-        </h2>
-
-    </div>
-
-
-    <div class="subcategory">
-
-        <h3>Soups Veg</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Sweet Corn Soup</span><span class="food-price">₹119</span></div>
-
-            <div class="food-card"><span class="food-name">Mushroom Soup</span><span class="food-price">₹129</span></div>
-
-            <div class="food-card"><span class="food-name">Lemon Coriander Soup</span><span class="food-price">₹129</span></div>
-
-            <div class="food-card"><span class="food-name">Manchow soup</span><span class="food-price">₹129</span></div>
-
-            <div class="food-card"><span class="food-name">Veg Hot &amp; Sour Soup</span><span class="food-price">₹129</span></div>
-
-        </div>
-
-    </div>
-
-
-    <div class="subcategory">
-
-        <h3>Soups Non Veg</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Sweet Corn Chicken Soup</span><span class="food-price">₹149</span></div>
-
-            <div class="food-card"><span class="food-name">Lemon Coriander Chicken Soup</span><span class="food-price">₹149</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Manchow Soup</span><span class="food-price">₹149</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Hot &amp; Sour Soup</span><span class="food-price">₹149</span></div>
-
-        </div>
-
-    </div>
-
-
-    <div class="subcategory">
-
-        <h3>Starters Veg</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Mushroom 65 Hyderabad</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Paneer 65 Hyderabad</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Veg manchurian</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Gobi manchurian</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Paneer manchurian</span><span class="food-price">₹209</span></div>
-
-            <div class="food-card"><span class="food-name">Baby corn manchurian</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Mushroom manchurian</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Chilly gobi</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Chilly mushroom</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Chilly babycorn</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Chilly paneer</span><span class="food-price">₹209</span></div>
-
-            <div class="food-card"><span class="food-name">Golden fry baby corn</span><span class="food-price">₹209</span></div>
-
-            <div class="food-card"><span class="food-name">Crispy mushroom</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Babycorn pepper salt</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Mushroom peppersalt</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Crispy corn</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Panner Majestic</span><span class="food-price">₹219</span></div>
-
-        </div>
-
-    </div>
-
-
-    <div class="subcategory">
-
-        <h3>Chicken Starters</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Chilly Chicken</span><span class="food-price">₹209</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken 65 Hyderabad</span><span class="food-price">₹209</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken 555</span><span class="food-price">₹219</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Manchurian</span><span class="food-price">₹209</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Salt &amp; pepper</span><span class="food-price">₹219</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Dry Pepper</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Pepper Chicken(roast)</span><span class="food-price">₹229</span></div>
-
-            <div class="food-card"><span class="food-name">Dragon Chicken</span><span class="food-price">₹229</span></div>
-
-            <div class="food-card"><span class="food-name">Schezwan Chicken</span><span class="food-price">₹219</span></div>
-
-            <div class="food-card"><span class="food-name">Shanghai Chicken</span><span class="food-price">₹229</span></div>
-
-            <div class="food-card"><span class="food-name">Lemon Chicken</span><span class="food-price">₹229</span></div>
-
-            <div class="food-card"><span class="food-name">Thai Pai Chicken</span><span class="food-price">₹229</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Majestic</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Lollypop (Saucy-5pc)</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Drumstick Dry-5pc</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Crispy Chicken</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Honey Chicken</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">RR Chicken</span><span class="food-price">₹249</span></div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     FRIED RICE & NOODLES
-========================================================= -->
-
-<section
-    class="menu-category searchable-section"
-    id="fried-noodles"
->
-
-    <div class="category-title">
-
-        <h2>
             <i class="fa-solid fa-utensils"></i>
-            Fried Rice & Noodles
-        </h2>
 
-    </div>
+            <br><br>
+
+            No dishes found matching your search.
+        </div>
+
+    </main>
 
 
-    <div class="subcategory">
 
-        <h3>Fried Rice Non Veg</h3>
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
-        <div class="food-grid">
+    <footer class="menu-footer">
 
-            <div class="food-card"><span class="food-name">Egg Fried Rice</span><span class="food-price">₹189</span></div>
+        <div class="footer-inner">
 
-            <div class="food-card"><span class="food-name">Schezwan Egg Fried Rice</span><span class="food-price">₹199</span></div>
 
-            <div class="food-card"><span class="food-name">Chicken Fried Rice</span><span class="food-price">₹209</span></div>
+            <!-- Brand -->
 
-            <div class="food-card"><span class="food-name">Schezwan Chicken Fried Rice</span><span class="food-price">₹219</span></div>
+            <div class="footer-brand">
 
-            <div class="food-card"><span class="food-name">Mutton Fried Rice</span><span class="food-price">₹239</span></div>
+                <a href="index.html">
 
-            <div class="food-card"><span class="food-name">Schezwan Mutton Fried Rice</span><span class="food-price">₹249</span></div>
+                    <img
+                        src="images/logo.png"
+                        alt="Guntur Gongura"
+                    >
 
-            <div class="food-card"><span class="food-name">Prawn Fried Rice</span><span class="food-price">₹229</span></div>
+                </a>
 
-            <div class="food-card"><span class="food-name">Schezwan Prawn Fried Rice</span><span class="food-price">₹249</span></div>
+                <p>
+                    Authentic Andhra flavours and South Indian
+                    favourites served in Egattur, OMR, Chennai.
+                </p>
 
-            <div class="food-card"><span class="food-name">Spl Chicken Fried Rice</span><span class="food-price">₹289</span></div>
+            </div>
 
-            <div class="food-card">
-                <span class="food-name">Non Veg Mixed Fried Rice</span>
-                <span class="description">Egg + Chicken + Mutton + Prawn</span>
-                <span class="food-price">₹289</span>
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="reviews.html">
+                    Reviews
+                </a>
+
+                <a href="reservation.html">
+                    Reservations
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    OMR, Egattur, Chennai
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+
+                    <a href="tel:+919047566665">
+                        +91 90475 66665
+                    </a>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-clock"></i>
+                    11:00 AM – 11:00 PM
+                </p>
+
+                <a
+                    href="https://www.instagram.com/guntur_gongura_chennai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                    @guntur_gongura_chennai
+                </a>
+
             </div>
 
         </div>
 
-    </div>
 
+        <!-- Footer Bottom -->
 
-    <div class="subcategory">
+        <div class="footer-bottom">
 
-        <h3>Noodles Non Veg</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Egg Noodles</span><span class="food-price">₹179</span></div>
-
-            <div class="food-card"><span class="food-name">Schezwan Egg Noodles</span><span class="food-price">₹189</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Noodles</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Schezwan Chicken Noodles</span><span class="food-price">₹209</span></div>
-
-            <div class="food-card"><span class="food-name">Mutton Noodles</span><span class="food-price">₹230</span></div>
-
-            <div class="food-card"><span class="food-name">Schezwan Mutton Noodles</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Prawn Noodles</span><span class="food-price">₹230</span></div>
-
-            <div class="food-card"><span class="food-name">Schezwan Prawn Noodles</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card">
-                <span class="food-name">Non Veg Mixed Noodles</span>
-                <span class="description">Egg + Chicken + Mutton + Prawn</span>
-                <span class="food-price">₹269</span>
-            </div>
+            © 2026 Guntur Gongura. All Rights Reserved.
 
         </div>
 
-    </div>
+    </footer>
 
 
-    <div class="subcategory">
 
-        <h3>Fried Rice Veg</h3>
+    <!-- =====================================================
+         SEARCH JAVASCRIPT
+    ====================================================== -->
 
-        <div class="food-grid">
+    <script>
 
-            <div class="food-card"><span class="food-name">Veg Fried Rice</span><span class="food-price">₹169</span></div>
+        document.addEventListener("DOMContentLoaded", function () {
 
-            <div class="food-card"><span class="food-name">Schezwan Veg Fried Rice</span><span class="food-price">₹189</span></div>
+            const searchInput =
+                document.getElementById("menuSearch");
 
-            <div class="food-card"><span class="food-name">Paneer Fried Rice</span><span class="food-price">₹199</span></div>
+            const items =
+                document.querySelectorAll(".item");
 
-            <div class="food-card"><span class="food-name">Schezwan Paneer Fried Rice</span><span class="food-price">₹209</span></div>
+            const subcategories =
+                document.querySelectorAll(".menu-subcategory");
 
-            <div class="food-card"><span class="food-name">Mushroom Fried Rice</span><span class="food-price">₹189</span></div>
+            const categories =
+                document.querySelectorAll(".menu-category");
 
-            <div class="food-card"><span class="food-name">Schezwan Mushroom Fried Rice</span><span class="food-price">₹199</span></div>
+            const noResults =
+                document.getElementById("noResults");
 
-            <div class="food-card"><span class="food-name">Gobi Fried Rice</span><span class="food-price">₹189</span></div>
 
-            <div class="food-card"><span class="food-name">Schezwan Gobi Fried Rice</span><span class="food-price">₹199</span></div>
+            searchInput.addEventListener("input", function () {
 
-            <div class="food-card"><span class="food-name">Manchurian Fried Rice</span><span class="food-price">₹199</span></div>
+                const searchTerm =
+                    this.value
+                        .trim()
+                        .toLowerCase();
 
-            <div class="food-card">
-                <span class="food-name">Veg Mixed Fried Rice</span>
-                <span class="description">Gobi + Paneer + Mushroom</span>
-                <span class="food-price">₹209</span>
-            </div>
+                let visibleItems = 0;
 
-        </div>
 
-    </div>
+                /* ---------------------------------------------
+                   FILTER ITEMS
+                --------------------------------------------- */
 
+                items.forEach(function (item) {
 
-    <div class="subcategory">
+                    const itemName =
+                        item
+                            .querySelector(".item-name")
+                            .textContent
+                            .toLowerCase();
 
-        <h3>Noodles Veg</h3>
+                    if (
+                        searchTerm === "" ||
+                        itemName.includes(searchTerm)
+                    ) {
 
-        <div class="food-grid">
+                        item.style.display = "flex";
 
-            <div class="food-card"><span class="food-name">Veg Noodles</span><span class="food-price">₹169</span></div>
+                        visibleItems++;
 
-            <div class="food-card"><span class="food-name">Paneer Noodles</span><span class="food-price">₹189</span></div>
+                    } else {
 
-            <div class="food-card"><span class="food-name">Gobi Noodles</span><span class="food-price">₹179</span></div>
+                        item.style.display = "none";
 
-            <div class="food-card"><span class="food-name">Mushroom Noodles</span><span class="food-price">₹179</span></div>
+                    }
 
-            <div class="food-card"><span class="food-name">Schezwan Veg Noodles</span><span class="food-price">₹179</span></div>
+                });
 
-            <div class="food-card"><span class="food-name">Schezwan Gobi Noodles</span><span class="food-price">₹189</span></div>
 
-            <div class="food-card"><span class="food-name">Schezwan Mushroom Noodles</span><span class="food-price">₹189</span></div>
+                /* ---------------------------------------------
+                   HIDE EMPTY SUBCATEGORIES
+                --------------------------------------------- */
 
-            <div class="food-card"><span class="food-name">Schezwan Paneer Noodles</span><span class="food-price">₹199</span></div>
+                subcategories.forEach(function (subcategory) {
 
-        </div>
+                    const visibleItemsInSubcategory =
+                        subcategory.querySelectorAll(
+                            ".item:not([style*='display: none'])"
+                        );
 
-    </div>
+                    if (
+                        searchTerm !== "" &&
+                        visibleItemsInSubcategory.length === 0
+                    ) {
 
-</section>
+                        subcategory.style.display = "none";
 
+                    } else {
 
+                        subcategory.style.display = "";
 
-<!-- =========================================================
-     DRINKS & DESSERTS
-========================================================= -->
+                    }
 
-<section
-    class="menu-category searchable-section"
-    id="drinks-desserts"
->
+                });
 
-    <div class="category-title">
 
-        <h2>
-            <i class="fa-solid fa-glass-water"></i>
-            Drinks & Desserts
-        </h2>
+                /* ---------------------------------------------
+                   HIDE EMPTY MAIN CATEGORIES
+                --------------------------------------------- */
 
-    </div>
+                categories.forEach(function (category) {
 
+                    const visibleItemsInCategory =
+                        category.querySelectorAll(
+                            ".item:not([style*='display: none'])"
+                        );
 
-    <div class="subcategory">
+                    if (
+                        searchTerm !== "" &&
+                        visibleItemsInCategory.length === 0
+                    ) {
 
-        <h3>Fruit Juice / Drinks</h3>
+                        category.style.display = "none";
 
-        <div class="food-grid">
+                    } else {
 
-            <div class="food-card">
-                <span class="food-name">Butter Milk</span>
-                <span class="food-price">₹65</span>
-            </div>
+                        category.style.display = "";
 
-            <div class="food-card">
-                <span class="food-name">Lassi</span>
-                <span class="food-price">₹85</span>
-            </div>
+                    }
 
-            <div class="food-card">
-                <span class="food-name">Cool Drinks</span>
-                <span class="mrp">MRP</span>
-            </div>
+                });
 
-            <div class="food-card">
-                <span class="food-name">Water Bottle</span>
-                <span class="mrp">MRP</span>
-            </div>
 
-        </div>
+                /* ---------------------------------------------
+                   NO RESULTS MESSAGE
+                --------------------------------------------- */
 
-    </div>
+                if (
+                    searchTerm !== "" &&
+                    visibleItems === 0
+                ) {
 
+                    noResults.style.display = "block";
 
-    <div class="subcategory">
+                } else {
 
-        <h3>Desserts</h3>
+                    noResults.style.display = "none";
 
-        <div class="food-grid">
+                }
 
-            <div class="food-card">
-                <span class="food-name">Junnu</span>
-                <span class="food-price">₹130</span>
-            </div>
+            });
 
-            <div class="food-card">
-                <span class="food-name">Apricot Delight</span>
-                <span class="food-price">₹140</span>
-            </div>
+        });
 
-            <div class="food-card">
-                <span class="food-name">Badam Kheer</span>
-                <span class="food-price">₹120</span>
-            </div>
+    </script>
 
-            <div class="food-card">
-                <span class="food-name">Gulab Jammun</span>
-                <span class="food-price">₹50</span>
-            </div>
 
-        </div>
+    <!-- Existing site JavaScript -->
 
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     GRAVIES
-========================================================= -->
-
-<section
-    class="menu-category searchable-section"
-    id="gravies"
->
-
-    <div class="category-title">
-
-        <h2>
-            <i class="fa-solid fa-bowl-rice"></i>
-            Indian Gravies & Rice
-        </h2>
-
-    </div>
-
-
-    <!-- INDIAN GRAVY NON VEG -->
-
-    <div class="subcategory">
-
-        <h3>Indian Gravy Non Veg</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Chicken Masala</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Boneless Chicken Curry</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Butter Chicken</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Kadai Chicken</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Achari Chicken</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Punjabi Chicken</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Afghani</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Maharani</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Kadai Mutton</span><span class="food-price">₹319</span></div>
-
-            <div class="food-card"><span class="food-name">Prawn Curry</span><span class="food-price">₹289</span></div>
-
-            <div class="food-card"><span class="food-name">Kadai Prawn</span><span class="food-price">₹289</span></div>
-
-            <div class="food-card"><span class="food-name">Butter Prawn</span><span class="food-price">₹309</span></div>
-
-            <div class="food-card"><span class="food-name">Fish Curry</span><span class="food-price">₹269</span></div>
-
-            <div class="food-card"><span class="food-name">Kadai Fish</span><span class="food-price">₹279</span></div>
-
-        </div>
-
-    </div>
-
-
-    <!-- EGG -->
-
-    <div class="subcategory">
-
-        <h3>Egg Dishes</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Chilly Egg</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Egg Burji</span><span class="food-price">₹149</span></div>
-
-            <div class="food-card"><span class="food-name">Egg Masala</span><span class="food-price">₹159</span></div>
-
-            <div class="food-card"><span class="food-name">Egg Tomato Curry</span><span class="food-price">₹159</span></div>
-
-            <div class="food-card"><span class="food-name">Egg Fry</span><span class="food-price">₹169</span></div>
-
-            <div class="food-card"><span class="food-name">Boiled Egg</span><span class="food-price">₹20</span></div>
-
-        </div>
-
-    </div>
-
-
-    <!-- RICE -->
-
-    <div class="subcategory">
-
-        <h3>Rice Items</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Jeera Rice</span><span class="food-price">₹189</span></div>
-
-            <div class="food-card"><span class="food-name">Ghee Rice</span><span class="food-price">₹189</span></div>
-
-            <div class="food-card"><span class="food-name">Curd Rice</span><span class="food-price">₹115</span></div>
-
-            <div class="food-card"><span class="food-name">Steam Rice</span><span class="food-price">₹130</span></div>
-
-        </div>
-
-    </div>
-
-
-    <!-- VEG GRAVY -->
-
-    <div class="subcategory">
-
-        <h3>Indian Gravy Veg</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Matar Masala</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Aloo Gobi Masala</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Aloo Gobi Mutter Masala</span><span class="food-price">₹209</span></div>
-
-            <div class="food-card"><span class="food-name">Gobi Masala</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Mixed Veg Curry</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Kadai Veg</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Kadai Baby Corn</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Baby Corn Masala</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Dal Fry</span><span class="food-price">₹189</span></div>
-
-            <div class="food-card"><span class="food-name">Dal Tadka</span><span class="food-price">₹199</span></div>
-
-            <div class="food-card"><span class="food-name">Mushroom Masala</span><span class="food-price">₹209</span></div>
-
-            <div class="food-card"><span class="food-name">Kaju Tomato</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Kaju Masala</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Paneer Kaju Masala</span><span class="food-price">₹279</span></div>
-
-            <div class="food-card"><span class="food-name">Paneer Butter Masala</span><span class="food-price">₹229</span></div>
-
-            <div class="food-card"><span class="food-name">Kadai Paneer</span><span class="food-price">₹229</span></div>
-
-            <div class="food-card"><span class="food-name">Palak Paneer</span><span class="food-price">₹229</span></div>
-
-            <div class="food-card"><span class="food-name">Paneer Tikka Masala</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Gongura Paneer Curry</span><span class="food-price">₹229</span></div>
-
-            <div class="food-card"><span class="food-name">Achari Paneer</span><span class="food-price">₹229</span></div>
-
-            <div class="food-card"><span class="food-name">Methi Chaman</span><span class="food-price">₹239</span></div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     ANDHRA DELICIOUS
-========================================================= -->
-
-<section
-    class="menu-category searchable-section"
-    id="andhra"
->
-
-    <div class="category-title">
-
-        <h2>
-            <i class="fa-solid fa-pepper-hot"></i>
-            Andhra Delicious
-        </h2>
-
-    </div>
-
-
-    <div class="food-grid">
-
-        <div class="food-card"><span class="food-name">Andhra Chicken Curry</span><span class="food-price">₹229</span></div>
-
-        <div class="food-card"><span class="food-name">Andhra Chicken Fry</span><span class="food-price">₹249</span></div>
-
-        <div class="food-card"><span class="food-name">Rayalaseema Chicken Curry</span><span class="food-price">₹249</span></div>
-
-        <div class="food-card"><span class="food-name">Rayalaseema Chicken Fry</span><span class="food-price">₹259</span></div>
-
-        <div class="food-card"><span class="food-name">Chicken Pepper Fry</span><span class="food-price">₹269</span></div>
-
-        <div class="food-card"><span class="food-name">Chicken Mughlai Fry</span><span class="food-price">₹289</span></div>
-
-        <div class="food-card"><span class="food-name">Cashew Chicken Fry</span><span class="food-price">₹319</span></div>
-
-        <div class="food-card"><span class="food-name">Cashew Chicken Curry</span><span class="food-price">₹309</span></div>
-
-        <div class="food-card"><span class="food-name">Natu Kodi Chicken Curry</span><span class="food-price">₹289</span></div>
-
-        <div class="food-card"><span class="food-name">Gongura Chicken Fry Semi</span><span class="food-price">₹259</span></div>
-
-        <div class="food-card"><span class="food-name">Gongura Chicken Curry</span><span class="food-price">₹239</span></div>
-
-        <div class="food-card"><span class="food-name">Ulavacharu Chicken Curry</span><span class="food-price">₹259</span></div>
-
-        <div class="food-card"><span class="food-name">Andhra Mutton Fry</span><span class="food-price">₹330</span></div>
-
-        <div class="food-card"><span class="food-name">Andhra Mutton Curry</span><span class="food-price">₹310</span></div>
-
-        <div class="food-card"><span class="food-name">Mutton Pepper Fry</span><span class="food-price">₹330</span></div>
-
-        <div class="food-card"><span class="food-name">Gongura Mutton Curry</span><span class="food-price">₹330</span></div>
-
-        <div class="food-card"><span class="food-name">Gongura Prawn Curry</span><span class="food-price">₹330</span></div>
-
-        <div class="food-card"><span class="food-name">Prawn Fry</span><span class="food-price">₹340</span></div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     INDIAN BREADS
-========================================================= -->
-
-<section
-    class="menu-category searchable-section"
-    id="breads"
->
-
-    <div class="category-title">
-
-        <h2>
-            <i class="fa-solid fa-bread-slice"></i>
-            Indian Breads
-        </h2>
-
-    </div>
-
-
-    <div class="food-grid">
-
-        <div class="food-card"><span class="food-name">Roti</span><span class="food-price">₹50</span></div>
-
-        <div class="food-card"><span class="food-name">Butter Roti</span><span class="food-price">₹60</span></div>
-
-        <div class="food-card"><span class="food-name">Butter Pulka</span><span class="food-price">₹30</span></div>
-
-        <div class="food-card"><span class="food-name">Naan</span><span class="food-price">₹50</span></div>
-
-        <div class="food-card"><span class="food-name">Butter Naan</span><span class="food-price">₹60</span></div>
-
-        <div class="food-card"><span class="food-name">Stuffed Naan</span><span class="food-price">₹85</span></div>
-
-        <div class="food-card"><span class="food-name">Garlic Naan</span><span class="food-price">₹80</span></div>
-
-        <div class="food-card"><span class="food-name">Plain Kulcha</span><span class="food-price">₹60</span></div>
-
-        <div class="food-card"><span class="food-name">Butter Kulcha</span><span class="food-price">₹70</span></div>
-
-        <div class="food-card"><span class="food-name">Masala Kulcha</span><span class="food-price">₹70</span></div>
-
-        <div class="food-card"><span class="food-name">Paneer Kulcha</span><span class="food-price">₹85</span></div>
-
-        <div class="food-card"><span class="food-name">Cheese Paneer Kulcha</span><span class="food-price">₹95</span></div>
-
-        <div class="food-card"><span class="food-name">Phulka 1pc</span><span class="food-price">₹25</span></div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     MUTTON & SEAFOOD
-========================================================= -->
-
-<section
-    class="menu-category searchable-section"
-    id="mutton-seafood"
->
-
-    <div class="category-title">
-
-        <h2>
-            <i class="fa-solid fa-fish"></i>
-            Mutton & Seafood
-        </h2>
-
-    </div>
-
-
-    <div class="subcategory">
-
-        <h3>Mutton Starters</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Manchurian Lamb</span><span class="food-price">₹279</span></div>
-
-            <div class="food-card"><span class="food-name">Crispy Lamb</span><span class="food-price">₹279</span></div>
-
-            <div class="food-card"><span class="food-name">Ginger Lamb</span><span class="food-price">₹289</span></div>
-
-            <div class="food-card"><span class="food-name">Roast Lamb</span><span class="food-price">₹299</span></div>
-
-            <div class="food-card"><span class="food-name">Lamb Salt &amp; pepper</span><span class="food-price">₹299</span></div>
-
-            <div class="food-card"><span class="food-name">Lamb Dry Pepper</span><span class="food-price">₹299</span></div>
-
-        </div>
-
-    </div>
-
-
-    <div class="subcategory">
-
-        <h3>Seafood Starters</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Fish 65 Hyderabad</span><span class="food-price">₹239</span></div>
-
-            <div class="food-card"><span class="food-name">Crispy Fish</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Chilly Fish</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Pepper Fish</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Fish Finger</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Lemon Fish</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Apollo Fish</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Apollo Prawn</span><span class="food-price">₹279</span></div>
-
-            <div class="food-card"><span class="food-name">Prawn 65 Hyderabad</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Golden Prawn</span><span class="food-price">₹279</span></div>
-
-            <div class="food-card"><span class="food-name">Schezwan Prawn</span><span class="food-price">₹279</span></div>
-
-            <div class="food-card"><span class="food-name">Prawn Manchurian</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Dry Pepper Prawn</span><span class="food-price">₹279</span></div>
-
-            <div class="food-card"><span class="food-name">Prawn Salt &amp; Pepper</span><span class="food-price">₹279</span></div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     TANDOORI
-========================================================= -->
-
-<section
-    class="menu-category searchable-section"
-    id="tandoori"
->
-
-    <div class="category-title">
-
-        <h2>
-            <i class="fa-solid fa-drumstick-bite"></i>
-            Tandoori Starters
-        </h2>
-
-    </div>
-
-
-    <!-- NON VEG -->
-
-    <div class="subcategory">
-
-        <h3>Tandoori Starters Non Veg</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Tandoori Half</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Tandoori Full</span><span class="food-price">₹420</span></div>
-
-            <div class="food-card"><span class="food-name">Grill Half</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Grill Full</span><span class="food-price">₹420</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Tikka</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Achari Chicken Tikka</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Kabab</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Kali Mirchi Kebab</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Reshmi Kebab</span><span class="food-price">₹269</span></div>
-
-            <div class="food-card"><span class="food-name">Chicken Malai Hyderabadi</span><span class="food-price">₹289</span></div>
-
-            <div class="food-card"><span class="food-name">Fish Tikka</span><span class="food-price">₹269</span></div>
-
-            <div class="food-card"><span class="food-name">Garlic Fish Kebab</span><span class="food-price">₹279</span></div>
-
-            <div class="food-card"><span class="food-name">BBQ Fish Half</span><span class="food-price">₹269</span></div>
-
-            <div class="food-card"><span class="food-name">BBQ Chicken Half</span><span class="food-price">₹259</span></div>
-
-            <div class="food-card"><span class="food-name">Pepper BBQ Chicken</span><span class="food-price">₹269</span></div>
-
-            <div class="food-card"><span class="food-name">Pepper BBQ Fish Half</span><span class="food-price">₹279</span></div>
-
-        </div>
-
-    </div>
-
-
-    <!-- VEG -->
-
-    <div class="subcategory">
-
-        <h3>Tandoori Starters Veg</h3>
-
-        <div class="food-grid">
-
-            <div class="food-card"><span class="food-name">Paneer Tikka</span><span class="food-price">₹219</span></div>
-
-            <div class="food-card"><span class="food-name">Achari Paneer Tikka</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Malai Paneer Tikka</span><span class="food-price">₹249</span></div>
-
-            <div class="food-card"><span class="food-name">Kaju Paneer Tikka</span><span class="food-price">₹259</span></div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     NO RESULTS
-========================================================= -->
-
-<div
-    class="no-results"
-    id="noResults"
->
-
-    <i class="fa-solid fa-face-frown"></i>
-
-    <h3>
-        No dishes found
-    </h3>
-
-    <p>
-        Try searching for another dish.
-    </p>
-
-</div>
-
-
-
-<!-- =========================================================
-     ORDER CTA
-========================================================= -->
-
-<section class="order-cta">
-
-    <h2>
-        Hungry Already?
-    </h2>
-
-    <p>
-        Order your favourite Andhra dishes directly from Guntur Gongura.
-    </p>
-
-    <a
-        href="orders.html"
-        class="order-button"
-    >
-
-        <i class="fa-solid fa-cart-shopping"></i>
-
-        Order Online
-
-    </a>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer class="footer">
-
-    <img
-        src="images/logo.png"
-        alt="Guntur Gongura"
-    >
-
-    <p>
-        Authentic Andhra • South Indian Cuisine
-    </p>
-
-    <p>
-        N.No. 12, Old No. 34, Rajiv Gandhi Salai,
-        OMR, Egattur, Chennai, Tamil Nadu 600130
-    </p>
-
-    <p class="phone">
-
-        <i class="fa-solid fa-phone"></i>
-
-        +91 90475 66665
-
-    </p>
-
-    <p>
-        © 2026 Guntur Gongura. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
-<script>
-
-function searchMenu() {
-
-    const searchInput =
-        document.getElementById("menuSearch");
-
-    const searchTerm =
-        searchInput.value
-            .toLowerCase()
-            .trim();
-
-
-    const cards =
-        document.querySelectorAll(".food-card");
-
-
-    const sections =
-        document.querySelectorAll(".searchable-section");
-
-
-    let found = 0;
-
-
-    cards.forEach(card => {
-
-        const name =
-            card
-                .querySelector(".food-name")
-                .textContent
-                .toLowerCase();
-
-
-        if (name.includes(searchTerm)) {
-
-            card.classList.remove("hidden");
-
-            found++;
-
-        } else {
-
-            card.classList.add("hidden");
-
-        }
-
-    });
-
-
-    /*
-       When searching, hide empty
-       subcategories and categories.
-    */
-
-    sections.forEach(section => {
-
-        const visibleCards =
-            section.querySelectorAll(
-                ".food-card:not(.hidden)"
-            );
-
-
-        if (
-            searchTerm !== "" &&
-            visibleCards.length === 0
-        ) {
-
-            section.classList.add("hidden");
-
-        } else {
-
-            section.classList.remove("hidden");
-
-        }
-
-    });
-
-
-    const noResults =
-        document.getElementById("noResults");
-
-
-    if (
-        searchTerm !== "" &&
-        found === 0
-    ) {
-
-        noResults.style.display = "block";
-
-    } else {
-
-        noResults.style.display = "none";
-
-    }
-
-}
-
-
-/* =========================================================
-   CLEAR SEARCH WHEN PAGE LOADS
-========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-        document
-            .getElementById("menuSearch")
-            .value = "";
-
-    }
-);
-
-</script>
-
+    <script src="js/script.js"></script>
 
 </body>
 
