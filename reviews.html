@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reviews | Guntur Gongura</title>
+
+    <meta
+        name="description"
+        content="Read customer reviews and feedback for Guntur Gongura restaurant in Egattur, Chennai."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <style>
+
+        /* =====================================================
+           PAGE
+        ===================================================== */
+
+        body {
+            background: #faf6ef;
+            color: #0b1f3a;
+        }
+
+        .reviews-page {
+            min-height: 100vh;
+            padding: 25px 20px 70px;
+        }
+
+
+        /* =====================================================
+           PAGE TRANSITION
+        ===================================================== */
+
+        #pageTransition {
+            position: fixed;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: #0b1f3a;
+
+            z-index: 999999;
+
+            opacity: 1;
+            visibility: visible;
+
+            pointer-events: none;
+
+            transition:
+                opacity 0.45s ease,
+                visibility 0.45s ease;
+        }
+
+        #pageTransition.hide {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ===================================================== */
+
+        .reviews-top {
+            max-width: 1100px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        /* =====================================================
+           BACK TO HOME
+        ===================================================== */
+
+        .back-home {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 10px 17px;
+
+            background: #ffffff;
+
+            color: #0b1f3a;
+
+            border: 1.5px solid #0b1f3a;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.15s ease;
+        }
+
+        .back-home i {
+            font-size: 14px;
+        }
+
+        .back-home:hover {
+            background: #0b1f3a;
+
+            color: #ffffff;
+
+            border-color: #0b1f3a;
+
+            transform: translateX(-3px);
+        }
+
+        .back-home:active {
+            background: #0b1f3a;
+
+            color: #ffffff;
+
+            border-color: #0b1f3a;
+
+            transform: scale(0.97);
+        }
+
+        .back-home.clicked {
+            background: #0b1f3a;
+
+            color: #ffffff;
+
+            border-color: #0b1f3a;
+        }
+
+        .back-home:focus-visible {
+            outline: 2px solid #d4af37;
+
+            outline-offset: 3px;
+        }
+
+
+        /* =====================================================
+           LOGO
+        ===================================================== */
+
+        .reviews-logo {
+            width: 180px;
+
+            height: auto;
+
+            display: block;
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .reviews-intro {
+            max-width: 760px;
+
+            margin: 75px auto 45px;
+
+            text-align: center;
+        }
+
+        .reviews-intro .small-title {
+            color: #8b1e1e;
+
+            font-size: 0.75rem;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        .reviews-intro h1 {
+            margin: 0 0 15px;
+
+            color: #0b1f3a;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(2.5rem, 5vw, 4rem);
+
+            line-height: 1.1;
+        }
+
+        .reviews-intro h1 span {
+            color: #8b1e1e;
+        }
+
+        .reviews-intro p {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: #666;
+
+            font-size: 0.95rem;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           MAIN CONTAINER
+        ===================================================== */
+
+        .reviews-container {
+            max-width: 1100px;
+
+            margin: 0 auto;
+        }
+
+
+        /* =====================================================
+           RATING SUMMARY
+        ===================================================== */
+
+        .rating-box {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 20px;
+
+            margin-bottom: 35px;
+
+            padding: 22px;
+
+            background: #ffffff;
+
+            border: 1px solid #e5ddd1;
+
+            border-radius: 8px;
+
+            box-shadow:
+                0 10px 30px rgba(11, 31, 58, 0.04);
+        }
+
+        .rating-number {
+            color: #0b1f3a;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 3.3rem;
+
+            font-weight: 700;
+
+            line-height: 1;
+        }
+
+        .rating-details {
+            text-align: left;
+        }
+
+        .stars {
+            color: #d4af37;
+
+            font-size: 1.1rem;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 4px;
+        }
+
+        .rating-details span {
+            color: #777;
+
+            font-size: 0.8rem;
+        }
+
+
+        /* =====================================================
+           REVIEW LIST
+        ===================================================== */
+
+        .review-list {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 20px;
+        }
+
+
+        /* =====================================================
+           REVIEW CARD
+        ===================================================== */
+
+        .review-card {
+            background: #ffffff;
+
+            border: 1px solid #e5ddd1;
+
+            border-radius: 8px;
+
+            padding: 30px 32px;
+
+            box-shadow:
+                0 10px 30px rgba(11, 31, 58, 0.04);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 15px 35px rgba(11, 31, 58, 0.07);
+        }
+
+
+        /* =====================================================
+           REVIEW TOP
+        ===================================================== */
+
+        .review-top {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-bottom: 15px;
+        }
+
+        .customer-info {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+        .customer-icon {
+            width: 42px;
+            height: 42px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #faf6ef;
+
+            color: #8b1e1e;
+
+            border: 1px solid #e5ddd1;
+        }
+
+        .customer-name {
+            color: #0b1f3a;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 1.05rem;
+
+            font-weight: 600;
+        }
+
+        .customer-source {
+            color: #999;
+
+            font-size: 0.68rem;
+
+            margin-top: 2px;
+        }
+
+
+        /* =====================================================
+           REVIEW QUOTE
+        ===================================================== */
+
+        .review-quote {
+            color: #d4af37;
+
+            font-size: 1.1rem;
+        }
+
+
+        /* =====================================================
+           REVIEW TEXT
+        ===================================================== */
+
+        .review-text {
+            margin: 0;
+
+            color: #666;
+
+            font-size: 0.88rem;
+
+            line-height: 1.9;
+        }
+
+
+        /* =====================================================
+           REVIEW ACTIONS
+        ===================================================== */
+
+        .review-actions {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 15px;
+
+            margin-top: 40px;
+
+            flex-wrap: wrap;
+        }
+
+        .action-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 11px 20px;
+
+            border-radius: 5px;
+
+            text-decoration: none;
+
+            font-size: 0.82rem;
+
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .google-button {
+            background: #0b1f3a;
+
+            color: #ffffff;
+        }
+
+        .google-button:hover {
+            background: #8b1e1e;
+        }
+
+        .reserve-button {
+            border: 1px solid #0b1f3a;
+
+            color: #0b1f3a;
+
+            background: #ffffff;
+        }
+
+        .reserve-button:hover {
+            background: #0b1f3a;
+
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           REVIEW NOTE
+        ===================================================== */
+
+        .review-note {
+            max-width: 800px;
+
+            margin: 25px auto 0;
+
+            text-align: center;
+
+            color: #888;
+
+            font-size: 0.72rem;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 650px) {
+
+            .reviews-page {
+                padding: 18px 15px 50px;
+            }
+
+            .reviews-logo {
+                width: 145px;
+            }
+
+            .back-home {
+                padding: 9px 12px;
+
+                font-size: 0.78rem;
+
+                white-space: nowrap;
+            }
+
+            .reviews-intro {
+                margin: 55px auto 35px;
+            }
+
+            .reviews-intro h1 {
+                font-size: 2.4rem;
+            }
+
+            .reviews-intro p {
+                font-size: 0.85rem;
+            }
+
+            .rating-box {
+                padding: 20px;
+
+                gap: 15px;
+            }
+
+            .rating-number {
+                font-size: 2.7rem;
+            }
+
+            .stars {
+                font-size: 1rem;
+            }
+
+            .rating-details span {
+                font-size: 0.72rem;
+            }
+
+            .review-card {
+                padding: 24px 20px;
+            }
+
+            .review-top {
+                align-items: flex-start;
+            }
+
+            .customer-name {
+                font-size: 0.95rem;
+            }
+
+            .review-text {
+                font-size: 0.8rem;
+
+                line-height: 1.8;
+            }
+
+            .review-actions {
+                margin-top: 30px;
+            }
+
+            .action-button {
+                width: 100%;
+
+                max-width: 300px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 380px) {
+
+            .reviews-logo {
+                width: 125px;
+            }
+
+            .back-home {
+                padding: 8px 10px;
+
+                font-size: 0.72rem;
+            }
+
+            .back-home i {
+                font-size: 0.7rem;
+            }
+
+            .reviews-intro h1 {
+                font-size: 2.1rem;
+            }
+
+            .reviews-intro p {
+                font-size: 0.78rem;
+            }
+
+            .rating-box {
+                padding: 17px;
+            }
+
+            .rating-number {
+                font-size: 2.4rem;
+            }
+
+            .review-card {
+                padding: 21px 16px;
+            }
+
+        }
+
+
+        /* =====================================================
+           VERY SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 340px) {
+
+            .reviews-page {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .reviews-top {
+                gap: 8px;
+            }
+
+            .reviews-logo {
+                width: 110px;
+            }
+
+            .back-home {
+                padding: 7px 9px;
+
+                font-size: 0.68rem;
+            }
+
+            .reviews-intro h1 {
+                font-size: 1.9rem;
+            }
+
+            .rating-box {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .rating-details {
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PAGE TRANSITION
+    ====================================================== -->
+
+    <div id="pageTransition"></div>
+
+
+    <div class="reviews-page">
+
+
+        <!-- =================================================
+             TOP BAR
+        ================================================== -->
+
+        <div class="reviews-top">
+
+
+            <!-- BACK TO HOME -->
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Home
+
+            </a>
+
+
+            <!-- LOGO -->
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Guntur Gongura"
+                    class="reviews-logo"
+                >
+
+            </a>
+
+        </div>
+
+
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
+        <section class="reviews-intro">
+
+            <div class="small-title">
+                What Our Customers Say
+            </div>
+
+            <h1>
+                Customer
+                <span>Reviews</span>
+            </h1>
+
+            <p>
+                Discover what our customers have shared about
+                their dining experience at Guntur Gongura.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             REVIEWS CONTAINER
+        ================================================== -->
+
+        <main class="reviews-container">
+
+
+            <!-- =================================================
+                 RATING SUMMARY
+            ================================================== -->
+
+            <div class="rating-box">
+
+                <div class="rating-number">
+                    4.2
+                </div>
+
+                <div class="rating-details">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <span>
+                        446 Google Reviews
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 REVIEW LIST
+            ================================================== -->
+
+            <section class="review-list">
+
+
+                <!-- REVIEW 1 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Dadi Ashok
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Guntur Gongura Restaurant is near Marina Mall
+                        it is one of the finest Andhra-style restaurants
+                        in this area. The staff are friendly and make
+                        ordering simple and stress-free. The food is
+                        authentic and flavorful...”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 2 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Pradeep Manoharan
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Good place for Andhra style and typical
+                        restaurant dish. Service and people around
+                        were good.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 3 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Prem Siva
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Myself and my friend was searching options
+                        for the good non veg spot for lunch in OMR.
+                        We tried their briyani which was really good.
+                        Their boneless chicken starter was finger
+                        licking yummy. The pricing was reasonable
+                        and the taste was yummy.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 4 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Vivek R
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “All dishes are bit spicy, but taste is good.
+                        Visited multiple times and tried Ulavancharu
+                        biriyani, Kakinada biriyani, Mugal biriyani,
+                        Gonkura chicken biriyani and more.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 5 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    THUMULA VINAY
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “It was one of the best biryani and starters
+                        in hyderabad style. We went on 14 feb 2026
+                        with five people. We ordered best and must
+                        try items.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 6 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Monisha Ramesh
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Had a great dining experience at Guntur
+                        Gongura. The ambience is simple, clean, and
+                        comfortable, giving it a casual and welcoming
+                        feel that suits everyday dining. The highlight
+                        here is definitely the food.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 7 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Fiona Alexander
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “My friend and I were looking for a good
+                        non-veg lunch spot on OMR and came across
+                        this place. We tried their biryani, which was
+                        really good, and the boneless chicken starter
+                        was absolutely finger-licking tasty. The
+                        pricing is reasonable.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 8 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Linesh Mishra
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “The food was fantastic, the service was quick
+                        and quantity is good as well, and the atmosphere
+                        was so welcoming.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 9 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Perni Soma Akash
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “I visited this hotel and had a wonderful
+                        experience. I tried the Gongura Biryani at
+                        Guntur Gongura Hotel, and it tasted amazing.
+                        The food was authentic and truly Andhra style.
+                        I really loved the taste and the overall
+                        experience.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 10 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    N Vishnu Vamsi
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Guntur Gongura is definitely one of my top
+                        choices for biryani! They do a fantastic job
+                        bringing together authentic Andhra cuisine
+                        with a variety of unique, flavorful styles.
+                        A must-try spot for any true biryani enthusiast!”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 11 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Sathish Kumar
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Visited Guntur Gongura on 15th March 2026
+                        and ordered chicken fry biryani, chicken dum
+                        biryani, and half tandoori for takeaway. The
+                        order was prepared quickly, and the chicken
+                        fry biryani was good as usual.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 12 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Vivek Deshmukh
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Rich in taste specially in non veg options
+                        and also very great staff, ambience and
+                        infrastructure.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 13 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Sravana Lakshmi
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Its like my go to restaurant in Chennai.
+                        I like their food so much. Whenever I feel
+                        like missing my native Andhra food. I go
+                        there. Overall experience is great.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 14 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Gola !
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “One of the best place in nearby to try
+                        biryani. specially try their lollipop Chicken
+                        biryani its worthy and spicy.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 15 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Eswaran Arumugam
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Super tasty food i had lunch with my team
+                        mates. The quality, ambience and service was
+                        good and pleasant. Such a nice experience in
+                        this place. Price also reasonable.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 16 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Srujan Bhimasetty
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Good food with good service.
+                        Must try the biryani.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 17 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Yamuna Chandar
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Food was delicious in this restaurant,
+                        great service. Had good food thankyou.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 18 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Hema Lakshmi
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Food is very tasty. Nice ambience.
+                        Friendly staff.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 19 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Priya Balasubramanian
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Food was authentic Andhra cuisine.
+                        It was awesome. Served hot and fresh.
+                        Weekend wait time around 20 mins.
+                        Value for money.”
+                    </p>
+
+                </article>
+
+
+                <!-- REVIEW 20 -->
+
+                <article class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="customer-info">
+
+                            <div class="customer-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div>
+
+                                <div class="customer-name">
+                                    Mani Kanta
+                                </div>
+
+                                <div class="customer-source">
+                                    Google Customer Review
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="review-quote">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+
+                    </div>
+
+                    <p class="review-text">
+                        “Best place to get a spicy biryani.
+                        Guntur special chicken biryani is a
+                        must try. The ambiance is very good
+                        as well.”
+                    </p>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 ACTION BUTTONS
+            ================================================== -->
+
+            <div class="review-actions">
+
+
+                <a
+                    href="https://maps.app.goo.gl/nqeuW5UiWc6u5XKx8?g_st=ac"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="action-button google-button"
+                >
+
+                    <i class="fa-brands fa-google"></i>
+
+                    Read Google Reviews
+
+                </a>
+
+
+                <a
+                    href="reservation.html"
+                    class="action-button reserve-button"
+                >
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    Reserve a Table
+
+                </a>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 NOTE
+            ================================================== -->
+
+            <p class="review-note">
+
+                Reviews shown on this page are customer feedback
+                collected from Google Reviews. Review excerpts are
+                displayed without customer photos.
+
+            </p>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            /* =================================================
+               PAGE TRANSITION
+            ================================================= */
+
+            const transitionScreen =
+                document.getElementById("pageTransition");
+
+
+            /* Hide transition after page loads */
+
+            setTimeout(function () {
+
+                transitionScreen.classList.add("hide");
+
+            }, 100);
+
+
+            /* =================================================
+               INTERNAL LINKS
+            ================================================= */
+
+            document.querySelectorAll("a[href]").forEach(function (link) {
+
+                link.addEventListener("click", function (event) {
+
+                    const href =
+                        this.getAttribute("href");
+
+
+                    /* Ignore external links */
+
+                    if (
+                        !href ||
+                        href.startsWith("#") ||
+                        href.startsWith("http://") ||
+                        href.startsWith("https://") ||
+                        href.startsWith("mailto:") ||
+                        href.startsWith("tel:") ||
+                        this.target === "_blank"
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    event.preventDefault();
+
+
+                    /* Make clicked button dark blue */
+
+                    this.classList.add("clicked");
+
+
+                    /* Show transition */
+
+                    transitionScreen.classList.remove("hide");
+
+
+                    /* Navigate */
+
+                    setTimeout(function () {
+
+                        window.location.href = href;
+
+                    }, 450);
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

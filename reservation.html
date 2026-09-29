@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC INFORMATION
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Reserve a table at Guntur Gongura, Egattur, Chennai."
+    >
+
+    <title>Reserve a Table | Guntur Gongura</title>
+
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           PAGE
+        ====================================================== */
+
+        body {
+            background: #faf6ef;
+            color: #0b1f3a;
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ====================================================== */
+
+        .reservation-topbar {
+            width: 100%;
+
+            background: #faf6ef;
+
+        }
+
+        .reservation-topbar-inner {
+            width: min(1100px, calc(100% - 40px));
+
+            margin: 0 auto;
+
+            padding: 25px 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        /* =====================================================
+           BACK TO HOME
+        ====================================================== */
+
+        .back-home {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 10px 17px;
+
+            color: #0b1f3a;
+            background: #ffffff;
+
+            border: 1.5px solid #0b1f3a;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.15s ease;
+        }
+
+        .back-home i {
+            font-size: 0.85rem;
+        }
+
+        .back-home:hover {
+            background: #0b1f3a;
+
+            color: #ffffff;
+
+            border-color: #0b1f3a;
+
+            transform: translateX(-3px);
+        }
+
+        .back-home:active {
+            background: #0b1f3a;
+
+            color: #ffffff;
+
+            border-color: #0b1f3a;
+
+            transform: scale(0.97);
+        }
+
+        .back-home:focus-visible {
+            outline: 2px solid #d4af37;
+
+            outline-offset: 3px;
+        }
+
+
+        /* =====================================================
+           LOGO
+        ====================================================== */
+
+        .reservation-logo {
+            display: block;
+        }
+
+        .reservation-logo img {
+            display: block;
+
+            width: 180px;
+
+            max-width: 100%;
+
+            height: auto;
+        }
+
+
+        /* =====================================================
+           MAIN
+        ====================================================== */
+
+        .reservation-main {
+            width: min(900px, calc(100% - 40px));
+
+            margin: 0 auto;
+
+            padding: 55px 0 80px;
+        }
+
+
+        /* =====================================================
+           PAGE INTRO
+        ====================================================== */
+
+        .reservation-heading {
+            text-align: center;
+
+            padding-bottom: 45px;
+
+            border-bottom: 1px solid #ddd3c4;
+
+            margin-bottom: 45px;
+        }
+
+        .reservation-heading .small-title {
+            display: inline-block;
+
+            color: #8b1e1e;
+
+            font-size: 0.75rem;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+        .reservation-heading h1 {
+            margin: 12px 0 18px;
+
+            color: #0b1f3a;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(2.5rem, 6vw, 4.2rem);
+
+            line-height: 1.1;
+        }
+
+        .reservation-heading p {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: #666;
+
+            font-size: 0.95rem;
+
+            line-height: 1.9;
+        }
+
+
+        /* =====================================================
+           RESERVATION CARD
+        ====================================================== */
+
+        .reservation-card {
+            background: #ffffff;
+
+            border: 1px solid #e7dfd3;
+
+            border-radius: 8px;
+
+            padding: clamp(25px, 5vw, 45px);
+
+            box-shadow:
+                0 10px 30px rgba(11, 31, 58, 0.05);
+        }
+
+
+        /* =====================================================
+           FORM
+        ====================================================== */
+
+        .reservation-form {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 22px;
+        }
+
+        .form-group {
+            min-width: 0;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+
+        /* =====================================================
+           LABELS
+        ====================================================== */
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #0b1f3a;
+
+            font-size: 0.85rem;
+
+            font-weight: 600;
+        }
+
+        .required {
+            color: #8b1e1e;
+        }
+
+
+        /* =====================================================
+           INPUTS
+        ====================================================== */
+
+        .reservation-form input,
+        .reservation-form select,
+        .reservation-form textarea {
+            width: 100%;
+
+            padding: 13px 14px;
+
+            border: 1px solid #ddd3c4;
+
+            border-radius: 5px;
+
+            background: #fffdf9;
+
+            color: #0b1f3a;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 0.88rem;
+
+            outline: none;
+
+            transition:
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .reservation-form input:focus,
+        .reservation-form select:focus,
+        .reservation-form textarea:focus {
+            border-color: #0b1f3a;
+
+            box-shadow:
+                0 0 0 3px rgba(11, 31, 58, 0.06);
+        }
+
+        .reservation-form textarea {
+            min-height: 120px;
+
+            resize: vertical;
+        }
+
+
+        /* =====================================================
+           RESERVE BUTTON
+        ====================================================== */
+
+        .reservation-submit {
+            grid-column: 1 / -1;
+
+            margin-top: 8px;
+        }
+
+        .whatsapp-button {
+            width: 100%;
+
+            min-height: 52px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            background: #0b1f3a;
+
+            color: #ffffff;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 0.92rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                background 0.25s ease,
+                transform 0.2s ease;
+        }
+
+        .whatsapp-button:hover {
+            background: #8b1e1e;
+
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-button:active {
+            transform: translateY(0);
+        }
+
+        .whatsapp-button i {
+            font-size: 1.1rem;
+        }
+
+
+        /* =====================================================
+           RESTAURANT INFORMATION
+        ====================================================== */
+
+        .reservation-info {
+            margin-top: 35px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #e5ddd1;
+
+            text-align: center;
+        }
+
+        .reservation-info p {
+            margin: 5px 0;
+
+            color: #665f56;
+
+            font-size: 0.82rem;
+
+            line-height: 1.7;
+        }
+
+        .reservation-info strong {
+            color: #0b1f3a;
+        }
+
+
+        /* =====================================================
+           NOTE
+        ====================================================== */
+
+        .reservation-note {
+            margin-top: 18px;
+
+            padding: 13px 15px;
+
+            background: #f8f3ea;
+
+            border-radius: 5px;
+
+            color: #665f56;
+
+            text-align: center;
+
+            font-size: 0.75rem;
+
+            line-height: 1.7;
+        }
+
+        .reservation-note strong {
+            color: #0b1f3a;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            .reservation-topbar-inner {
+                width: calc(100% - 32px);
+
+                padding: 18px 0;
+            }
+
+            .reservation-logo img {
+                width: 135px;
+            }
+
+            .reservation-main {
+                width: calc(100% - 32px);
+
+                padding: 45px 0 65px;
+            }
+
+            .reservation-form {
+                gap: 18px;
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 600px) {
+
+            .reservation-topbar-inner {
+                width: calc(100% - 24px);
+
+                gap: 12px;
+            }
+
+            .back-home {
+                padding: 9px 12px;
+
+                font-size: 0.78rem;
+            }
+
+            .reservation-logo img {
+                width: 115px;
+            }
+
+            .reservation-main {
+                width: calc(100% - 24px);
+
+                padding: 40px 0 55px;
+            }
+
+            .reservation-heading {
+                padding-bottom: 35px;
+
+                margin-bottom: 30px;
+            }
+
+            .reservation-heading h1 {
+                font-size: 2.35rem;
+            }
+
+            .reservation-heading p {
+                font-size: 0.82rem;
+
+                line-height: 1.8;
+            }
+
+            .reservation-card {
+                padding: 22px 18px;
+            }
+
+            .reservation-form {
+                grid-template-columns: 1fr;
+
+                gap: 18px;
+            }
+
+            .form-group.full-width,
+            .reservation-submit {
+                grid-column: auto;
+            }
+
+            .reservation-form input,
+            .reservation-form select,
+            .reservation-form textarea {
+                font-size: 16px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ====================================================== */
+
+        @media (max-width: 420px) {
+
+            .reservation-topbar-inner {
+                width: calc(100% - 20px);
+            }
+
+            .back-home {
+                padding: 8px 10px;
+
+                font-size: 0.72rem;
+
+                gap: 6px;
+            }
+
+            .reservation-logo img {
+                width: 100px;
+            }
+
+            .reservation-main {
+                width: calc(100% - 20px);
+            }
+
+            .reservation-heading h1 {
+                font-size: 2rem;
+            }
+
+            .reservation-heading .small-title {
+                font-size: 0.68rem;
+
+                letter-spacing: 2px;
+            }
+
+            .reservation-card {
+                padding: 18px 14px;
+            }
+
+        }
+
+
+        /* =====================================================
+           VERY SMALL MOBILE
+        ====================================================== */
+
+        @media (max-width: 340px) {
+
+            .reservation-topbar-inner {
+                gap: 8px;
+            }
+
+            .reservation-logo img {
+                width: 90px;
+            }
+
+            .back-home {
+                padding: 7px 9px;
+
+                font-size: 0.68rem;
+            }
+
+            .reservation-heading h1 {
+                font-size: 1.8rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="reservation-topbar">
+
+        <div class="reservation-topbar-inner">
+
+
+            <!-- BACK TO HOME -->
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+            </a>
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="reservation-logo"
+            >
+                <img
+                    src="images/logo.png"
+                    alt="Guntur Gongura"
+                >
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="reservation-main">
+
+
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
+        <section class="reservation-heading">
+
+            <span class="small-title">
+                Guntur Gongura
+            </span>
+
+            <h1>
+                Reserve Your Table
+            </h1>
+
+            <p>
+                Fill in your details below and send your
+                reservation request directly to Guntur Gongura
+                through WhatsApp.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESERVATION CARD
+        ================================================== -->
+
+        <section class="reservation-card">
+
+            <form
+                id="reservationForm"
+                class="reservation-form"
+            >
+
+
+                <!-- FULL NAME -->
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="10-digit phone number"
+                        inputmode="numeric"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        autocomplete="tel"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- DATE -->
+
+                <div class="form-group">
+
+                    <label for="date">
+                        Date
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- TIME -->
+
+                <div class="form-group">
+
+                    <label for="time">
+                        Preferred Time
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="time"
+                        id="time"
+                        name="time"
+                        min="11:00"
+                        max="23:00"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- NUMBER OF GUESTS -->
+
+                <div class="form-group">
+
+                    <label for="guests">
+                        Number of Guests
+                        <span class="required">*</span>
+                    </label>
+
+                    <select
+                        id="guests"
+                        name="guests"
+                        required
+                    >
+
+                        <option value="">
+                            Select guests
+                        </option>
+
+                        <option value="1">
+                            1 Guest
+                        </option>
+
+                        <option value="2">
+                            2 Guests
+                        </option>
+
+                        <option value="3">
+                            3 Guests
+                        </option>
+
+                        <option value="4">
+                            4 Guests
+                        </option>
+
+                        <option value="5">
+                            5 Guests
+                        </option>
+
+                        <option value="6">
+                            6 Guests
+                        </option>
+
+                        <option value="7">
+                            7 Guests
+                        </option>
+
+                        <option value="8">
+                            8 Guests
+                        </option>
+
+                        <option value="9">
+                            9 Guests
+                        </option>
+
+                        <option value="10">
+                            10 Guests
+                        </option>
+
+                        <option value="11+">
+                            11+ Guests
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- OCCASION -->
+
+                <div class="form-group">
+
+                    <label for="occasion">
+                        Occasion
+                    </label>
+
+                    <select
+                        id="occasion"
+                        name="occasion"
+                    >
+
+                        <option value="">
+                            Select occasion
+                        </option>
+
+                        <option value="Birthday">
+                            Birthday
+                        </option>
+
+                        <option value="Anniversary">
+                            Anniversary
+                        </option>
+
+                        <option value="Family Gathering">
+                            Family Gathering
+                        </option>
+
+                        <option value="Business Meeting">
+                            Business Meeting
+                        </option>
+
+                        <option value="Casual Dining">
+                            Casual Dining
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- SPECIAL REQUESTS -->
+
+                <div class="form-group full-width">
+
+                    <label for="requests">
+                        Special Requests
+                    </label>
+
+                    <textarea
+                        id="requests"
+                        name="requests"
+                        placeholder="Any special requests? For example: window table, birthday arrangement, etc."
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- RESERVE BUTTON -->
+
+                <div class="reservation-submit">
+
+                    <button
+                        type="submit"
+                        class="whatsapp-button"
+                    >
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        Reserve
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+
+            <!-- =================================================
+                 RESTAURANT INFORMATION
+            ================================================== -->
+
+            <div class="reservation-info">
+
+                <p>
+                    <strong>
+                        Guntur Gongura
+                    </strong>
+                </p>
+
+                <p>
+                    N.No. 12, Old No. 34,
+                    Rajiv Gandhi Salai,
+                    OMR, Egattur,
+                    Chennai,
+                    Tamil Nadu 600130
+                </p>
+
+                <p>
+                    Open daily:
+                    <strong>
+                        11:00 AM – 11:00 PM
+                    </strong>
+                </p>
+
+                <p>
+                    Phone:
+                    <strong>
+                        +91 90475 66665
+                    </strong>
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RESERVATION NOTE
+            ================================================== -->
+
+            <div class="reservation-note">
+
+                Your request will open in WhatsApp
+                and be sent to
+                <strong>+91 90475 66665</strong>.
+
+                The restaurant will confirm your
+                reservation directly.
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         WHATSAPP RESERVATION
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const form =
+                    document.getElementById(
+                        "reservationForm"
+                    );
+
+
+                if (!form) {
+                    return;
+                }
+
+
+                /* =============================================
+                   SET MINIMUM DATE TO TODAY
+                ============================================= */
+
+                const dateInput =
+                    document.getElementById("date");
+
+                const today =
+                    new Date().toISOString().split("T")[0];
+
+                dateInput.min = today;
+
+
+                /* =============================================
+                   PHONE INPUT
+                ============================================= */
+
+                const phoneInput =
+                    document.getElementById("phone");
+
+                phoneInput.addEventListener(
+                    "input",
+                    function () {
+
+                        this.value =
+                            this.value
+                                .replace(/\D/g, "")
+                                .slice(0, 10);
+
+                    }
+                );
+
+
+                /* =============================================
+                   FORM SUBMIT
+                ============================================= */
+
+                form.addEventListener(
+                    "submit",
+                    function (event) {
+
+                        event.preventDefault();
+
+
+                        /* =====================================
+                           GET VALUES
+                        ===================================== */
+
+                        const name =
+                            document
+                                .getElementById("name")
+                                .value
+                                .trim();
+
+                        const phone =
+                            document
+                                .getElementById("phone")
+                                .value
+                                .trim();
+
+                        const date =
+                            document
+                                .getElementById("date")
+                                .value;
+
+                        const time =
+                            document
+                                .getElementById("time")
+                                .value;
+
+                        const guests =
+                            document
+                                .getElementById("guests")
+                                .value;
+
+                        const occasion =
+                            document
+                                .getElementById("occasion")
+                                .value;
+
+                        const requests =
+                            document
+                                .getElementById("requests")
+                                .value
+                                .trim();
+
+
+                        /* =====================================
+                           VALIDATION
+                        ===================================== */
+
+                        if (
+                            !name ||
+                            !phone ||
+                            !date ||
+                            !time ||
+                            !guests
+                        ) {
+
+                            alert(
+                                "Please fill in all required fields."
+                            );
+
+                            return;
+                        }
+
+
+                        if (!/^[0-9]{10}$/.test(phone)) {
+
+                            alert(
+                                "Please enter a valid 10-digit phone number."
+                            );
+
+                            return;
+                        }
+
+
+                        /* =====================================
+                           FORMAT DATE
+                        ===================================== */
+
+                        const dateObject =
+                            new Date(
+                                date + "T00:00:00"
+                            );
+
+                        const formattedDate =
+                            dateObject.toLocaleDateString(
+                                "en-IN",
+                                {
+                                    day: "2-digit",
+                                    month: "long",
+                                    year: "numeric"
+                                }
+                            );
+
+
+                        /* =====================================
+                           FORMAT TIME
+                        ===================================== */
+
+                        const timeObject =
+                            new Date(
+                                "1970-01-01T" + time
+                            );
+
+                        const formattedTime =
+                            timeObject.toLocaleTimeString(
+                                "en-IN",
+                                {
+                                    hour: "numeric",
+                                    minute: "2-digit",
+                                    hour12: true
+                                }
+                            );
+
+
+                        /* =====================================
+                           WHATSAPP NUMBER
+                        ===================================== */
+
+                        const whatsappNumber =
+                            "919047566665";
+
+
+                        /* =====================================
+                           WHATSAPP MESSAGE
+                        ===================================== */
+
+                        const message =
+`Hello Guntur Gongura! 👋
+
+I would like to make a table reservation.
+
+🍽️ RESERVATION DETAILS
+
+Name: ${name}
+
+Phone: ${phone}
+
+Date: ${formattedDate}
+
+Time: ${formattedTime}
+
+Number of Guests: ${guests}
+
+Occasion: ${occasion || "Not specified"}
+
+Special Requests:
+${requests || "None"}
+
+Thank you!`;
+
+
+                        /* =====================================
+                           CREATE WHATSAPP URL
+                        ===================================== */
+
+                        const whatsappURL =
+                            "https://wa.me/" +
+                            whatsappNumber +
+                            "?text=" +
+                            encodeURIComponent(message);
+
+
+                        /* =====================================
+                           OPEN WHATSAPP
+                        ===================================== */
+
+                        window.open(
+                            whatsappURL,
+                            "_blank"
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

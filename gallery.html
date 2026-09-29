@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =====================================================
+         BASIC INFORMATION
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore the dishes and food gallery of Guntur Gongura, Egattur, Chennai."
+    >
+
+    <meta
+        name="keywords"
+        content="Guntur Gongura, Andhra food, South Indian food, biryani, Chennai restaurant, food gallery"
+    >
+
+    <title>Gallery | Guntur Gongura</title>
+
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- =====================================================
+         GALLERY PAGE CSS
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           PAGE
+        ====================================================== */
+
+        .gallery-page {
+            min-height: 100vh;
+            background: #faf6ef;
+            color: #0b1f3a;
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ====================================================== */
+
+        .gallery-topbar {
+            max-width: 1100px;
+            margin: auto;
+
+            padding: 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        /* =====================================================
+           BACK TO HOME
+        ====================================================== */
+
+        .back-home {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 10px 17px;
+
+            background: #ffffff;
+
+            color: #0b1f3a;
+
+            border: 1.5px solid #0b1f3a;
+
+            border-radius: 6px;
+
+            text-decoration: none;
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease,
+                border-color 0.25s ease,
+                transform 0.15s ease;
+        }
+
+        .back-home i {
+            font-size: 0.85rem;
+        }
+
+        .back-home:hover {
+            background: #0b1f3a;
+            color: #ffffff;
+            border-color: #0b1f3a;
+        }
+
+        .back-home:active {
+            background: #0b1f3a;
+            color: #ffffff;
+            border-color: #0b1f3a;
+
+            transform: scale(0.97);
+        }
+
+        .back-home:focus-visible {
+            outline: 2px solid #d4af37;
+            outline-offset: 3px;
+        }
+
+
+        /* =====================================================
+           LOGO
+        ====================================================== */
+
+        .top-logo {
+            width: 180px;
+            height: auto;
+            display: block;
+        }
+
+
+        /* =====================================================
+           MAIN CONTENT
+        ====================================================== */
+
+        .gallery-content {
+            width: min(1200px, calc(100% - 40px));
+
+            margin: 0 auto;
+
+            padding: 30px 0 90px;
+        }
+
+
+        /* =====================================================
+           PAGE HEADING
+        ====================================================== */
+
+        .gallery-heading {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .gallery-heading .label {
+            display: inline-block;
+
+            color: #8b1e1e;
+
+            font-size: 0.75rem;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+        .gallery-heading h1 {
+            font-family: "Playfair Display", serif;
+
+            color: #0b1f3a;
+
+            font-size: clamp(2.6rem, 6vw, 4.3rem);
+
+            line-height: 1.1;
+
+            margin: 12px 0 18px;
+        }
+
+        .gallery-heading p {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: #666;
+
+            font-size: 0.98rem;
+
+            line-height: 1.8;
+        }
+
+
+        /* =====================================================
+           GALLERY GRID
+        ====================================================== */
+
+        .dish-gallery {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+
+        /* =====================================================
+           GALLERY ITEM
+        ====================================================== */
+
+        .gallery-item {
+            position: relative;
+
+            overflow: hidden;
+
+            aspect-ratio: 1 / 1;
+
+            background: #ffffff;
+
+            border-radius: 8px;
+
+            border: 1px solid #e5ddd1;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 4px 15px rgba(11, 31, 58, 0.05);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 30px rgba(11, 31, 58, 0.13);
+        }
+
+
+        /* =====================================================
+           IMAGE
+        ====================================================== */
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.45s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+
+        /* =====================================================
+           HOVER OVERLAY
+        ====================================================== */
+
+        .gallery-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(11, 31, 58, 0.38);
+
+            opacity: 0;
+
+            transition:
+                opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #ffffff;
+
+            color: #0b1f3a;
+
+            border-radius: 50%;
+
+            font-size: 1rem;
+        }
+
+
+        /* =====================================================
+           LIGHTBOX
+        ====================================================== */
+
+        .lightbox {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9999;
+
+            display: none;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 30px;
+
+            background: rgba(5, 14, 27, 0.92);
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+
+        /* =====================================================
+           LIGHTBOX IMAGE
+        ====================================================== */
+
+        .lightbox-image {
+            max-width: min(1100px, 92vw);
+
+            max-height: 85vh;
+
+            width: auto;
+            height: auto;
+
+            object-fit: contain;
+
+            border-radius: 6px;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.35);
+        }
+
+
+        /* =====================================================
+           CLOSE BUTTON
+        ====================================================== */
+
+        .lightbox-close {
+            position: fixed;
+
+            top: 25px;
+            right: 30px;
+
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,0.5);
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.1);
+
+            color: #ffffff;
+
+            font-size: 1.2rem;
+
+            cursor: pointer;
+
+            transition:
+                background 0.25s ease,
+                transform 0.2s ease;
+        }
+
+        .lightbox-close:hover {
+            background: #8b1e1e;
+
+            transform: rotate(90deg);
+        }
+
+
+        /* =====================================================
+           PREVIOUS / NEXT BUTTONS
+        ====================================================== */
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: fixed;
+
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,0.5);
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.1);
+
+            color: #ffffff;
+
+            cursor: pointer;
+
+            font-size: 1rem;
+
+            transition:
+                background 0.25s ease,
+                transform 0.2s ease;
+        }
+
+        .lightbox-prev {
+            left: 25px;
+        }
+
+        .lightbox-next {
+            right: 25px;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: #8b1e1e;
+        }
+
+
+        /* =====================================================
+           IMAGE COUNTER
+        ====================================================== */
+
+        .lightbox-counter {
+            position: fixed;
+
+            bottom: 25px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            color: #ffffff;
+
+            font-size: 0.85rem;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ====================================================== */
+
+        @media (max-width: 1000px) {
+
+            .dish-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+
+        @media (max-width: 700px) {
+
+            .gallery-topbar {
+                padding: 18px;
+
+                gap: 15px;
+            }
+
+            .top-logo {
+                width: 150px;
+            }
+
+            .back-home {
+                padding: 9px 13px;
+
+                font-size: 0.8rem;
+            }
+
+            .gallery-content {
+                width: calc(100% - 32px);
+
+                padding: 25px 0 60px;
+            }
+
+            .gallery-heading {
+                margin-bottom: 30px;
+            }
+
+            .gallery-heading h1 {
+                font-size: 2.7rem;
+            }
+
+            .gallery-heading p {
+                font-size: 0.9rem;
+            }
+
+            .dish-gallery {
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 12px;
+            }
+
+            .gallery-item {
+                border-radius: 6px;
+            }
+
+            .gallery-overlay {
+                display: none;
+            }
+
+            .lightbox {
+                padding: 20px;
+            }
+
+            .lightbox-image {
+                max-width: 95vw;
+
+                max-height: 80vh;
+            }
+
+            .lightbox-close {
+                top: 15px;
+                right: 15px;
+            }
+
+            .lightbox-prev {
+                left: 12px;
+            }
+
+            .lightbox-next {
+                right: 12px;
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ====================================================== */
+
+        @media (max-width: 420px) {
+
+            .gallery-topbar {
+                padding: 15px;
+
+                gap: 10px;
+            }
+
+            .top-logo {
+                width: 150px;
+            }
+
+            .back-home {
+                padding: 8px 11px;
+
+                font-size: 0.75rem;
+
+                gap: 6px;
+            }
+
+            .gallery-content {
+                width: calc(100% - 28px);
+            }
+
+            .gallery-heading h1 {
+                font-size: 2.25rem;
+            }
+
+            .gallery-heading .label {
+                font-size: 0.68rem;
+
+                letter-spacing: 2px;
+            }
+
+            .dish-gallery {
+                gap: 10px;
+            }
+
+            .lightbox-prev,
+            .lightbox-next {
+                width: 40px;
+                height: 40px;
+            }
+
+        }
+
+
+        /* =====================================================
+           VERY SMALL MOBILE
+        ====================================================== */
+
+        @media (max-width: 340px) {
+
+            .gallery-topbar {
+                padding: 12px;
+
+                gap: 8px;
+            }
+
+            .top-logo {
+                width: 150px;
+            }
+
+            .back-home {
+                padding: 7px 9px;
+
+                font-size: 0.7rem;
+            }
+
+            .gallery-heading h1 {
+                font-size: 2rem;
+            }
+
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+        ====================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .gallery-item,
+            .gallery-item img,
+            .gallery-overlay,
+            .lightbox-close {
+                transition: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="gallery-page">
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="gallery-topbar">
+
+        <!-- BACK TO HOME -->
+
+        <a
+            href="index.html"
+            class="back-home"
+        >
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+
+        <!-- RESTAURANT LOGO -->
+
+        <img
+            src="images/logo.png"
+            alt="Guntur Gongura"
+            class="top-logo"
+        >
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN GALLERY
+    ====================================================== -->
+
+    <main class="gallery-content">
+
+
+        <!-- =================================================
+             HEADING
+        ================================================== -->
+
+        <section class="gallery-heading">
+
+            <span class="label">
+                Our Food
+            </span>
+
+            <h1>
+                Dish Gallery
+            </h1>
+
+            <p>
+                Explore some of the dishes served at
+                Guntur Gongura, bringing together
+                bold Andhra flavours and South Indian
+                favourites.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DISH GALLERY
+        ================================================== -->
+
+        <section
+            class="dish-gallery"
+            aria-label="Guntur Gongura dish gallery"
+        >
+
+
+            <!-- =================================================
+                 IMAGE 01
+            ================================================== -->
+
+            <div
+                class="gallery-item"
+                data-index="0"
+            >
+
+                <img
+                    src="images/1.jpeg"
+                    alt="Guntur Gongura dish 1"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 02 -->
+
+            <div
+                class="gallery-item"
+                data-index="1"
+            >
+
+                <img
+                    src="images/2.jpeg"
+                    alt="Guntur Gongura dish 2"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 03 -->
+
+            <div
+                class="gallery-item"
+                data-index="2"
+            >
+
+                <img
+                    src="images/3.jpeg"
+                    alt="Guntur Gongura dish 3"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 04 -->
+
+            <div
+                class="gallery-item"
+                data-index="3"
+            >
+
+                <img
+                    src="images/4.jpeg"
+                    alt="Guntur Gongura dish 4"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 05 -->
+
+            <div
+                class="gallery-item"
+                data-index="4"
+            >
+
+                <img
+                    src="images/5.jpeg"
+                    alt="Guntur Gongura dish 5"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 06 -->
+
+            <div
+                class="gallery-item"
+                data-index="5"
+            >
+
+                <img
+                    src="images/6.jpeg"
+                    alt="Guntur Gongura dish 6"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 07 -->
+
+            <div
+                class="gallery-item"
+                data-index="6"
+            >
+
+                <img
+                    src="images/7.jpeg"
+                    alt="Guntur Gongura dish 7"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 08 -->
+
+            <div
+                class="gallery-item"
+                data-index="7"
+            >
+
+                <img
+                    src="images/8.jpeg"
+                    alt="Guntur Gongura dish 8"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 09 -->
+
+            <div
+                class="gallery-item"
+                data-index="8"
+            >
+
+                <img
+                    src="images/9.jpeg"
+                    alt="Guntur Gongura dish 9"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 10 -->
+
+            <div
+                class="gallery-item"
+                data-index="9"
+            >
+
+                <img
+                    src="images/10.jpeg"
+                    alt="Guntur Gongura dish 10"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 11 -->
+
+            <div
+                class="gallery-item"
+                data-index="10"
+            >
+
+                <img
+                    src="images/11.jpeg"
+                    alt="Guntur Gongura dish 11"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 12 -->
+
+            <div
+                class="gallery-item"
+                data-index="11"
+            >
+
+                <img
+                    src="images/12.jpeg"
+                    alt="Guntur Gongura dish 12"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 13 -->
+
+            <div
+                class="gallery-item"
+                data-index="12"
+            >
+
+                <img
+                    src="images/13.jpeg"
+                    alt="Guntur Gongura dish 13"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+        
+            <!-- IMAGE 15 -->
+
+            <div
+                class="gallery-item"
+                data-index="14"
+            >
+
+                <img
+                    src="images/15.jpeg"
+                    alt="Guntur Gongura dish 15"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 16 -->
+
+            <div
+                class="gallery-item"
+                data-index="15"
+            >
+
+                <img
+                    src="images/16.jpeg"
+                    alt="Guntur Gongura dish 16"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 17 -->
+
+            <div
+                class="gallery-item"
+                data-index="16"
+            >
+
+                <img
+                    src="images/17.jpeg"
+                    alt="Guntur Gongura dish 17"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 19 -->
+
+            <div
+                class="gallery-item"
+                data-index="18"
+            >
+
+                <img
+                    src="images/19.jpeg"
+                    alt="Guntur Gongura dish 19"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 20 -->
+
+            <div
+                class="gallery-item"
+                data-index="19"
+            >
+
+                <img
+                    src="images/20.jpeg"
+                    alt="Guntur Gongura dish 20"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 21 -->
+
+            <div
+                class="gallery-item"
+                data-index="20"
+            >
+
+                <img
+                    src="images/21.jpeg"
+                    alt="Guntur Gongura dish 21"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 22 -->
+
+            <div
+                class="gallery-item"
+                data-index="21"
+            >
+
+                <img
+                    src="images/22.jpeg"
+                    alt="Guntur Gongura dish 22"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 23 -->
+
+            <div
+                class="gallery-item"
+                data-index="22"
+            >
+
+                <img
+                    src="images/23.jpeg"
+                    alt="Guntur Gongura dish 23"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+
+            <!-- IMAGE 25 -->
+
+            <div
+                class="gallery-item"
+                data-index="24"
+            >
+
+                <img
+                    src="images/25.jpeg"
+                    alt="Guntur Gongura dish 25"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 26 -->
+
+            <div
+                class="gallery-item"
+                data-index="25"
+            >
+
+                <img
+                    src="images/26.jpeg"
+                    alt="Guntur Gongura dish 26"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 27 -->
+
+            <div
+                class="gallery-item"
+                data-index="26"
+            >
+
+                <img
+                    src="images/27.jpeg"
+                    alt="Guntur Gongura dish 27"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 28 -->
+
+            <div
+                class="gallery-item"
+                data-index="27"
+            >
+
+                <img
+                    src="images/28.jpeg"
+                    alt="Guntur Gongura dish 28"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 29 -->
+
+            <div
+                class="gallery-item"
+                data-index="28"
+            >
+
+                <img
+                    src="images/29.jpeg"
+                    alt="Guntur Gongura dish 29"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 30 -->
+
+            <div
+                class="gallery-item"
+                data-index="29"
+            >
+
+                <img
+                    src="images/30.jpeg"
+                    alt="Guntur Gongura dish 30"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 31 -->
+
+            <div
+                class="gallery-item"
+                data-index="30"
+            >
+
+                <img
+                    src="images/31.jpeg"
+                    alt="Guntur Gongura dish 31"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE 32 -->
+
+            <div
+                class="gallery-item"
+                data-index="31"
+            >
+
+                <img
+                    src="images/32.jpeg"
+                    alt="Guntur Gongura dish 32"
+                    loading="lazy"
+                >
+
+                <div class="gallery-overlay">
+                    <i class="fa-solid fa-expand"></i>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         LIGHTBOX
+    ====================================================== -->
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        aria-hidden="true"
+    >
+
+        <!-- CLOSE -->
+
+        <button
+            class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close image"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <!-- PREVIOUS -->
+
+        <button
+            class="lightbox-prev"
+            id="lightboxPrev"
+            aria-label="Previous image"
+        >
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+
+        <!-- IMAGE -->
+
+        <img
+            src=""
+            alt="Guntur Gongura dish"
+            class="lightbox-image"
+            id="lightboxImage"
+        >
+
+
+        <!-- NEXT -->
+
+        <button
+            class="lightbox-next"
+            id="lightboxNext"
+            aria-label="Next image"
+        >
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+
+        <!-- COUNTER -->
+
+        <div
+            class="lightbox-counter"
+            id="lightboxCounter"
+        >
+            1 / 32
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const galleryItems =
+                document.querySelectorAll(".gallery-item");
+
+            const lightbox =
+                document.getElementById("lightbox");
+
+            const lightboxImage =
+                document.getElementById("lightboxImage");
+
+            const lightboxClose =
+                document.getElementById("lightboxClose");
+
+            const lightboxPrev =
+                document.getElementById("lightboxPrev");
+
+            const lightboxNext =
+                document.getElementById("lightboxNext");
+
+            const lightboxCounter =
+                document.getElementById("lightboxCounter");
+
+
+            let currentIndex = 0;
+
+
+            /* =================================================
+               OPEN LIGHTBOX
+            ================================================== */
+
+            function openLightbox(index) {
+
+                currentIndex = index;
+
+                const image =
+                    galleryItems[currentIndex].querySelector("img");
+
+                lightboxImage.src = image.src;
+
+                lightboxImage.alt = image.alt;
+
+                lightboxCounter.textContent =
+                    `${currentIndex + 1} / ${galleryItems.length}`;
+
+                lightbox.classList.add("active");
+
+                lightbox.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+                document.body.style.overflow = "hidden";
+
+            }
+
+
+            /* =================================================
+               CLOSE LIGHTBOX
+            ================================================== */
+
+            function closeLightbox() {
+
+                lightbox.classList.remove("active");
+
+                lightbox.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+                document.body.style.overflow = "";
+
+            }
+
+
+            /* =================================================
+               SHOW IMAGE
+            ================================================== */
+
+            function showImage(index) {
+
+                if (index < 0) {
+                    index = galleryItems.length - 1;
+                }
+
+                if (index >= galleryItems.length) {
+                    index = 0;
+                }
+
+                currentIndex = index;
+
+                const image =
+                    galleryItems[currentIndex].querySelector("img");
+
+                lightboxImage.src = image.src;
+
+                lightboxImage.alt = image.alt;
+
+                lightboxCounter.textContent =
+                    `${currentIndex + 1} / ${galleryItems.length}`;
+
+            }
+
+
+            /* =================================================
+               GALLERY CLICK
+            ================================================== */
+
+            galleryItems.forEach((item, index) => {
+
+                item.addEventListener("click", () => {
+
+                    openLightbox(index);
+
+                });
+
+            });
+
+
+            /* =================================================
+               CLOSE BUTTON
+            ================================================== */
+
+            lightboxClose.addEventListener(
+                "click",
+                closeLightbox
+            );
+
+
+            /* =================================================
+               PREVIOUS BUTTON
+            ================================================== */
+
+            lightboxPrev.addEventListener(
+                "click",
+                () => {
+
+                    showImage(currentIndex - 1);
+
+                }
+            );
+
+
+            /* =================================================
+               NEXT BUTTON
+            ================================================== */
+
+            lightboxNext.addEventListener(
+                "click",
+                () => {
+
+                    showImage(currentIndex + 1);
+
+                }
+            );
+
+
+            /* =================================================
+               CLICK OUTSIDE IMAGE
+            ================================================== */
+
+            lightbox.addEventListener(
+                "click",
+                (event) => {
+
+                    if (event.target === lightbox) {
+                        closeLightbox();
+                    }
+
+                }
+            );
+
+
+            /* =================================================
+               KEYBOARD CONTROLS
+            ================================================== */
+
+            document.addEventListener(
+                "keydown",
+                (event) => {
+
+                    if (
+                        !lightbox.classList.contains("active")
+                    ) {
+                        return;
+                    }
+
+
+                    if (event.key === "Escape") {
+
+                        closeLightbox();
+
+                    }
+
+
+                    if (event.key === "ArrowLeft") {
+
+                        showImage(currentIndex - 1);
+
+                    }
+
+
+                    if (event.key === "ArrowRight") {
+
+                        showImage(currentIndex + 1);
+
+                    }
+
+                }
+            );
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

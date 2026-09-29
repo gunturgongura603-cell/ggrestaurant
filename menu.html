@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menu | Guntur Gongura</title>
+
+    <meta
+        name="description"
+        content="Explore the menu at Guntur Gongura, Egattur, Chennai. Discover Andhra and South Indian biryanis, starters, curries and more."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <style>
+
+        /* =========================================
+           PAGE
+        ========================================= */
+
+        body {
+            background: #faf6ef;
+            color: #0b1f3a;
+        }
+
+        .menu-page {
+            min-height: 100vh;
+            padding: 25px 20px 70px;
+        }
+
+
+        /* =========================================
+           TOP BAR
+        ========================================= */
+
+        .menu-top {
+            max-width: 1100px;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        /* =========================================
+           BACK TO HOME
+        ========================================= */
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 10px 16px;
+
+            border: 1px solid rgba(11, 31, 58, 0.15);
+            border-radius: 5px;
+
+            color: #0b1f3a;
+            text-decoration: none;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .back-home:hover {
+            background: #0b1f3a;
+            color: #ffffff;
+            transform: translateX(-3px);
+        }
+
+
+        /* =========================================
+           LOGO
+        ========================================= */
+
+        .menu-logo {
+            width: 185px;
+            height: auto;
+            display: block;
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .menu-intro {
+            max-width: 760px;
+            margin: 75px auto 45px;
+            text-align: center;
+        }
+
+        .menu-intro .small-title {
+            color: #8b1e1e;
+
+            font-size: 0.75rem;
+            font-weight: 600;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+        .menu-intro h1 {
+            margin: 0 0 15px;
+
+            color: #0b1f3a;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(2.5rem, 5vw, 4rem);
+
+            line-height: 1.1;
+        }
+
+        .menu-intro h1 span {
+            color: #8b1e1e;
+        }
+
+        .menu-intro p {
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: #666;
+
+            font-size: 0.95rem;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================
+           MENU CONTAINER
+        ========================================= */
+
+        .menu-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+
+        /* =========================================
+           CATEGORY
+        ========================================= */
+
+        .menu-category {
+            margin-bottom: 45px;
+        }
+
+        .category-heading {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            margin-bottom: 20px;
+        }
+
+        .category-heading h2 {
+            margin: 0;
+
+            color: #0b1f3a;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 1.9rem;
+        }
+
+        .category-heading .line {
+            flex: 1;
+
+            height: 1px;
+
+            background: #ddd3c4;
+        }
+
+        .category-heading i {
+            color: #d4af37;
+            font-size: 1rem;
+        }
+
+
+        /* =========================================
+           MENU ITEMS
+        ========================================= */
+
+        .menu-list {
+            background: #ffffff;
+
+            border: 1px solid #e5ddd1;
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 30px rgba(11, 31, 58, 0.04);
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 25px;
+
+            padding: 19px 24px;
+
+            border-bottom: 1px solid #eee7dd;
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item:hover {
+            background: #fcfaf6;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-name {
+            margin: 0 0 5px;
+
+            color: #0b1f3a;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .item-description {
+            margin: 0;
+
+            color: #777;
+
+            font-size: 0.78rem;
+
+            line-height: 1.6;
+        }
+
+        .item-price {
+            flex-shrink: 0;
+
+            color: #8b1e1e;
+
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           POPULAR ITEM
+        ========================================= */
+
+        .popular-item {
+            position: relative;
+        }
+
+        .popular-badge {
+            display: inline-block;
+
+            margin-left: 8px;
+            padding: 3px 7px;
+
+            border-radius: 3px;
+
+            background: #f3ead0;
+            color: #8b1e1e;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 0.58rem;
+            font-weight: 600;
+
+            letter-spacing: 0.5px;
+
+            vertical-align: middle;
+        }
+
+
+        /* =========================================
+           PRICE NOTE
+        ========================================= */
+
+        .price-note {
+            margin-top: 35px;
+
+            padding: 18px 22px;
+
+            border: 1px solid #e5ddd1;
+            border-left: 3px solid #d4af37;
+
+            background: #fffdf9;
+
+            color: #777;
+
+            font-size: 0.78rem;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================
+           RESTAURANT INFO
+        ========================================= */
+
+        .menu-info {
+            max-width: 1100px;
+
+            margin: 50px auto 0;
+
+            padding: 30px;
+
+            background: #0b1f3a;
+
+            border-radius: 8px;
+
+            color: #ffffff;
+
+            text-align: center;
+        }
+
+        .menu-info h3 {
+            margin: 0 0 10px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 1.7rem;
+        }
+
+        .menu-info p {
+            margin: 0;
+
+            color: rgba(255,255,255,0.8);
+
+            font-size: 0.83rem;
+
+            line-height: 1.8;
+        }
+
+        .menu-info a {
+            color: #d4af37;
+
+            text-decoration: none;
+
+            font-weight: 600;
+        }
+
+        .menu-info a:hover {
+            color: #ffffff;
+        }
+
+
+        /* =========================================
+           RESERVATION BUTTON
+        ========================================= */
+
+        .reserve-button {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            margin-top: 20px;
+
+            padding: 11px 20px;
+
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 5px;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            font-size: 0.82rem;
+            font-weight: 600;
+
+            transition: 0.3s ease;
+        }
+
+        .reserve-button:hover {
+            background: #ffffff;
+            color: #0b1f3a;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 650px) {
+
+            .menu-page {
+                padding: 18px 15px 50px;
+            }
+
+            .menu-logo {
+                width: 145px;
+            }
+
+            .back-home {
+                padding: 9px 12px;
+                font-size: 0.78rem;
+                white-space: nowrap;
+            }
+
+            .menu-intro {
+                margin: 55px auto 35px;
+            }
+
+            .menu-intro h1 {
+                font-size: 2.4rem;
+            }
+
+            .menu-intro p {
+                font-size: 0.85rem;
+            }
+
+            .category-heading h2 {
+                font-size: 1.5rem;
+            }
+
+            .category-heading {
+                gap: 10px;
+            }
+
+            .menu-item {
+                padding: 17px 16px;
+                gap: 15px;
+            }
+
+            .item-name {
+                font-size: 0.95rem;
+            }
+
+            .item-description {
+                font-size: 0.72rem;
+            }
+
+            .item-price {
+                font-size: 0.9rem;
+            }
+
+            .popular-badge {
+                display: block;
+                width: fit-content;
+                margin: 5px 0 0;
+            }
+
+            .menu-info {
+                padding: 25px 18px;
+            }
+        }
+
+
+        /* =========================================
+           SMALL MOBILE
+        ========================================= */
+
+        @media (max-width: 380px) {
+
+            .menu-logo {
+                width: 125px;
+            }
+
+            .back-home {
+                padding: 8px 10px;
+                font-size: 0.72rem;
+            }
+
+            .back-home i {
+                font-size: 0.7rem;
+            }
+
+            .menu-item {
+                padding: 15px 13px;
+            }
+
+            .item-name {
+                font-size: 0.9rem;
+            }
+
+            .item-price {
+                font-size: 0.85rem;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="menu-page">
+
+
+        <!-- =====================================
+             TOP BAR
+        ====================================== -->
+
+        <div class="menu-top">
+
+
+            <!-- BACK TO HOME - LEFT -->
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Back to Home
+
+            </a>
+
+
+            <!-- LOGO - RIGHT -->
+
+            <a href="index.html">
+
+                <img
+                    src="images/logo.png"
+                    alt="Guntur Gongura"
+                    class="menu-logo"
+                >
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- =====================================
+             INTRO
+        ====================================== -->
+
+        <section class="menu-intro">
+
+
+            <div class="small-title">
+                Our Menu
+            </div>
+
+
+            <h1>
+
+                Taste the
+                <span>Andhra Spirit</span>
+
+            </h1>
+
+
+            <p>
+
+                Explore the flavours of Andhra and South India
+                at Guntur Gongura. From aromatic biryanis to
+                delicious starters and traditional favourites,
+                there is something for everyone.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             MENU
+        ====================================== -->
+
+        <main class="menu-container">
+
+
+            <!-- =================================
+                 BIRYANI
+            ================================== -->
+
+            <section class="menu-category">
+
+
+                <div class="category-heading">
+
+                    <i class="fa-solid fa-bowl-food"></i>
+
+                    <h2>
+                        Biryani
+                    </h2>
+
+                    <div class="line"></div>
+
+                </div>
+
+
+                <div class="menu-list">
+
+
+                    <!-- PLAIN BIRYANI -->
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Plain Biryani
+                            </h3>
+
+                            <p class="item-description">
+                                Fragrant, flavourful biryani prepared with
+                                aromatic rice and traditional spices.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            ₹250
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EGG BIRYANI -->
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Egg Biryani
+                            </h3>
+
+                            <p class="item-description">
+                                Aromatic biryani served with egg and
+                                traditional spices.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            ₹279
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CHICKEN DUM BIRYANI -->
+
+                    <div class="menu-item popular-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+
+                                Chicken Dum Biryani
+                                <span class="popular-badge">
+                                    POPULAR
+                                </span>
+
+                            </h3>
+
+                            <p class="item-description">
+                                Dum-cooked chicken biryani served with
+                                2 pieces of chicken.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            ₹360
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- GONGURA CHICKEN BIRYANI -->
+
+                    <div class="menu-item popular-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+
+                                Gongura Chicken Biryani
+                                <span class="popular-badge">
+                                    SPECIAL
+                                </span>
+
+                            </h3>
+
+                            <p class="item-description">
+                                A signature combination of chicken biryani
+                                and the distinctive tangy flavour of gongura.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            ₹385
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CHICKEN LOLLIPOP BIRYANI -->
+
+                    <div class="menu-item popular-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+
+                                Chicken Lollipop Biryani
+                                <span class="popular-badge">
+                                    POPULAR
+                                </span>
+
+                            </h3>
+
+                            <p class="item-description">
+                                Flavourful biryani paired with crispy,
+                                juicy chicken lollipop pieces.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            ₹400
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ULAVACHARU CHICKEN BIRYANI -->
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Ulavacharu Chicken Biryani
+                            </h3>
+
+                            <p class="item-description">
+                                Chicken biryani with the rich and distinctive
+                                flavour of traditional ulavacharu.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            ₹387
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PANEER BIRYANI -->
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Paneer Biryani
+                            </h3>
+
+                            <p class="item-description">
+                                Aromatic biryani prepared with flavourful
+                                paneer and traditional spices.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            Price on request
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 STARTERS
+            ================================== -->
+
+            <section class="menu-category">
+
+
+                <div class="category-heading">
+
+                    <i class="fa-solid fa-fire-burner"></i>
+
+                    <h2>
+                        Starters
+                    </h2>
+
+                    <div class="line"></div>
+
+                </div>
+
+
+                <div class="menu-list">
+
+
+                    <!-- CHICKEN LOLLIPOP -->
+
+                    <div class="menu-item popular-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+
+                                Chicken Lollipop
+                                <span class="popular-badge">
+                                    POPULAR
+                                </span>
+
+                            </h3>
+
+                            <p class="item-description">
+                                Crispy and flavourful chicken starter,
+                                perfect to begin your meal.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            Price on request
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- KAJU PANEER TIKKA -->
+
+                    <div class="menu-item popular-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+
+                                Kaju Paneer Tikka
+                                <span class="popular-badge">
+                                    POPULAR
+                                </span>
+
+                            </h3>
+
+                            <p class="item-description">
+                                Soft paneer and cashew-based preparation
+                                with a rich, spiced flavour.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            Price on request
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CHICKEN FRY -->
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Chicken Fry
+                            </h3>
+
+                            <p class="item-description">
+                                Spiced chicken preparation with
+                                Andhra-inspired flavours.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            Price on request
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 ANDHRA SPECIALS
+            ================================== -->
+
+            <section class="menu-category">
+
+
+                <div class="category-heading">
+
+                    <i class="fa-solid fa-pepper-hot"></i>
+
+                    <h2>
+                        Andhra Specials
+                    </h2>
+
+                    <div class="line"></div>
+
+                </div>
+
+
+                <div class="menu-list">
+
+
+                    <!-- GONGURA -->
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Gongura Specialities
+                            </h3>
+
+                            <p class="item-description">
+                                Traditional Andhra dishes featuring
+                                the distinctive tangy flavour of gongura.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            Price on request
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- VEG SALAN -->
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Veg Salan
+                            </h3>
+
+                            <p class="item-description">
+                                A flavourful accompaniment that pairs
+                                beautifully with biryani.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            ₹90
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 VEG SPECIALS
+            ================================== -->
+
+            <section class="menu-category">
+
+
+                <div class="category-heading">
+
+                    <i class="fa-solid fa-leaf"></i>
+
+                    <h2>
+                        Vegetarian Favourites
+                    </h2>
+
+                    <div class="line"></div>
+
+                </div>
+
+
+                <div class="menu-list">
+
+
+                    <!-- PANEER -->
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Kaju Paneer Tikka
+                            </h3>
+
+                            <p class="item-description">
+                                Paneer preparation with rich cashew
+                                flavours and Indian spices.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            Price on request
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PANEER BIRYANI -->
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Paneer Biryani
+                            </h3>
+
+                            <p class="item-description">
+                                Aromatic rice layered with flavourful
+                                paneer and spices.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            Price on request
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 DESSERTS & DRINKS
+            ================================== -->
+
+            <section class="menu-category">
+
+
+                <div class="category-heading">
+
+                    <i class="fa-solid fa-glass-water"></i>
+
+                    <h2>
+                        Desserts & Beverages
+                    </h2>
+
+                    <div class="line"></div>
+
+                </div>
+
+
+                <div class="menu-list">
+
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Desserts
+                            </h3>
+
+                            <p class="item-description">
+                                A selection of sweet treats to finish
+                                your meal.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            Price on request
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Fresh Fruit Juice
+                            </h3>
+
+                            <p class="item-description">
+                                Refreshing fruit-based beverages.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            Price on request
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="menu-item">
+
+                        <div class="item-content">
+
+                            <h3 class="item-name">
+                                Milk Shakes
+                            </h3>
+
+                            <p class="item-description">
+                                Creamy and refreshing milk-based drinks.
+                            </p>
+
+                        </div>
+
+                        <div class="item-price">
+                            Price on request
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PRICE NOTE
+            ================================== -->
+
+            <div class="price-note">
+
+                <strong>Menu pricing:</strong>
+                Prices shown above are the prices available
+                from the menu information provided. Items for
+                which a specific price was not provided are
+                marked as <strong>Price on request</strong> rather
+                than using an unverified price.
+
+            </div>
+
+
+        </main>
+
+
+
+        <!-- =====================================
+             RESTAURANT INFORMATION
+        ====================================== -->
+
+        <section class="menu-info">
+
+
+            <h3>
+                Dine at Guntur Gongura
+            </h3>
+
+
+            <p>
+
+                N.No. 12, Old No. 34, Rajiv Gandhi Salai,
+                OMR, Egattur, Chennai, Tamil Nadu 600130
+
+                <br><br>
+
+                Open every day:
+                <strong>11:00 AM – 11:00 PM</strong>
+
+                <br>
+
+                Phone:
+                <a href="tel:+919047566665">
+                    +91 90475 66665
+                </a>
+
+            </p>
+
+
+            <a
+                href="reservation.html"
+                class="reserve-button"
+            >
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                Reserve a Table
+
+            </a>
+
+
+        </section>
+
+
+    </div>
+
+
+</body>
+
+</html>
