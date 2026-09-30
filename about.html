@@ -3,10 +3,6 @@
 
 <head>
 
-    <!-- =====================================================
-         BASIC INFORMATION
-    ====================================================== -->
-
     <meta charset="UTF-8">
 
     <meta
@@ -16,33 +12,31 @@
 
     <meta
         name="description"
-        content="Learn about Guntur Gongura, an Andhra and South Indian restaurant in Egattur, Chennai."
+        content="Learn about Guntur Gongura, an Andhra cuisine restaurant serving bold and authentic flavours in Chennai."
+    >
+
+    <meta
+        name="keywords"
+        content="Guntur Gongura, Andhra cuisine, South Indian restaurant, Chennai restaurant, Andhra food"
+    >
+
+    <meta
+        name="author"
+        content="Guntur Gongura"
     >
 
     <title>About | Guntur Gongura</title>
 
 
-    <!-- =====================================================
-         FONTS
-    ====================================================== -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- GOOGLE FONTS -->
 
     <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
 
-    <!-- =====================================================
-         ICONS
-    ====================================================== -->
+    <!-- FONT AWESOME -->
 
     <link
         rel="stylesheet"
@@ -50,67 +44,109 @@
     >
 
 
-    <!-- =====================================================
-         MAIN CSS
-    ====================================================== -->
+    <!-- MAIN CSS -->
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
 
-    <!-- =====================================================
-         PAGE CSS
-    ====================================================== -->
-
     <style>
 
         /* =====================================================
-           PAGE
+           ROOT
         ====================================================== */
 
-        .simple-page {
-            min-height: 100vh;
-            background: #faf6ef;
-            color: #0b1f3a;
+        :root {
+            --primary: #0b1f3a;
+            --secondary: #d4af37;
+            --white: #ffffff;
+            --light: #faf6ef;
+            --text: #222222;
+            --gray: #666666;
+            --border: #e5e5e5;
+            --red: #8b1e1e;
         }
 
 
         /* =====================================================
-           TOP BAR
+           RESET
         ====================================================== */
 
-        .simple-topbar {
-            max-width: 1100px;
-            margin: auto;
-            padding: 25px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ====================================================== */
+
+        .about-header {
+            width: 100%;
+            min-height: 84px;
+
+            padding: 15px 5%;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 20px;
+
+            background: #faf6ef;
+
+            /* NO DIVIDING LINE */
+            border: none;
         }
 
 
         /* =====================================================
-           BACK HOME BUTTON
+           BACK TO HOME
         ====================================================== */
 
         .back-home {
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
+
             gap: 9px;
 
             padding: 10px 17px;
 
+            background: #faf6ef;
+
             color: #0b1f3a;
-            background: #ffffff;
 
             border: 1.5px solid #0b1f3a;
+
             border-radius: 6px;
 
             text-decoration: none;
 
             font-size: 0.9rem;
+
             font-weight: 600;
 
             cursor: pointer;
@@ -122,9 +158,11 @@
                 transform 0.15s ease;
         }
 
+
         .back-home i {
             font-size: 0.85rem;
         }
+
 
         .back-home:hover {
             background: #0b1f3a;
@@ -132,24 +170,28 @@
             border-color: #0b1f3a;
         }
 
+
         .back-home:active {
             background: #0b1f3a;
             color: #ffffff;
             border-color: #0b1f3a;
-            transform: scale(0.97);
-        }
 
-        .back-home:focus-visible {
-            outline: 2px solid #d4af37;
-            outline-offset: 3px;
+            transform: scale(0.97);
         }
 
 
         /* =====================================================
-           HEADER LOGO
-           
-           SAME SIZE AS MENU PAGE
+           LOGO
         ====================================================== */
+
+        .logo-link {
+            margin-left: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
 
         .top-logo {
             width: 180px;
@@ -159,58 +201,59 @@
 
 
         /* =====================================================
-           MAIN CONTENT
+           PAGE INTRO
         ====================================================== */
 
-        .about-page-content {
-            width: min(900px, calc(100% - 40px));
-            margin: 0 auto;
-            padding: 25px 0 80px;
-        }
-
-
-        /* =====================================================
-           INTRO
-        ====================================================== */
-
-        .simple-intro {
+        .about-intro {
             text-align: center;
-            padding: 25px 0 55px;
-            border-bottom: 1px solid #ddd3c4;
+
+            padding: 75px 20px 50px;
+
+            max-width: 900px;
+
+            margin: auto;
         }
 
-        .simple-intro .label {
-            display: inline-block;
 
-            color: #8b1e1e;
+        .about-intro .eyebrow {
+            color: var(--red);
 
-            font-size: 0.75rem;
-            font-weight: 600;
+            font-size: 0.85rem;
 
-            letter-spacing: 3px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
             text-transform: uppercase;
+
+            margin-bottom: 10px;
         }
 
-        .simple-intro h1 {
+
+        .about-intro h1 {
             font-family: "Playfair Display", serif;
 
-            font-size: clamp(2.5rem, 6vw, 4.2rem);
+            font-size: clamp(2.4rem, 5vw, 4rem);
 
-            line-height: 1.1;
+            color: var(--primary);
 
-            margin: 12px 0 20px;
+            line-height: 1.2;
 
-            color: #0b1f3a;
+            margin-bottom: 15px;
         }
 
-        .simple-intro p {
-            max-width: 650px;
 
-            margin: 0 auto;
+        .about-intro h1 span {
+            color: var(--secondary);
+        }
 
-            color: #666;
 
-            line-height: 1.9;
+        .about-intro p {
+            max-width: 720px;
+
+            margin: auto;
+
+            color: var(--gray);
 
             font-size: 1rem;
         }
@@ -220,131 +263,598 @@
            STORY
         ====================================================== */
 
-        .story {
-            padding: 55px 0 0;
+        .story-section {
+            max-width: 1150px;
+
+            margin: 0 auto;
+
+            padding: 30px 5% 80px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 55px;
+
+            align-items: center;
         }
 
-        .story h2 {
+
+        .story-image {
+            width: 100%;
+
+            height: 430px;
+
+            object-fit: cover;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, 0.08);
+        }
+
+
+        .story-content .section-label {
+            color: var(--red);
+
+            font-size: 0.8rem;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+
+        .story-content h2 {
             font-family: "Playfair Display", serif;
 
-            font-size: 2.2rem;
+            color: var(--primary);
 
-            color: #0b1f3a;
+            font-size: 2.3rem;
+
+            line-height: 1.25;
 
             margin-bottom: 20px;
         }
 
-        .story p {
-            color: #5f5f5f;
 
-            line-height: 1.95;
+        .story-content p {
+            color: var(--gray);
 
-            margin-bottom: 18px;
+            margin-bottom: 16px;
 
-            font-size: 0.98rem;
+            font-size: 0.95rem;
         }
 
 
         /* =====================================================
-           HIGHLIGHTS
+           CUISINE SECTION
         ====================================================== */
 
-        .highlights {
+        .cuisine-section {
+            background: #ffffff;
+
+            padding: 80px 5%;
+        }
+
+
+        .section-heading {
+            max-width: 800px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+        }
+
+
+        .section-heading .section-label {
+            color: var(--red);
+
+            font-size: 0.8rem;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+
+        .section-heading h2 {
+            font-family: "Playfair Display", serif;
+
+            color: var(--primary);
+
+            font-size: 2.4rem;
+
+            margin-bottom: 12px;
+        }
+
+
+        .section-heading p {
+            color: var(--gray);
+
+            font-size: 0.95rem;
+        }
+
+
+        /* =====================================================
+           CUISINE CARDS
+        ====================================================== */
+
+        .cuisine-grid {
+            max-width: 1150px;
+
+            margin: auto;
+
             display: grid;
 
             grid-template-columns: repeat(3, 1fr);
 
-            gap: 18px;
-
-            margin-top: 45px;
+            gap: 22px;
         }
 
-        .highlight {
-            background: #ffffff;
 
-            border: 1px solid #e7dfd3;
+        .cuisine-card {
+            background: var(--light);
 
-            border-radius: 8px;
+            border: 1px solid var(--border);
 
-            padding: 25px;
+            border-radius: 9px;
+
+            padding: 30px 25px;
 
             text-align: center;
 
             transition:
                 transform 0.25s ease,
-                box-shadow 0.25s ease;
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
         }
 
-        .highlight:hover {
-            transform: translateY(-4px);
+
+        .cuisine-card:hover {
+            transform: translateY(-5px);
 
             box-shadow:
-                0 10px 25px rgba(11, 31, 58, 0.08);
+                0 12px 30px rgba(0, 0, 0, 0.08);
+
+            border-color: var(--secondary);
         }
 
-        .highlight i {
-            color: #8b1e1e;
 
-            font-size: 1.35rem;
+        .cuisine-icon {
+            width: 58px;
 
-            margin-bottom: 14px;
+            height: 58px;
+
+            margin: 0 auto 18px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: var(--primary);
+
+            color: var(--white);
+
+            font-size: 1.25rem;
         }
 
-        .highlight h3 {
-            font-size: 1rem;
+
+        .cuisine-card h3 {
+            font-family: "Playfair Display", serif;
+
+            color: var(--primary);
+
+            font-size: 1.25rem;
 
             margin-bottom: 8px;
-
-            color: #0b1f3a;
         }
 
-        .highlight p {
-            font-size: 0.82rem;
 
-            line-height: 1.6;
+        .cuisine-card p {
+            color: var(--gray);
 
-            margin: 0;
-
-            color: #777;
+            font-size: 0.88rem;
         }
 
 
         /* =====================================================
-           LOCATION
+           VALUES
         ====================================================== */
 
-        .location-note {
-            margin-top: 45px;
+        .values-section {
+            max-width: 1150px;
 
-            padding: 28px 25px;
+            margin: auto;
 
-            background: #0b1f3a;
+            padding: 80px 5%;
+        }
 
-            color: #ffffff;
+
+        .values-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .value-card {
+            background: #ffffff;
+
+            border: 1px solid var(--border);
 
             border-radius: 8px;
+
+            padding: 28px 20px;
 
             text-align: center;
         }
 
-        .location-note i {
-            color: #d4af37;
 
-            margin-right: 7px;
+        .value-card i {
+            color: var(--secondary);
+
+            font-size: 1.5rem;
+
+            margin-bottom: 15px;
         }
 
-        .location-note strong {
-            font-size: 1rem;
+
+        .value-card h3 {
+            color: var(--primary);
+
+            font-size: 1.05rem;
+
+            margin-bottom: 8px;
         }
 
-        .location-note p {
-            margin: 10px 0 0;
 
-            color: rgba(255,255,255,0.8);
+        .value-card p {
+            color: var(--gray);
 
-            font-size: 0.88rem;
+            font-size: 0.82rem;
+        }
 
-            line-height: 1.7;
+
+        /* =====================================================
+           EXPERIENCE BANNER
+        ====================================================== */
+
+        .experience-section {
+            min-height: 380px;
+
+            background:
+                linear-gradient(
+                    rgba(11, 31, 58, 0.75),
+                    rgba(11, 31, 58, 0.75)
+                ),
+                url("images/experience.jpg")
+                center / cover no-repeat;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 50px 20px;
+        }
+
+
+        .experience-content {
+            max-width: 750px;
+
+            color: #ffffff;
+        }
+
+
+        .experience-content .section-label {
+            color: var(--secondary);
+
+            font-size: 0.8rem;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+
+        .experience-content h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+            margin-bottom: 15px;
+        }
+
+
+        .experience-content p {
+            font-size: 0.95rem;
+
+            opacity: 0.92;
+
+            margin-bottom: 25px;
+        }
+
+
+        .experience-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 11px 22px;
+
+            background: #ffffff;
+
+            color: var(--primary);
+
+            border-radius: 5px;
+
+            font-size: 0.9rem;
+
+            font-weight: 600;
+
+            transition: 0.25s ease;
+        }
+
+
+        .experience-button:hover {
+            background: var(--secondary);
+
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           VISIT SECTION
+        ====================================================== */
+
+        .visit-section {
+            padding: 80px 5%;
+
+            background: var(--light);
+        }
+
+
+        .visit-container {
+            max-width: 1050px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+
+        .visit-card {
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 8px;
+
+            padding: 28px 22px;
+
+            text-align: center;
+        }
+
+
+        .visit-card i {
+            color: var(--primary);
+
+            font-size: 1.35rem;
+
+            margin-bottom: 12px;
+        }
+
+
+        .visit-card h3 {
+            font-family: "Playfair Display", serif;
+
+            color: var(--primary);
+
+            font-size: 1.15rem;
+
+            margin-bottom: 10px;
+        }
+
+
+        .visit-card p {
+            color: var(--gray);
+
+            font-size: 0.85rem;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .about-footer {
+            background: var(--primary);
+
+            color: #ffffff;
+
+            padding: 45px 5% 25px;
+        }
+
+
+        .footer-container {
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr 1fr;
+
+            gap: 45px;
+        }
+
+
+        .footer-logo {
+            width: 150px;
+
+            background: #ffffff;
+
+            padding: 8px;
+
+            border-radius: 5px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.75);
+
+            font-size: 0.85rem;
+
+            max-width: 350px;
+        }
+
+
+        .footer-column h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 1.15rem;
+
+            margin-bottom: 15px;
+        }
+
+
+        .footer-column a {
+            display: block;
+
+            color: rgba(255, 255, 255, 0.75);
+
+            font-size: 0.84rem;
+
+            margin-bottom: 8px;
+
+            transition: 0.2s ease;
+        }
+
+
+        .footer-column a:hover {
+            color: var(--secondary);
+        }
+
+
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.75);
+
+            font-size: 0.84rem;
+
+            margin-bottom: 8px;
+        }
+
+
+        .footer-bottom {
+            max-width: 1150px;
+
+            margin: 35px auto 0;
+
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+            text-align: center;
+
+            color: rgba(255, 255, 255, 0.6);
+
+            font-size: 0.78rem;
+        }
+
+
+        /* =====================================================
+           WHATSAPP
+        ====================================================== */
+
+        .whatsapp-button {
+            position: fixed;
+
+            right: 20px;
+            bottom: 20px;
+
+            width: 54px;
+            height: 54px;
+
+            border-radius: 50%;
+
+            background: #25d366;
+
+            color: #ffffff;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 1.55rem;
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.2);
+
+            z-index: 999;
+
+            transition: transform 0.25s ease;
+        }
+
+
+        .whatsapp-button:hover {
+            transform: scale(1.08);
+        }
+
+
+        /* =====================================================
+           TABLET
+        ====================================================== */
+
+        @media (max-width: 1000px) {
+
+            .cuisine-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .story-section {
+                gap: 35px;
+            }
+
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
         }
 
 
@@ -352,73 +862,59 @@
            MOBILE
         ====================================================== */
 
-        @media (max-width: 700px) {
+        @media (max-width: 768px) {
 
-            .simple-topbar {
-                padding: 18px;
-                gap: 15px;
+            .about-header {
+                min-height: 75px;
+
+                padding: 12px 5%;
+
+                border: none;
             }
 
-            /*
-               LOGO STAYS 150px
-               SAME AS MENU PAGE
-            */
 
             .top-logo {
-                width: 150px;
-                height: auto;
+                width: 130px;
             }
+
 
             .back-home {
                 padding: 9px 13px;
-                font-size: 0.8rem;
+
+                font-size: 0.82rem;
             }
 
-            .about-page-content {
-                width: min(100% - 32px, 900px);
-                padding: 20px 0 60px;
+
+            .about-intro {
+                padding: 55px 20px 35px;
             }
 
-            .simple-intro {
-                padding: 20px 0 40px;
-            }
 
-            .simple-intro h1 {
-                font-size: 2.5rem;
-            }
-
-            .simple-intro p {
-                font-size: 0.9rem;
-                line-height: 1.8;
-            }
-
-            .story {
-                padding-top: 40px;
-            }
-
-            .story h2 {
-                font-size: 1.9rem;
-            }
-
-            .story p {
-                font-size: 0.9rem;
-                line-height: 1.85;
-            }
-
-            .highlights {
+            .story-section {
                 grid-template-columns: 1fr;
-                gap: 14px;
-                margin-top: 35px;
+
+                padding-top: 20px;
+
+                padding-bottom: 60px;
             }
 
-            .highlight {
-                padding: 22px;
+
+            .story-image {
+                height: 320px;
             }
 
-            .location-note {
-                margin-top: 35px;
-                padding: 24px 18px;
+
+            .visit-container {
+                grid-template-columns: 1fr;
             }
+
+
+            .footer-container {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
         }
 
 
@@ -426,75 +922,81 @@
            SMALL MOBILE
         ====================================================== */
 
-        @media (max-width: 420px) {
+        @media (max-width: 600px) {
 
-            .simple-topbar {
-                padding: 15px;
+            .about-header {
+                padding: 12px 18px;
+
+                border: none;
             }
 
-            /*
-               LOGO STILL 150px
-            */
 
             .top-logo {
-                width: 150px;
-                height: auto;
-                display: block;
+                width: 115px;
             }
+
 
             .back-home {
                 padding: 8px 11px;
-                font-size: 0.75rem;
-                gap: 6px;
+
+                gap: 7px;
+
+                font-size: 0.78rem;
             }
 
-            .about-page-content {
-                width: calc(100% - 28px);
+
+            .about-intro h1 {
+                font-size: 2.2rem;
             }
 
-            .simple-intro h1 {
-                font-size: 2.15rem;
+
+            .about-intro p {
+                font-size: 0.88rem;
             }
 
-            .simple-intro .label {
-                font-size: 0.68rem;
-                letter-spacing: 2px;
+
+            .cuisine-section,
+            .values-section,
+            .visit-section {
+                padding-top: 60px;
+
+                padding-bottom: 60px;
             }
 
-            .story h2 {
-                font-size: 1.7rem;
-            }
-        }
 
-
-        /* =====================================================
-           VERY SMALL MOBILE
-        ====================================================== */
-
-        @media (max-width: 340px) {
-
-            .simple-topbar {
-                gap: 8px;
+            .cuisine-grid {
+                grid-template-columns: 1fr;
             }
 
-            /*
-               LOGO STILL 150px
-            */
 
-            .top-logo {
-                width: 150px;
-                height: auto;
-                display: block;
+            .values-grid {
+                grid-template-columns: 1fr;
             }
 
-            .back-home {
-                padding: 7px 9px;
-                font-size: 0.7rem;
+
+            .section-heading h2 {
+                font-size: 2rem;
             }
 
-            .simple-intro h1 {
-                font-size: 1.95rem;
+
+            .story-content h2 {
+                font-size: 2rem;
             }
+
+
+            .experience-section {
+                min-height: 330px;
+            }
+
+
+            .whatsapp-button {
+                width: 50px;
+                height: 50px;
+
+                right: 15px;
+                bottom: 15px;
+            }
+
         }
 
     </style>
@@ -502,202 +1004,618 @@
 </head>
 
 
-<body class="simple-page">
+<body>
 
 
     <!-- =====================================================
-         TOP BAR
+         HEADER
     ====================================================== -->
 
-    <header class="simple-topbar">
-
-        <!-- Back to Home -->
+    <header class="about-header">
 
         <a
             href="index.html"
             class="back-home"
         >
+
             <i class="fa-solid fa-arrow-left"></i>
+
             Back to Home
+
         </a>
 
 
-        <!-- Restaurant Logo -->
-
-        <img
-            src="images/logo.png"
-            alt="Guntur Gongura"
-            class="top-logo"
+        <a
+            href="index.html"
+            class="logo-link"
+            aria-label="Guntur Gongura Home"
         >
+
+            <img
+                src="images/logo.png"
+                alt="Guntur Gongura"
+                class="top-logo"
+            >
+
+        </a>
 
     </header>
 
 
 
     <!-- =====================================================
-         MAIN
+         INTRO
     ====================================================== -->
 
-    <main class="about-page-content">
+    <section class="about-intro">
 
+        <div class="eyebrow">
+            About Guntur Gongura
+        </div>
 
-        <!-- =================================================
-             INTRO
-        ================================================== -->
+        <h1>
+            The Taste of <span>Andhra</span>
+        </h1>
 
-        <section class="simple-intro">
+        <p>
+            Discover the rich, bold and traditional flavours of Andhra
+            cuisine at Guntur Gongura, bringing authentic South Indian
+            food to Chennai.
+        </p>
 
-            <span class="label">
-                About Us
-            </span>
-
-            <h1>
-                Guntur Gongura
-            </h1>
-
-            <p>
-                A place for bold Andhra flavours,
-                South Indian favourites and good food
-                shared with family and friends.
-            </p>
-
-        </section>
-
-
-
-        <!-- =================================================
-             STORY
-        ================================================== -->
-
-        <section class="story">
-
-            <h2>
-                Our Story
-            </h2>
-
-            <p>
-                Guntur Gongura brings the distinctive
-                flavours of Andhra and South Indian
-                cuisine to OMR, Egattur, Chennai.
-            </p>
-
-            <p>
-                Our menu brings together aromatic
-                biryanis, flavourful starters,
-                vegetarian favourites and traditional
-                Indian dishes.
-            </p>
-
-            <p>
-                The idea is simple — serve satisfying
-                food in a comfortable setting and give
-                guests a reason to come back.
-            </p>
-
-
-
-            <!-- =================================================
-                 HIGHLIGHTS
-            ================================================== -->
-
-            <div class="highlights">
-
-
-                <!-- Andhra -->
-
-                <div class="highlight">
-
-                    <i class="fa-solid fa-pepper-hot"></i>
-
-                    <h3>
-                        Andhra Flavours
-                    </h3>
-
-                    <p>
-                        Bold, aromatic and distinctive
-                        regional flavours.
-                    </p>
-
-                </div>
-
-
-
-                <!-- South Indian -->
-
-                <div class="highlight">
-
-                    <i class="fa-solid fa-utensils"></i>
-
-                    <h3>
-                        South Indian Cuisine
-                    </h3>
-
-                    <p>
-                        A menu with something for
-                        different tastes.
-                    </p>
-
-                </div>
-
-
-
-                <!-- Hospitality -->
-
-                <div class="highlight">
-
-                    <i class="fa-solid fa-heart"></i>
-
-                    <h3>
-                        Warm Hospitality
-                    </h3>
-
-                    <p>
-                        A relaxed place to enjoy
-                        a good meal.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 LOCATION
-            ================================================== -->
-
-            <div class="location-note">
-
-                <div>
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    <strong>
-                        Visit Guntur Gongura
-                    </strong>
-
-                </div>
-
-                <p>
-                    N.No. 12, Old No. 34,
-                    Rajiv Gandhi Salai,
-                    OMR, Egattur,
-                    Chennai, Tamil Nadu – 600130
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
+    </section>
 
 
 
     <!-- =====================================================
-         JAVASCRIPT
+         OUR STORY
     ====================================================== -->
 
-    <script src="js/script.js"></script>
+    <section class="story-section">
+
+        <div>
+
+            <img
+                src="images/restaurant-interior.jpeg"
+                alt="Guntur Gongura restaurant"
+                class="story-image"
+            >
+
+        </div>
+
+
+        <div class="story-content">
+
+            <div class="section-label">
+                Our Story
+            </div>
+
+            <h2>
+                A Taste of Andhra, Right Here in Chennai
+            </h2>
+
+            <p>
+                Guntur Gongura brings the rich and bold flavours of
+                Andhra cuisine to Chennai, with dishes inspired by
+                traditional South Indian cooking.
+            </p>
+
+            <p>
+                From aromatic biryanis and flavourful curries to
+                delicious starters, seafood and traditional favourites,
+                our menu celebrates the variety and character of
+                Andhra food.
+            </p>
+
+            <p>
+                Every dish is prepared to create a memorable dining
+                experience while keeping the spirit of Andhra flavours
+                at the heart of the meal.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OUR CUISINE
+    ====================================================== -->
+
+    <section class="cuisine-section">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Our Cuisine
+            </div>
+
+            <h2>
+                Bold Flavours. Andhra Soul.
+            </h2>
+
+            <p>
+                Explore a menu filled with traditional favourites,
+                delicious biryanis, seafood, vegetarian dishes and
+                comforting South Indian flavours.
+            </p>
+
+        </div>
+
+
+        <div class="cuisine-grid">
+
+
+            <div class="cuisine-card">
+
+                <div class="cuisine-icon">
+                    <i class="fa-solid fa-pepper-hot"></i>
+                </div>
+
+                <h3>
+                    Bold Flavours
+                </h3>
+
+                <p>
+                    Experience the distinctive spices and bold flavours
+                    that make Andhra cuisine special.
+                </p>
+
+            </div>
+
+
+            <div class="cuisine-card">
+
+                <div class="cuisine-icon">
+                    <i class="fa-solid fa-bowl-food"></i>
+                </div>
+
+                <h3>
+                    Biryani
+                </h3>
+
+                <p>
+                    Enjoy aromatic biryanis prepared with rich spices
+                    and traditional flavours.
+                </p>
+
+            </div>
+
+
+            <div class="cuisine-card">
+
+                <div class="cuisine-icon">
+                    <i class="fa-solid fa-fish"></i>
+                </div>
+
+                <h3>
+                    Seafood
+                </h3>
+
+                <p>
+                    Discover flavourful seafood dishes prepared
+                    with South Indian inspiration.
+                </p>
+
+            </div>
+
+
+            <div class="cuisine-card">
+
+                <div class="cuisine-icon">
+                    <i class="fa-solid fa-drumstick-bite"></i>
+                </div>
+
+                <h3>
+                    Non-Veg Specials
+                </h3>
+
+                <p>
+                    From chicken and mutton to seafood, enjoy
+                    a variety of satisfying specialities.
+                </p>
+
+            </div>
+
+
+            <div class="cuisine-card">
+
+                <div class="cuisine-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <h3>
+                    Vegetarian Choices
+                </h3>
+
+                <p>
+                    Enjoy delicious vegetarian dishes packed
+                    with traditional flavours.
+                </p>
+
+            </div>
+
+
+            <div class="cuisine-card">
+
+                <div class="cuisine-icon">
+                    <i class="fa-solid fa-ice-cream"></i>
+                </div>
+
+                <h3>
+                    Desserts & Drinks
+                </h3>
+
+                <p>
+                    Finish your meal with traditional desserts
+                    and refreshing drinks.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHAT WE VALUE
+    ====================================================== -->
+
+    <section class="values-section">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                What We Value
+            </div>
+
+            <h2>
+                Our Approach
+            </h2>
+
+            <p>
+                We focus on creating an enjoyable dining experience
+                built around flavour, variety and tradition.
+            </p>
+
+        </div>
+
+
+        <div class="values-grid">
+
+
+            <div class="value-card">
+
+                <i class="fa-solid fa-utensils"></i>
+
+                <h3>
+                    Tradition
+                </h3>
+
+                <p>
+                    Inspired by traditional Andhra and South Indian
+                    culinary flavours.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <i class="fa-solid fa-pepper-hot"></i>
+
+                <h3>
+                    Flavour
+                </h3>
+
+                <p>
+                    Rich spices and bold flavours are at the heart
+                    of our food.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <i class="fa-solid fa-table-list"></i>
+
+                <h3>
+                    Variety
+                </h3>
+
+                <p>
+                    A wide selection of vegetarian, non-vegetarian,
+                    seafood and biryani dishes.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <i class="fa-solid fa-heart"></i>
+
+                <h3>
+                    Experience
+                </h3>
+
+                <p>
+                    A welcoming place to enjoy delicious food
+                    with family and friends.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXPERIENCE BANNER
+    ====================================================== -->
+
+    <section class="experience-section">
+
+        <div class="experience-content">
+
+            <div class="section-label">
+                Guntur Gongura
+            </div>
+
+            <h2>
+                Bold Flavours. Andhra Soul.
+            </h2>
+
+            <p>
+                Come experience the flavours of Andhra and discover
+                something delicious from our menu.
+            </p>
+
+            <a
+                href="menu.html"
+                class="experience-button"
+            >
+
+                Explore Our Menu
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VISIT US
+    ====================================================== -->
+
+    <section class="visit-section">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Visit Us
+            </div>
+
+            <h2>
+                Come Dine With Us
+            </h2>
+
+            <p>
+                Find us in Egattur, OMR, Chennai.
+            </p>
+
+        </div>
+
+
+        <div class="visit-container">
+
+
+            <!-- LOCATION -->
+
+            <div class="visit-card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    N.No. 12, Old No. 34,<br>
+                    Rajiv Gandhi Salai, OMR,<br>
+                    Egattur, Chennai,<br>
+                    Tamil Nadu 600130
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="visit-card">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    +91 90475 66665
+                </p>
+
+                <br>
+
+                <p>
+                    Call us for enquiries
+                    and reservations.
+                </p>
+
+            </div>
+
+
+            <!-- HOURS -->
+
+            <div class="visit-card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>
+                    Opening Hours
+                </h3>
+
+                <p>
+                    Monday – Sunday
+                </p>
+
+                <p>
+                    11:00 AM – 11:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="about-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-about">
+
+                <img
+                    src="images/logo.png"
+                    alt="Guntur Gongura"
+                    class="footer-logo"
+                >
+
+                <p>
+                    Experience the rich, bold and traditional
+                    flavours of Andhra cuisine at Guntur Gongura.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="reviews.html">
+                    Reviews
+                </a>
+
+                <a href="reservation.html">
+                    Reservations
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Egattur, OMR, Chennai
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 90475 66665
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-clock"></i>
+                    11:00 AM – 11:00 PM
+                </p>
+
+                <a
+                    href="https://www.instagram.com/guntur_gongura_chennai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                    @guntur_gongura_chennai
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Guntur Gongura. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         WHATSAPP
+    ====================================================== -->
+
+    <a
+        href="https://wa.me/919047566665"
+        class="whatsapp-button"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Guntur Gongura on WhatsApp"
+    >
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
 
 </body>
 
