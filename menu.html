@@ -1,18 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-    <!-- =====================================================
-         BASIC INFORMATION
-    ====================================================== -->
-
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
         name="description"
@@ -24,10 +17,7 @@
         content="Guntur Gongura menu, Andhra food Chennai, biryani, South Indian food, Chennai restaurant"
     >
 
-    <meta
-        name="author"
-        content="Guntur Gongura"
-    >
+    <meta name="author" content="Guntur Gongura">
 
     <title>Menu | Guntur Gongura</title>
 
@@ -93,9 +83,11 @@
             width: min(1200px, calc(100% - 40px));
             margin: auto;
             padding: 20px 0;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 20px;
         }
 
@@ -108,15 +100,22 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
+
             gap: 9px;
+
             padding: 10px 17px;
+
             background: #ffffff;
             color: #0b1f3a;
+
             border: 1.5px solid #0b1f3a;
             border-radius: 6px;
+
             text-decoration: none;
+
             font-size: 0.9rem;
             font-weight: 600;
+
             cursor: pointer;
 
             transition:
@@ -126,11 +125,9 @@
                 transform 0.15s ease;
         }
 
-
         .back-home i {
             font-size: 0.85rem;
         }
-
 
         .back-home:hover {
             background: #0b1f3a;
@@ -138,14 +135,12 @@
             border-color: #0b1f3a;
         }
 
-
         .back-home:active {
             background: #0b1f3a;
             color: #ffffff;
             border-color: #0b1f3a;
             transform: scale(0.97);
         }
-
 
         .back-home:focus-visible {
             outline: 2px solid #d4af37;
@@ -159,11 +154,11 @@
 
         .logo-link {
             margin-left: auto;
+
             display: flex;
             align-items: center;
             justify-content: center;
         }
-
 
         .top-logo {
             width: 180px;
@@ -181,30 +176,37 @@
             padding: 35px 20px 30px;
         }
 
-
         .menu-heading .label {
             display: inline-block;
+
             color: #8b1e1e;
+
             font-size: 0.75rem;
             font-weight: 600;
+
             letter-spacing: 3px;
             text-transform: uppercase;
         }
 
-
         .menu-heading h1 {
             font-family: "Playfair Display", serif;
+
             color: #0b1f3a;
+
             font-size: clamp(2.6rem, 6vw, 4.2rem);
+
             line-height: 1.1;
+
             margin: 12px 0 16px;
         }
 
-
         .menu-heading p {
             max-width: 680px;
+
             margin: auto;
+
             color: #666;
+
             font-size: 0.96rem;
             line-height: 1.8;
         }
@@ -217,26 +219,32 @@
         .order-link-wrap {
             display: flex;
             justify-content: center;
+
             margin-top: 22px;
         }
-
 
         .orders-link {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+
             gap: 8px;
+
             padding: 10px 18px;
+
             background: #0b1f3a;
             color: #ffffff;
+
             border: 1px solid #0b1f3a;
             border-radius: 6px;
+
             font-size: 0.85rem;
             font-weight: 600;
+
             text-decoration: none;
+
             transition: 0.25s ease;
         }
-
 
         .orders-link:hover {
             background: #ffffff;
@@ -250,41 +258,51 @@
 
         .search-area {
             width: min(700px, calc(100% - 40px));
+
             margin: 0 auto 40px;
         }
-
 
         .search-box {
             position: relative;
         }
 
-
         .search-box i {
             position: absolute;
+
             left: 18px;
             top: 50%;
+
             transform: translateY(-50%);
+
             color: #666;
         }
 
-
         #menuSearch {
             width: 100%;
+
             padding: 14px 20px 14px 48px;
+
             border: 1px solid #ddd4c8;
             border-radius: 7px;
+
             background: #ffffff;
             color: #222;
+
             font-family: "Poppins", sans-serif;
             font-size: 0.9rem;
-            outline: none;
-            transition: 0.25s ease;
-        }
 
+            outline: none;
+
+            transition: 0.25s ease;
+
+            box-sizing: border-box;
+        }
 
         #menuSearch:focus {
             border-color: #0b1f3a;
-            box-shadow: 0 0 0 3px rgba(11, 31, 58, 0.08);
+
+            box-shadow:
+                0 0 0 3px rgba(11, 31, 58, 0.08);
         }
 
 
@@ -294,7 +312,9 @@
 
         .menu-content {
             width: min(1200px, calc(100% - 40px));
+
             margin: auto;
+
             padding-bottom: 90px;
         }
 
@@ -307,31 +327,39 @@
             margin-bottom: 60px;
         }
 
-
         .section-heading {
             text-align: center;
+
             margin-bottom: 30px;
         }
 
-
         .section-heading h2 {
             display: inline-block;
+
             position: relative;
+
             font-family: "Playfair Display", serif;
+
             color: #0b1f3a;
+
             font-size: 2rem;
+
             padding-bottom: 12px;
         }
 
-
         .section-heading h2::after {
             content: "";
+
             position: absolute;
+
             width: 60px;
             height: 3px;
+
             background: #d4af37;
+
             bottom: 0;
             left: 50%;
+
             transform: translateX(-50%);
         }
 
@@ -344,13 +372,17 @@
             margin-bottom: 35px;
         }
 
-
         .sub-category h3 {
             font-family: "Playfair Display", serif;
+
             color: #8b1e1e;
+
             font-size: 1.35rem;
+
             border-left: 4px solid #d4af37;
+
             padding-left: 11px;
+
             margin-bottom: 18px;
         }
 
@@ -361,7 +393,9 @@
 
         .menu-grid {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 16px;
         }
 
@@ -372,21 +406,29 @@
 
         .menu-item {
             background: #ffffff;
+
             border: 1px solid #e5ddd1;
+
             border-radius: 7px;
+
             padding: 16px;
-            box-shadow: 0 4px 15px rgba(11, 31, 58, 0.04);
+
+            box-shadow:
+                0 4px 15px rgba(11, 31, 58, 0.04);
+
             transition:
                 transform 0.25s ease,
                 box-shadow 0.25s ease,
                 border-color 0.25s ease;
         }
 
-
         .menu-item:hover {
             transform: translateY(-3px);
+
             border-color: #d4af37;
-            box-shadow: 0 10px 25px rgba(11, 31, 58, 0.09);
+
+            box-shadow:
+                0 10px 25px rgba(11, 31, 58, 0.09);
         }
 
 
@@ -396,18 +438,24 @@
 
         .item-top {
             display: flex;
+
             align-items: center;
             justify-content: space-between;
+
             gap: 10px;
         }
 
-
         .item-name {
             flex: 1;
+
             color: #0b1f3a;
+
             font-size: 0.88rem;
             font-weight: 600;
+
             line-height: 1.45;
+
+            margin: 0;
         }
 
 
@@ -417,28 +465,35 @@
 
         .add-order {
             flex-shrink: 0;
+
             padding: 7px 9px;
+
             background: #ffffff;
             color: #0b1f3a;
+
             border: 1px solid #0b1f3a;
+
             border-radius: 5px;
+
             font-family: "Poppins", sans-serif;
+
             font-size: 0.66rem;
             font-weight: 600;
+
             cursor: pointer;
+
             transition: 0.25s ease;
         }
-
 
         .add-order:hover {
             background: #0b1f3a;
             color: #ffffff;
         }
 
-
         .add-order.added {
             background: #0b1f3a;
             color: #ffffff;
+
             border-color: #0b1f3a;
         }
 
@@ -449,34 +504,44 @@
 
         .price {
             margin-top: 9px;
+
             color: #8b1e1e;
+
             font-size: 0.92rem;
+
             font-weight: 600;
         }
 
 
         /* =====================================================
-           SEARCH NO RESULTS
+           NO RESULTS
         ====================================================== */
 
         #noResults {
             display: none;
+
             text-align: center;
+
             padding: 60px 20px;
+
             color: #666;
         }
 
-
         #noResults i {
+            display: block;
+
             font-size: 2.5rem;
+
             color: #8b1e1e;
+
             margin-bottom: 15px;
         }
 
-
         #noResults h3 {
             color: #0b1f3a;
+
             font-family: "Playfair Display", serif;
+
             margin-bottom: 7px;
         }
 
@@ -487,63 +552,79 @@
 
         .menu-footer {
             background: #0b1f3a;
+
             color: #ffffff;
+
             padding: 45px 20px 25px;
         }
 
-
         .footer-inner {
             width: min(1200px, 100%);
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: 1.4fr 1fr 1fr;
+
             gap: 40px;
         }
 
-
         .footer-logo {
             width: 150px;
+
             height: auto;
+
             margin-bottom: 15px;
         }
 
-
         .footer-column h3 {
             font-family: "Playfair Display", serif;
+
             color: #d4af37;
+
             margin-bottom: 14px;
+
             font-size: 1.2rem;
         }
-
 
         .footer-column p,
         .footer-column a {
             color: #ddd;
+
             font-size: 0.82rem;
+
             line-height: 1.8;
         }
 
-
         .footer-column a {
             display: block;
+
             text-decoration: none;
+
             margin-bottom: 4px;
+
             transition: 0.2s ease;
         }
-
 
         .footer-column a:hover {
             color: #d4af37;
         }
 
-
         .footer-bottom {
             width: min(1200px, 100%);
+
             margin: 30px auto 0;
+
             padding-top: 18px;
-            border-top: 1px solid rgba(255,255,255,0.15);
+
+            border-top:
+                1px solid rgba(255,255,255,0.15);
+
             text-align: center;
+
             color: #aaa;
+
             font-size: 0.72rem;
         }
 
@@ -554,23 +635,34 @@
 
         .whatsapp {
             position: fixed;
+
             right: 22px;
             bottom: 22px;
+
             width: 52px;
             height: 52px;
+
             border-radius: 50%;
+
             background: #25D366;
             color: #ffffff;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             font-size: 25px;
+
             text-decoration: none;
+
             z-index: 1000;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.2);
+
             transition: 0.25s ease;
         }
-
 
         .whatsapp:hover {
             transform: translateY(-4px);
@@ -590,7 +682,6 @@
             .footer-inner {
                 grid-template-columns: repeat(2, 1fr);
             }
-
         }
 
 
@@ -602,75 +693,67 @@
 
             .menu-topbar {
                 width: calc(100% - 32px);
+
                 padding: 18px 0;
             }
-
 
             .top-logo {
                 width: 150px;
             }
 
-
             .back-home {
                 padding: 9px 13px;
+
                 font-size: 0.8rem;
             }
-
 
             .menu-heading {
                 padding: 25px 18px 25px;
             }
 
-
             .menu-heading h1 {
                 font-size: 2.7rem;
             }
-
 
             .menu-heading p {
                 font-size: 0.88rem;
             }
 
-
             .search-area {
                 width: calc(100% - 32px);
             }
-
 
             .menu-content {
                 width: calc(100% - 32px);
             }
 
-
             .menu-grid {
                 grid-template-columns: 1fr;
             }
-
 
             .section-heading h2 {
                 font-size: 1.8rem;
             }
 
-
             .sub-category h3 {
                 font-size: 1.2rem;
             }
 
-
             .footer-inner {
                 grid-template-columns: 1fr;
+
                 gap: 30px;
             }
-
 
             .whatsapp {
                 width: 48px;
                 height: 48px;
+
                 right: 15px;
                 bottom: 15px;
+
                 font-size: 22px;
             }
-
         }
 
 
@@ -682,37 +765,35 @@
 
             .menu-topbar {
                 width: calc(100% - 28px);
+
                 gap: 10px;
             }
-
 
             .top-logo {
                 width: 145px;
             }
 
-
             .back-home {
                 padding: 8px 11px;
+
                 font-size: 0.75rem;
+
                 gap: 6px;
             }
-
 
             .menu-heading h1 {
                 font-size: 2.3rem;
             }
 
-
             .item-top {
                 align-items: flex-start;
             }
 
-
             .add-order {
                 padding: 6px 8px;
+
                 font-size: 0.6rem;
             }
-
         }
 
 
@@ -726,18 +807,16 @@
                 display: none;
             }
 
-
             .back-home {
                 width: 38px;
                 height: 38px;
+
                 padding: 0;
             }
-
 
             .top-logo {
                 width: 140px;
             }
-
         }
 
     </style>
@@ -754,8 +833,6 @@
 
     <header class="menu-topbar">
 
-        <!-- BACK TO HOME -->
-
         <a
             href="index.html"
             class="back-home"
@@ -764,8 +841,6 @@
             <span>Back to Home</span>
         </a>
 
-
-        <!-- RESTAURANT LOGO -->
 
         <a
             href="index.html"
@@ -801,7 +876,6 @@
             Explore the bold, traditional and delicious flavours
             served at Guntur Gongura.
         </p>
-
 
         <div class="order-link-wrap">
 
@@ -846,11 +920,11 @@
          MENU CONTENT
     ====================================================== -->
 
-    <main class="menu-content" id="menuContent">
+    <main
+        class="menu-content"
+        id="menuContent"
+    ></main>
 
-        <!-- MENU WILL BE GENERATED HERE -->
-
-    </main>
 
 
     <!-- =====================================================
@@ -909,33 +983,19 @@
                     Quick Links
                 </h3>
 
-                <a href="index.html">
-                    Home
-                </a>
+                <a href="index.html">Home</a>
 
-                <a href="about.html">
-                    About
-                </a>
+                <a href="about.html">About</a>
 
-                <a href="menu.html">
-                    Menu
-                </a>
+                <a href="menu.html">Menu</a>
 
-                <a href="gallery.html">
-                    Gallery
-                </a>
+                <a href="gallery.html">Gallery</a>
 
-                <a href="reviews.html">
-                    Reviews
-                </a>
+                <a href="reviews.html">Reviews</a>
 
-                <a href="reservation.html">
-                    Reservations
-                </a>
+                <a href="reservation.html">Reservations</a>
 
-                <a href="contact.html">
-                    Contact
-                </a>
+                <a href="contact.html">Contact</a>
 
             </div>
 
@@ -1017,68 +1077,74 @@
 
             const menuData = [
 
+                /* =================================================
+                   BIRYANI
+                ================================================= */
+
                 {
                     category: "Biryani",
+
                     subcategories: [
 
                         {
                             name: "Biryani Veg",
+
                             items: [
-                                ["Veg Biryani", 189],
-                                ["Gongura Veg Biryani", 209],
-                                ["Ulavacharu Veg Biryani", 209],
-                                ["Mushroom Biryani", 209],
-                                ["Paneer Biryani", 219],
-                                ["Baby Corn Biryani", 209],
-                                ["Cashewnut Biryani", 229],
-                                ["Gongura Paneer Biryani", 219],
-                                ["Ulavacharu Paneer Biryani", 219]
+                                ["Veg Biryani", 229],
+                                ["Gongura Veg Biryani", 239],
+                                ["Ulavacharu Veg Biryani", 249],
+                                ["Mushroom Biryani", 249],
+                                ["Paneer Biryani", 249],
+                                ["Baby Corn Biryani", 239],
+                                ["Cashewnut Biryani", 249],
+                                ["Gongura Paneer Biryani", 259],
+                                ["Ulavacharu Paneer Biryani", 269]
                             ]
                         },
 
+                        
+
                         {
                             name: "Special Biryani's",
+
                             items: [
                                 ["Chicken Tikka Biryani", 359],
                                 ["Lahori Chicken Biryani", 339],
                                 ["Palnadu Mutton Biryani", 399],
-                                ["Guntur Spl Mutton Biryani", 409],
+                                ["Kakinada Biryani", 390],
                                 ["Gongura Spl Chicken Biryani", 359],
-                                ["Gongura Spl Mutton Biryani", 399],
-                                ["Ulavacharu Special Chicken Biryani", 359],
-                                ["Potlam Chicken Biryani", 379],
-                                ["Potlam Mutton Biryani", 400]
+                                ["Ulavacharu Special Chicken Biryani", 359]
                             ]
                         },
 
                         {
                             name: "Biryani Non Veg",
+
                             items: [
-                                ["Plain Biryani", 175],
-                                ["Egg Biryani", 199],
-                                ["Chicken Dum Biryani", 239],
-                                ["Chicken Fry Biryani", 248],
-                                ["Spl Chicken Biryani", 269],
-                                ["Guntur Spl Chicken Biryani", 319],
-                                ["Gongura Chicken Biryani", 259],
-                                ["Chicken Lollipop Biryani", 279],
-                                ["Ulavacharu Chicken Biryani", 289],
-                                ["Natukodi Biryani", 289],
-                                ["Palnadu Chicken Biryani", 309],
-                                ["Mughlai Chicken Biryani", 299],
-                                ["Avakai Chicken Biryani", 299],
-                                ["Mutton Dum Biryani", 340],
-                                ["Mutton Kheema Biryani", 340],
-                                ["Mutton Fry Biryani", 360],
-                                ["Gongura Mutton Biryani", 380],
-                                ["Spl Mutton Biryani", 380],
-                                ["Mughalai Mutton Biryani", 380],
-                                ["Prawn Biryani", 330],
-                                ["Gongura Prawn Biryani", 350],
-                                ["Fish Biryani", 310],
-                                ["Mixed Biryani", 350],
-                                ["Egg Fry Biryani", 239],
-                                ["Chicken Wings Biryani", 329]
+                                ["Plain Biryani", 205],
+                                ["Egg Biryani", 250],
+                                ["Chicken Dum Biryani", 309],
+                                ["Chicken Fry Biryani", 329],
+                                ["Spl Chicken Biryani", 339],
+                                ["Guntur Spl Chicken Biryani", 349],
+                                ["Guntur Spl Mutton Biryani", 430],
+                                ["Gongura Chicken Biryani", 319],
+                                ["Chicken Lollipop Biryani", 329],
+                                ["Ulavacharu Chicken Biryani", 329],
+                                ["Natukodi Biryani", 329],
+                                ["Palnadu Chicken Biryani", 349],
+                                ["Palnadu Mutton Biryani", 430],
+                                ["Mughlai Chicken Biryani", 329],
+                                ["Mutton Dum Biryani", 379],
+                                ["Mutton Kheema Biryani", 399],
+                                ["Mutton Fry Biryani", 399],
+                                ["Gongura Mutton Biryani", 399],
+                                ["Spl Mutton Biryani", 410],
+                                ["Mughalai Mutton Biryani", 429],
+                                ["Prawn Biryani", 379],
+                                ["Gongura Prawn Biryani", 399],
+                                ["Fish Biryani", 359],
+                                ["Egg Fry Biryani", 299]
                             ]
                         }
 
@@ -1086,23 +1152,30 @@
                 },
 
 
+                /* =================================================
+                   SOUPS & STARTERS
+                ================================================= */
+
                 {
                     category: "Soups & Starters",
+
                     subcategories: [
 
                         {
                             name: "Soups Veg",
+
                             items: [
                                 ["Sweet Corn Soup", 119],
                                 ["Mushroom Soup", 129],
                                 ["Lemon Coriander Soup", 129],
-                                ["Manchow soup", 129],
+                                ["Manchow Soup", 129],
                                 ["Veg Hot & Sour Soup", 129]
                             ]
                         },
 
                         {
                             name: "Soups Non Veg",
+
                             items: [
                                 ["Sweet Corn Chicken Soup", 149],
                                 ["Lemon Coriander Chicken Soup", 149],
@@ -1113,48 +1186,50 @@
 
                         {
                             name: "Starters Veg",
+
                             items: [
-                                ["Mushroom 65 Hyderabad", 199],
-                                ["Paneer 65 Hyderabad", 199],
-                                ["Veg manchurian", 199],
-                                ["Gobi manchurian", 199],
-                                ["Paneer manchurian", 209],
-                                ["Baby corn manchurian", 199],
-                                ["Mushroom manchurian", 199],
-                                ["Chilly gobi", 199],
-                                ["Chilly mushroom", 199],
-                                ["Chilly babycorn", 199],
-                                ["Chilly paneer", 209],
-                                ["Golden fry baby corn", 209],
-                                ["Crispy mushroom", 199],
-                                ["Babycorn pepper salt", 199],
-                                ["Mushroom peppersalt", 199],
-                                ["Crispy corn", 199],
-                                ["Panner Majestic", 219]
+                                ["Mushroom 65 Hyderabad", 240],
+                                ["Paneer 65 Hyderabad", 240],
+                                ["Veg Manchurian", 240],
+                                ["Gobi Manchurian", 240],
+                                ["Paneer Manchurian", 240],
+                                ["Baby Corn Manchurian", 230],
+                                ["Mushroom Manchurian", 230],
+                                ["Chilly Gobi", 230],
+                                ["Chilly Mushroom", 240],
+                                ["Chilly Babycorn", 230],
+                                ["Chilly Paneer", 240],
+                                ["Golden Fry Baby Corn", 240],
+                                ["Crispy Mushroom", 240],
+                                ["Babycorn Pepper Salt", 240],
+                                ["Mushroom Pepper Salt", 240],
+                                ["Crispy Corn", 240],
+                                ["Panner Majestic", 250]
                             ]
                         },
 
                         {
                             name: "Chicken Starters",
+
                             items: [
-                                ["Chilly Chicken", 209],
-                                ["Chicken 65 Hyderabad", 209],
-                                ["Chicken 555", 219],
-                                ["Chicken Manchurian", 209],
-                                ["Chicken Salt & pepper", 219],
-                                ["Chicken Dry Pepper", 239],
-                                ["Pepper Chicken(roast)", 229],
-                                ["Dragon Chicken", 229],
-                                ["Schezwan Chicken", 219],
-                                ["Shanghai Chicken", 229],
-                                ["Lemon Chicken", 229],
-                                ["Thai Pai Chicken", 229],
-                                ["Chicken Majestic", 239],
-                                ["Chicken Lollypop (Saucy-5pc)", 239],
-                                ["Chicken Drumstick Dry-5pc", 239],
-                                ["Crispy Chicken", 239],
-                                ["Honey Chicken", 239],
-                                ["RR Chicken", 249]
+                                ["Chilly Chicken", 265],
+                                ["Chicken 65 Hyderabad", 265],
+                                ["Chicken 555", 260],
+                                ["Chicken Manchurian", 250],
+                                ["Chicken Salt & Pepper", 260],
+                                ["Chicken Dry Pepper", 260],
+                                ["Pepper Chicken (Roast)", 260],
+                                ["Dragon Chicken", 270],
+                                ["Schezwan Chicken", 270],
+                                ["Shanghai Chicken", 260],
+                                ["Lemon Chicken", 250],
+                                ["Thai Pai Chicken", 260],
+                                ["Chicken Majestic", 260],
+                                ["Chicken Lollypop (Saucy-5pc)", 280],
+                                ["Chicken Drumstick Dry-5pc", 270],
+                                ["Crispy Chicken", 280],
+                                ["Honey Chicken", 280],
+                                ["RR Chicken", 280]
                             ]
                         }
 
@@ -1162,68 +1237,43 @@
                 },
 
 
+                /* =================================================
+                   FRIED RICE
+                ================================================= */
+
                 {
-                    category: "Fried Rice & Noodles",
+                    category: "Fried Rice",
+
                     subcategories: [
 
                         {
                             name: "Fried Rice Non Veg",
-                            items: [
-                                ["Egg Fried Rice", 189],
-                                ["Schezwan Egg Fried Rice", 199],
-                                ["Chicken Fried Rice", 209],
-                                ["Schezwan Chicken Fried Rice", 219],
-                                ["Mutton Fried Rice", 239],
-                                ["Schezwan Mutton Fried Rice", 249],
-                                ["Prawn Fried Rice", 229],
-                                ["Schezwan Prawn Fried Rice", 249],
-                                ["Spl Chicken Fried Rice", 289],
-                                ["Non Veg Mixed Fried Rice", 289]
-                            ]
-                        },
 
-                        {
-                            name: "Noodles Non Veg",
                             items: [
-                                ["Egg Noodles", 179],
-                                ["Schezwan Egg Noodles", 189],
-                                ["Chicken Noodles", 199],
-                                ["Schezwan Chicken Noodles", 209],
-                                ["Mutton Noodles", 230],
-                                ["Schezwan Mutton Noodles", 239],
-                                ["Prawn Noodles", 230],
-                                ["Schezwan Prawn Noodles", 239],
-                                ["Non Veg Mixed Noodles", 269]
+                                ["Egg Fried Rice", 239],
+                                ["Schezwan Egg Fried Rice", 259],
+                                ["Chicken Fried Rice", 259],
+                                ["Schezwan Chicken Fried Rice", 279],
+                                ["Mutton Fried Rice", 299],
+                                ["Schezwan Mutton Fried Rice", 329],
+                                ["Prawn Fried Rice", 329],
+                                ["Schezwan Prawn Fried Rice", 349]
                             ]
                         },
 
                         {
                             name: "Fried Rice Veg",
-                            items: [
-                                ["Veg Fried Rice", 169],
-                                ["Schezwan Veg Fried Rice", 189],
-                                ["Paneer Fried Rice", 199],
-                                ["Schezwan Paneer Fried Rice", 209],
-                                ["Mushroom Fried Rice", 189],
-                                ["Schezwan Mushroom Fried Rice", 199],
-                                ["Gobi Fried Rice", 189],
-                                ["Schezwan Gobi Fried Rice", 199],
-                                ["Manchurian Fried Rice", 199],
-                                ["Veg Mixed Fried Rice", 209]
-                            ]
-                        },
 
-                        {
-                            name: "Noodles Veg",
                             items: [
-                                ["Veg Noodles", 169],
-                                ["Paneer Noodles", 189],
-                                ["Gobi Noodles", 179],
-                                ["Mushroom Noodles", 179],
-                                ["Schezwan Veg Noodles", 179],
-                                ["Schezwan Gobi Noodles", 189],
-                                ["Schezwan Mushroom Noodles", 189],
-                                ["Schezwan Paneer Noodles", 199]
+                                ["Veg Fried Rice", 299],
+                                ["Schezwan Veg Fried Rice", 249],
+                                ["Paneer Fried Rice", 249],
+                                ["Schezwan Paneer Fried Rice", 269],
+                                ["Mushroom Fried Rice", 229],
+                                ["Schezwan Mushroom Fried Rice", 259],
+                                ["Gobi Fried Rice", 239],
+                                ["Schezwan Gobi Fried Rice", 249],
+                                ["Manchurian Fried Rice", 259]
                             ]
                         }
 
@@ -1231,76 +1281,80 @@
                 },
 
 
+                /* =================================================
+                   INDIAN GRAVIES
+                ================================================= */
+
                 {
                     category: "Indian Gravies",
+
                     subcategories: [
 
                         {
                             name: "Indian Gravy Non Veg",
+
                             items: [
-                                ["Chicken Masala", 239],
-                                ["Boneless Chicken Curry", 249],
-                                ["Butter Chicken", 249],
-                                ["Kadai Chicken", 249],
-                                ["Achari Chicken", 249],
-                                ["Punjabi Chicken", 259],
-                                ["Chicken Afghani", 249],
-                                ["Chicken Maharani", 259],
-                                ["Kadai Mutton", 319],
-                                ["Prawn Curry", 289],
-                                ["Kadai Prawn", 289],
-                                ["Butter Prawn", 309],
-                                ["Fish Curry", 269],
-                                ["Kadai Fish", 279]
+                                ["Chicken Masala", 269],
+                                ["Boneless Chicken Curry", 279],
+                                ["Butter Chicken", 279],
+                                ["Kadai Chicken", 279],
+                                ["Achari Chicken", 279],
+                                ["Kadai Mutton", 349],
+                                ["Prawn Curry", 339],
+                                ["Kadai Prawn", 339],
+                                ["Butter Prawn", 349],
+                                ["Kadai Fish", 329]
                             ]
                         },
 
                         {
                             name: "Indian Gravy Veg",
+
                             items: [
-                                ["Matar Masala", 199],
-                                ["Aloo Gobi Masala", 199],
-                                ["Aloo Gobi Mutter Masala", 209],
-                                ["Gobi Masala", 199],
-                                ["Mixed Veg Curry", 199],
-                                ["Kadai Veg", 199],
-                                ["Kadai Baby Corn", 199],
-                                ["Baby Corn Masala", 199],
-                                ["Dal Fry", 189],
-                                ["Dal Tadka", 199],
-                                ["Mushroom Masala", 209],
-                                ["Kaju Tomato", 259],
-                                ["Kaju Masala", 249],
-                                ["Paneer Kaju Masala", 279],
-                                ["Paneer Butter Masala", 229],
-                                ["Kadai Paneer", 229],
-                                ["Palak Paneer", 229],
-                                ["Paneer Tikka Masala", 239],
-                                ["Gongura Paneer Curry", 229],
-                                ["Achari Paneer", 229],
-                                ["Methi Chaman", 239]
+                                ["Matar Masala", 239],
+                                ["Aloo Gobi Masala", 239],
+                                ["Aloo Gobi Mutter Masala", 259],
+                                ["Gobi Masala", 239],
+                                ["Mixed Veg Curry", 249],
+                                ["Kadai Veg", 250],
+                                ["Kadai Baby Corn", 250],
+                                ["Baby Corn Masala", 250],
+                                ["Dal Fry", 250],
+                                ["Dal Tadka", 250],
+                                ["Mushroom Masala", 250],
+                                ["Kaju Tomato", 270],
+                                ["Kaju Masala", 259],
+                                ["Paneer Kaju Masala", 289],
+                                ["Paneer Butter Masala", 259],
+                                ["Kadai Paneer", 259],
+                                ["Palak Paneer", 299],
+                                ["Paneer Tikka Masala", 289],
+                                ["Gongura Paneer Curry", 269],
+                                ["Achari Paneer", 269],
+                                ["Methi Chaman", 279]
                             ]
                         },
 
                         {
                             name: "Egg Dishes",
+
                             items: [
-                                ["Chilly Egg", 199],
-                                ["Egg Burji", 149],
-                                ["Egg Masala", 159],
-                                ["Egg Tomato Curry", 159],
-                                ["Egg Fry", 169],
-                                ["Boiled Egg", 20]
+                                ["Chilly Egg", 229],
+                                ["Egg Burji", 209],
+                                ["Egg Masala", 229],
+                                ["Egg Tomato Curry", 239],
+                                ["Boiled Egg", 25]
                             ]
                         },
 
                         {
                             name: "Rice Items",
+
                             items: [
-                                ["Jeera Rice", 189],
-                                ["Ghee Rice", 189],
+                                ["Jeera Rice", 219],
+                                ["Ghee Rice", 219],
                                 ["Curd Rice", 115],
-                                ["Steam Rice", 130]
+                                ["Steam Rice", 160]
                             ]
                         }
 
@@ -1308,31 +1362,32 @@
                 },
 
 
+                /* =================================================
+                   ANDHRA DELICIOUS
+                ================================================= */
+
                 {
                     category: "Andhra Delicious",
+
                     subcategories: [
 
                         {
                             name: "Andhra Specials",
+
                             items: [
-                                ["Andhra Chicken Curry", 229],
-                                ["Andhra Chicken Fry", 249],
-                                ["Rayalaseema Chicken Curry", 249],
-                                ["Rayalaseema Chicken Fry", 259],
-                                ["Chicken Pepper Fry", 269],
-                                ["Chicken Mughlai Fry", 289],
-                                ["Cashew Chicken Fry", 319],
-                                ["Cashew Chicken Curry", 309],
-                                ["Natu Kodi Chicken Curry", 289],
-                                ["Gongura Chicken Fry Semi", 259],
-                                ["Gongura Chicken Curry", 239],
-                                ["Ulavacharu Chicken Curry", 259],
-                                ["Andhra Mutton Fry", 330],
-                                ["Andhra Mutton Curry", 310],
-                                ["Mutton Pepper Fry", 330],
-                                ["Gongura Mutton Curry", 330],
-                                ["Gongura Prawn Curry", 330],
-                                ["Prawn Fry", 340]
+                                ["Andhra Chicken Curry", 279],
+                                ["Andhra Chicken Fry", 299],
+                                ["Rayalaseema Chicken Curry", 279],
+                                ["Rayalaseema Chicken Fry", 299],
+                                ["Chicken Pepper Fry", 299],
+                                ["Gongura Chicken Fry Semi", 299],
+                                ["Gongura Chicken Curry", 269],
+                                ["Ulavacharu Chicken Curry", 299],
+                                ["Andhra Mutton Fry", 369],
+                                ["Andhra Mutton Curry", 359],
+                                ["Mutton Pepper Fry", 399],
+                                ["Gongura Mutton Curry", 389],
+                                ["Gongura Prawn Curry", 389]
                             ]
                         }
 
@@ -1340,16 +1395,21 @@
                 },
 
 
+                /* =================================================
+                   INDIAN BREADS
+                ================================================= */
+
                 {
                     category: "Indian Breads",
+
                     subcategories: [
 
                         {
                             name: "Indian Breads",
+
                             items: [
                                 ["Roti", 50],
                                 ["Butter Roti", 60],
-                                ["Butter Pulka", 30],
                                 ["Naan", 50],
                                 ["Butter Naan", 60],
                                 ["Stuffed Naan", 85],
@@ -1358,8 +1418,7 @@
                                 ["Butter Kulcha", 70],
                                 ["Masala Kulcha", 70],
                                 ["Paneer Kulcha", 85],
-                                ["Cheese Paneer Kulcha", 95],
-                                ["Phulka 1pc", 25]
+                                ["Cheese Paneer Kulcha", 95]
                             ]
                         }
 
@@ -1367,39 +1426,46 @@
                 },
 
 
+                /* =================================================
+                   MUTTON & SEAFOOD
+                ================================================= */
+
                 {
                     category: "Mutton & Seafood",
+
                     subcategories: [
 
                         {
                             name: "Mutton Starters",
+
                             items: [
-                                ["Manchurian Lamb", 279],
-                                ["Crispy Lamb", 279],
-                                ["Ginger Lamb", 289],
-                                ["Roast Lamb", 299],
-                                ["Lamb Salt & pepper", 299],
-                                ["Lamb Dry Pepper", 299]
+                                ["Manchurian Lamb", 359],
+                                ["Crispy Lamb", 359],
+                                ["Ginger Lamb", 359],
+                                ["Roast Lamb", 359],
+                                ["Lamb Salt & Pepper", 359],
+                                ["Lamb Dry Pepper", 359]
                             ]
                         },
 
                         {
                             name: "Seafood Starters",
+
                             items: [
-                                ["Fish 65 Hyderabad", 239],
-                                ["Crispy Fish", 259],
-                                ["Chilly Fish", 249],
-                                ["Pepper Fish", 259],
-                                ["Fish Finger", 259],
-                                ["Lemon Fish", 259],
-                                ["Apollo Fish", 259],
-                                ["Apollo Prawn", 279],
-                                ["Prawn 65 Hyderabad", 259],
-                                ["Golden Prawn", 279],
-                                ["Schezwan Prawn", 279],
-                                ["Prawn Manchurian", 259],
-                                ["Dry Pepper Prawn", 279],
-                                ["Prawn Salt & Pepper", 279]
+                                ["Fish 65 Hyderabad", 269],
+                                ["Crispy Fish", 279],
+                                ["Chilly Fish", 279],
+                                ["Pepper Fish", 279],
+                                ["Fish Finger", 269],
+                                ["Lemon Fish", 279],
+                                ["Apollo Fish", 279],
+                                ["Apollo Prawn", 309],
+                                ["Prawn 65 Hyderabad", 309],
+                                ["Golden Prawn", 309],
+                                ["Schezwan Prawn", 309],
+                                ["Prawn Manchurian", 309],
+                                ["Dry Pepper Prawn", 309],
+                                ["Prawn Salt & Pepper", 309]
                             ]
                         }
 
@@ -1407,75 +1473,133 @@
                 },
 
 
+                /* =================================================
+                   TANDOORI STARTERS
+                ================================================= */
+
                 {
                     category: "Tandoori Starters",
+
                     subcategories: [
 
                         {
                             name: "Tandoori Starters Non Veg",
+
                             items: [
-                                ["Tandoori Half", 259],
-                                ["Tandoori Full", 420],
-                                ["Grill Half", 249],
+                                ["Tandoori Half", 289],
+                                ["Tandoori Full", 490],
+                                ["Grill Half", 289],
                                 ["Grill Full", 420],
-                                ["Chicken Tikka", 249],
-                                ["Achari Chicken Tikka", 249],
-                                ["Chicken Kabab", 249],
+                                ["Chicken Tikka", 279],
+                                ["Achari Chicken Tikka", 299],
+                                ["Chicken Kabab", 299],
                                 ["Kali Mirchi Kebab", 259],
-                                ["Reshmi Kebab", 269],
-                                ["Chicken Malai Hyderabadi", 289],
-                                ["Fish Tikka", 269],
-                                ["Garlic Fish Kebab", 279],
+                                ["Fish Tikka", 309],
+                                ["Garlic Fish Kebab", 309],
                                 ["BBQ Fish Half", 269],
-                                ["BBQ Chicken Half", 259],
-                                ["Pepper BBQ Chicken", 269],
+                                ["BBQ Chicken Half", 269],
+                                ["Pepper BBQ Chicken", 299],
                                 ["Pepper BBQ Fish Half", 279]
                             ]
                         },
 
                         {
                             name: "Tandoori Starters Veg",
+
                             items: [
-                                ["Paneer Tikka", 219],
-                                ["Achari Paneer Tikka", 249],
-                                ["Malai Paneer Tikka", 249],
-                                ["Kaju Paneer Tikka", 259]
+                                ["Paneer Tikka", 249],
+                                ["Achari Paneer Tikka", 269],
+                                ["Kaju Paneer Tikka", 289]
                             ]
                         }
 
                     ]
                 },
 
+                
+
+
+                /* =================================================
+                   MILKSHAKES, BEVERAGES & DESSERTS
+                ================================================= */
 
                 {
-                    category: "Drinks & Desserts",
+                    category: "Milkshakes, Beverages & Desserts",
+
                     subcategories: [
 
                         {
-                            name: "Fruit Juice",
+                            name: "Milkshakes",
+
+                            items: [
+                                ["Vanilla Shake", 130],
+                                ["Strawberry Shake", 130],
+                                ["Chocolate Shake", 150],
+                                ["Butterscotch Shake", 150],
+                                ["Pista Shake", 150],
+                                ["Mango Shake", 150],
+                                ["Blackcurrent", 150]
+                            ]
+                        },
+
+                        {
+                            name: "Beverages",
+
                             items: [
                                 ["Butter Milk", 65],
-                                ["Lassi", 85],
-                                ["Cool Drinks", "MRP"],
-                                ["Water Bottle", "MRP"]
+                                ["Lassi", 85]
                             ]
                         },
 
                         {
                             name: "Desserts",
+
                             items: [
-                                ["Junnu", 130],
-                                ["Apricot Delight", 140],
-                                ["Badam Kheer", 120],
-                                ["Gulab Jammun", 50]
+                                ["Junnu", 140],
+                                ["Apricot Delight", 150],
+                                ["Gulab Jammun", 60],
+                                ["Gulab Jammun with Ice cream", 140]
                             ]
                         }
 
                     ]
+                },
+
+                {
+                    category: "Icecreams",
+
+                    subcategories: [
+
+                        {
+                            name: "Icecreams",
+
+                            items: [
+                                ["Vanilla", 100],
+                                ["Strawberry", 100],
+                                ["Chocolate", 110],
+                                ["Butterscotch", 110],
+                                ["Pista", 110],
+                                ["Mango", 110],
+                                ["Double sunde", 140],
+                                ["Chocolate Roulette", 160],
+                                ["Singapore Lady", 160],
+                                ["Tooty Fruity", 170],
+                                ["Walnut sizzlers Brownie-Double Choco chip", 180],
+                                ["Sizzlers Brownie", 180],
+                                ["Lotus Biscoff", 170],
+                                ["Honey Almond", 130],
+                                ["Kit kat Ice cream", 170],
+                                ["Tender Coconut", 170],
+                                ["Oreo Ice cream", 160],
+                                ["Sea salt Caramel", 180]
+
+
+                            ]
+                        }
+                    ]
                 }
 
             ];
-
 
             /* =================================================
                GENERATE MENU
@@ -1490,7 +1614,8 @@
                 const sectionElement =
                     document.createElement("section");
 
-                sectionElement.className = "menu-section";
+                sectionElement.className =
+                    "menu-section";
 
 
                 const sectionHeading =
@@ -1541,6 +1666,7 @@
                     subcategory.items.forEach(item => {
 
                         const name = item[0];
+
                         const price = item[1];
 
 
@@ -1593,18 +1719,8 @@
                         priceElement.className =
                             "price";
 
-
-                        if (price === "MRP") {
-
-                            priceElement.textContent =
-                                "MRP";
-
-                        } else {
-
-                            priceElement.textContent =
-                                "₹" + price;
-
-                        }
+                        priceElement.textContent =
+                            "₹" + price;
 
 
                         top.appendChild(itemName);
@@ -1636,7 +1752,8 @@
                ADD TO ORDERS
             ================================================= */
 
-            document.querySelectorAll(".add-order")
+            document
+                .querySelectorAll(".add-order")
                 .forEach(button => {
 
                     button.addEventListener(
@@ -1646,14 +1763,8 @@
                             const name =
                                 this.dataset.name;
 
-                            const rawPrice =
-                                this.dataset.price;
-
-
-                            let price =
-                                rawPrice === "MRP"
-                                    ? "MRP"
-                                    : Number(rawPrice);
+                            const price =
+                                Number(this.dataset.price);
 
 
                             let orders =
@@ -1678,13 +1789,9 @@
                             } else {
 
                                 orders.push({
-
                                     name: name,
-
                                     price: price,
-
                                     quantity: 1
-
                                 });
 
                             }
@@ -1696,8 +1803,6 @@
                             );
 
 
-                            /* BUTTON FEEDBACK */
-
                             const originalText =
                                 this.textContent;
 
@@ -1706,9 +1811,7 @@
                                 "Added ✓";
 
 
-                            this.classList.add(
-                                "added"
-                            );
+                            this.classList.add("added");
 
 
                             setTimeout(() => {
@@ -1749,8 +1852,7 @@
                             .trim();
 
 
-                    let totalVisible =
-                        0;
+                    let totalVisible = 0;
 
 
                     document
@@ -1775,9 +1877,7 @@
 
                                             const itemName =
                                                 item
-                                                    .querySelector(
-                                                        ".item-name"
-                                                    )
+                                                    .querySelector(".item-name")
                                                     .textContent
                                                     .toLowerCase();
 
@@ -1845,3 +1945,6 @@
 </body>
 
 </html>
+```
+
+This version fixes the missing comma and the malformed formatting from the pasted code, so the JavaScript can actually run and generate the menu cards.
