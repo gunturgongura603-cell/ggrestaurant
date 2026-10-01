@@ -3,10 +3,6 @@
 
 <head>
 
-    <!-- =====================================================
-         BASIC INFORMATION
-    ====================================================== -->
-
     <meta charset="UTF-8">
 
     <meta
@@ -21,30 +17,17 @@
 
     <title>Your Orders | Guntur Gongura</title>
 
-
-    <!-- =====================================================
-         GOOGLE FONTS
-    ====================================================== -->
-
+    <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
-
-    <!-- =====================================================
-         FONT AWESOME
-    ====================================================== -->
-
+    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
-
-
-    <!-- =====================================================
-         STYLES
-    ====================================================== -->
 
     <style>
 
@@ -58,11 +41,9 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
             font-family: "Poppins", sans-serif;
@@ -71,11 +52,9 @@
             line-height: 1.6;
         }
 
-
         a {
             text-decoration: none;
         }
-
 
         button,
         input,
@@ -83,11 +62,6 @@
         select {
             font-family: inherit;
         }
-
-
-        /* =====================================================
-           COLORS
-        ====================================================== */
 
         :root {
             --primary: #0b1f3a;
@@ -112,13 +86,10 @@
             border: none;
         }
 
-
         .header-inner {
             width: min(1100px, 92%);
             min-height: 84px;
-
             margin: auto;
-
             padding: 15px 0;
 
             display: flex;
@@ -126,31 +97,21 @@
             justify-content: space-between;
         }
 
-
-        /* =====================================================
-           BACK HOME BUTTON
-        ====================================================== */
-
         .home-button {
             display: inline-flex;
-
             align-items: center;
             justify-content: center;
-
             gap: 9px;
 
             padding: 10px 17px;
 
             background: var(--cream);
-
             color: var(--primary);
 
             border: 1.5px solid var(--primary);
-
             border-radius: 6px;
 
             font-size: 0.9rem;
-
             font-weight: 600;
 
             cursor: pointer;
@@ -162,75 +123,50 @@
                 transform 0.15s ease;
         }
 
-
         .home-button i {
             font-size: 0.85rem;
         }
 
-
-        .home-button:hover {
+        .home-button:hover,
+        .home-button:active {
             background: var(--primary);
-
-            color: var(--white);
-
+            color: #ffffff;
             border-color: var(--primary);
         }
 
-
         .home-button:active {
-            background: var(--primary);
-
-            color: var(--white);
-
-            border-color: var(--primary);
-
             transform: scale(0.97);
         }
 
-
         .home-button:focus-visible {
             outline: 2px solid var(--secondary);
-
             outline-offset: 3px;
         }
-
-
-        /* =====================================================
-           LOGO
-        ====================================================== */
 
         .logo-link {
             margin-left: auto;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
         }
 
-
         .top-logo {
-            width: 180px;
-
+            width: 150px;
             height: auto;
-
             display: block;
         }
 
 
         /* =====================================================
-           PAGE TITLE
+           PAGE HEADING
         ====================================================== */
 
         .page-heading {
             width: min(1100px, 92%);
-
             margin: 25px auto 35px;
-
             text-align: center;
         }
-
 
         .page-heading span {
             display: block;
@@ -238,14 +174,12 @@
             color: var(--secondary);
 
             font-size: 13px;
-
             font-weight: 600;
 
             letter-spacing: 2px;
 
             margin-bottom: 8px;
         }
-
 
         .page-heading h1 {
             font-family: "Playfair Display", serif;
@@ -256,7 +190,6 @@
 
             margin-bottom: 8px;
         }
-
 
         .page-heading p {
             color: var(--muted);
@@ -275,7 +208,6 @@
 
         .container {
             width: min(1100px, 92%);
-
             margin: auto;
         }
 
@@ -294,11 +226,10 @@
             margin-bottom: 25px;
         }
 
-
         .type-card {
             border: 1.5px solid var(--border);
 
-            background: var(--white);
+            background: #ffffff;
 
             border-radius: 14px;
 
@@ -311,18 +242,14 @@
             transition: 0.3s ease;
         }
 
-
         .type-card:hover {
             transform: translateY(-3px);
         }
 
-
         .type-card.active {
             border-color: var(--secondary);
-
             background: #fffaf0;
         }
-
 
         .type-card i {
             font-size: 28px;
@@ -331,7 +258,6 @@
 
             margin-bottom: 8px;
         }
-
 
         .type-card h3 {
             font-family: "Playfair Display", serif;
@@ -343,7 +269,6 @@
             margin-bottom: 4px;
         }
 
-
         .type-card p {
             color: var(--muted);
 
@@ -352,11 +277,11 @@
 
 
         /* =====================================================
-           DELIVERY PANELS
+           DELIVERY PANEL
         ====================================================== */
 
         .delivery-panel {
-            background: var(--white);
+            background: #ffffff;
 
             border: 1px solid var(--border);
 
@@ -367,7 +292,6 @@
             margin-bottom: 25px;
         }
 
-
         .delivery-panel h3 {
             font-family: "Playfair Display", serif;
 
@@ -376,13 +300,11 @@
             margin-bottom: 13px;
         }
 
-
         .delivery-panel h3 i {
             color: var(--secondary);
 
             margin-right: 6px;
         }
-
 
         .delivery-panel label {
             display: block;
@@ -394,7 +316,6 @@
             margin-bottom: 6px;
         }
 
-
         .delivery-panel select {
             width: 100%;
 
@@ -404,16 +325,14 @@
 
             border-radius: 8px;
 
-            background: white;
+            background: #ffffff;
 
             outline: none;
         }
 
-
         .delivery-panel select:focus {
             border-color: var(--secondary);
         }
-
 
         .delivery-info {
             margin-top: 10px;
@@ -425,13 +344,15 @@
 
 
         /* =====================================================
-           ORDER AREA
+           ORDERS LAYOUT
         ====================================================== */
 
         .orders-layout {
             display: grid;
 
-            grid-template-columns: minmax(0, 1fr) 360px;
+            grid-template-columns:
+                minmax(0, 1fr)
+                360px;
 
             gap: 28px;
 
@@ -440,11 +361,11 @@
 
 
         /* =====================================================
-           ORDER ITEMS
+           ORDERS BOX
         ====================================================== */
 
         .orders-box {
-            background: var(--white);
+            background: #ffffff;
 
             border: 1px solid var(--border);
 
@@ -453,13 +374,12 @@
             overflow: hidden;
         }
 
-
         .orders-box-header {
             padding: 18px 20px;
 
             background: var(--primary);
 
-            color: var(--white);
+            color: #ffffff;
 
             display: flex;
 
@@ -468,13 +388,11 @@
             justify-content: space-between;
         }
 
-
         .orders-box-header h2 {
             font-family: "Playfair Display", serif;
 
             font-size: 24px;
         }
-
 
         .orders-box-header span {
             font-size: 12px;
@@ -482,16 +400,17 @@
             color: #e8ca68;
         }
 
-
         .orders-list {
             padding: 10px 20px 20px;
         }
 
-
         .order-item {
             display: grid;
 
-            grid-template-columns: minmax(0, 1fr) auto auto;
+            grid-template-columns:
+                minmax(0, 1fr)
+                auto
+                auto;
 
             align-items: center;
 
@@ -502,11 +421,9 @@
             border-bottom: 1px solid #eeeeee;
         }
 
-
         .order-item:last-child {
             border-bottom: none;
         }
-
 
         .order-item-name {
             color: var(--text);
@@ -515,7 +432,6 @@
 
             font-weight: 600;
         }
-
 
         .order-item-price {
             color: var(--red);
@@ -529,7 +445,7 @@
 
 
         /* =====================================================
-           QUANTITY
+           QUANTITY CONTROLS
         ====================================================== */
 
         .quantity-controls {
@@ -540,15 +456,13 @@
             gap: 7px;
         }
 
-
         .quantity-controls button {
             width: 28px;
-
             height: 28px;
 
             border: 1px solid var(--border);
 
-            background: var(--white);
+            background: #ffffff;
 
             color: var(--primary);
 
@@ -559,15 +473,13 @@
             transition: 0.2s ease;
         }
 
-
         .quantity-controls button:hover {
             background: var(--primary);
 
-            color: white;
+            color: #ffffff;
 
             border-color: var(--primary);
         }
-
 
         .quantity-controls span {
             min-width: 25px;
@@ -578,11 +490,6 @@
 
             font-weight: 600;
         }
-
-
-        /* =====================================================
-           REMOVE
-        ====================================================== */
 
         .remove-button {
             border: none;
@@ -595,7 +502,6 @@
 
             cursor: pointer;
         }
-
 
         .remove-button:hover {
             text-decoration: underline;
@@ -614,7 +520,6 @@
             color: var(--muted);
         }
 
-
         .empty-orders i {
             display: block;
 
@@ -625,7 +530,6 @@
             margin-bottom: 15px;
         }
 
-
         .empty-orders h3 {
             font-family: "Playfair Display", serif;
 
@@ -633,7 +537,6 @@
 
             margin-bottom: 7px;
         }
-
 
         .empty-orders a {
             display: inline-block;
@@ -655,16 +558,15 @@
             transition: 0.25s ease;
         }
 
-
         .empty-orders a:hover {
             background: var(--primary);
 
-            color: white;
+            color: #ffffff;
         }
 
 
         /* =====================================================
-           CART / SUMMARY
+           CART BOX
         ====================================================== */
 
         .cart-box {
@@ -672,7 +574,7 @@
 
             top: 25px;
 
-            background: var(--white);
+            background: #ffffff;
 
             border: 1px solid var(--border);
 
@@ -681,13 +583,12 @@
             overflow: hidden;
         }
 
-
         .cart-header {
             padding: 18px 20px;
 
             background: var(--primary);
 
-            color: white;
+            color: #ffffff;
 
             display: flex;
 
@@ -696,13 +597,11 @@
             justify-content: space-between;
         }
 
-
         .cart-header h2 {
             font-family: "Playfair Display", serif;
 
             font-size: 24px;
         }
-
 
         .cart-count {
             min-width: 28px;
@@ -727,12 +626,15 @@
         }
 
 
+        /* =====================================================
+           SUMMARY
+        ====================================================== */
+
         .cart-summary {
             padding: 18px;
 
             border-bottom: 1px solid var(--border);
         }
-
 
         .summary-row {
             display: flex;
@@ -745,7 +647,6 @@
 
             font-size: 14px;
         }
-
 
         .summary-row.total {
             padding-top: 12px;
@@ -762,11 +663,6 @@
         }
 
 
-        .delivery-free {
-            color: var(--green);
-        }
-
-
         /* =====================================================
            CUSTOMER FORM
         ====================================================== */
@@ -774,7 +670,6 @@
         .customer-form {
             padding: 20px;
         }
-
 
         .customer-form h3 {
             font-family: "Playfair Display", serif;
@@ -784,11 +679,9 @@
             margin-bottom: 15px;
         }
 
-
         .form-group {
             margin-bottom: 13px;
         }
-
 
         .form-group label {
             display: block;
@@ -799,7 +692,6 @@
 
             margin-bottom: 5px;
         }
-
 
         .form-group input,
         .form-group textarea {
@@ -815,20 +707,97 @@
 
             font-size: 13px;
 
-            background: white;
+            background: #ffffff;
         }
-
 
         .form-group input:focus,
         .form-group textarea:focus {
             border-color: var(--secondary);
         }
 
-
         .form-group textarea {
             resize: vertical;
 
             min-height: 75px;
+        }
+
+
+        /* =====================================================
+           PAYMENT SECTION
+        ====================================================== */
+
+        .payment-section {
+            margin: 20px 0;
+
+            padding: 18px;
+
+            background: #faf6ef;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            text-align: center;
+        }
+
+        .payment-section h3 {
+            font-family: "Playfair Display", serif;
+
+            color: var(--primary);
+
+            margin-bottom: 8px;
+        }
+
+        .payment-section h3 i {
+            color: var(--secondary);
+
+            margin-right: 6px;
+        }
+
+        .payment-text {
+            color: var(--muted);
+
+            font-size: 12px;
+
+            margin-bottom: 15px;
+        }
+
+        .qr-container {
+            display: flex;
+
+            justify-content: center;
+
+            margin: 10px 0 15px;
+        }
+
+        .payment-qr {
+            width: min(100%, 330px);
+
+            height: auto;
+
+            display: block;
+
+            border-radius: 8px;
+
+            background: #ffffff;
+        }
+
+        .upi-id {
+            font-size: 13px;
+
+            color: var(--primary);
+
+            margin-bottom: 8px;
+
+            word-break: break-word;
+        }
+
+        .payment-note {
+            font-size: 11px;
+
+            color: var(--muted);
+
+            line-height: 1.6;
         }
 
 
@@ -847,7 +816,7 @@
 
             background: #25d366;
 
-            color: white;
+            color: #ffffff;
 
             font-size: 14px;
 
@@ -865,7 +834,6 @@
 
             transition: 0.3s ease;
         }
-
 
         .whatsapp-button:hover {
             background: #1fb956;
@@ -902,7 +870,6 @@
             transition: 0.25s ease;
         }
 
-
         .clear-orders:hover {
             background: #fff3f3;
 
@@ -932,18 +899,15 @@
             color: #665d45;
         }
 
-
         .terms h3 {
             color: var(--primary);
 
             margin-bottom: 8px;
         }
 
-
         .terms ul {
             padding-left: 20px;
         }
-
 
         .terms li {
             margin-bottom: 4px;
@@ -957,13 +921,12 @@
         footer {
             background: var(--primary);
 
-            color: white;
+            color: #ffffff;
 
             padding: 45px 0 25px;
 
             margin-top: 20px;
         }
-
 
         .footer-inner {
             width: min(1100px, 92%);
@@ -972,18 +935,17 @@
 
             display: grid;
 
-            grid-template-columns: 1.5fr 1fr 1fr;
+            grid-template-columns:
+                1.5fr 1fr 1fr;
 
             gap: 40px;
         }
-
 
         .footer-logo img {
             width: 150px;
 
             margin-bottom: 15px;
         }
-
 
         .footer-column h3 {
             font-family: "Playfair Display", serif;
@@ -993,26 +955,32 @@
             margin-bottom: 15px;
         }
 
-
         .footer-column p,
         .footer-column a {
-            color: #ddd;
+            color: #dddddd;
 
             font-size: 13px;
 
             line-height: 1.8;
         }
 
-
         .footer-column a {
             display: block;
         }
-
 
         .footer-column a:hover {
             color: var(--secondary);
         }
 
+        .footer-gst {
+            margin-top: 10px;
+
+            color: #f2df9b;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
 
         .footer-bottom {
             width: min(1100px, 92%);
@@ -1021,11 +989,11 @@
 
             padding-top: 20px;
 
-            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-top: 1px solid rgba(255,255,255,.15);
 
             text-align: center;
 
-            color: #bbb;
+            color: #bbbbbb;
 
             font-size: 12px;
         }
@@ -1056,17 +1024,17 @@
 
             background: #25d366;
 
-            color: white;
+            color: #ffffff;
 
             font-size: 27px;
 
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.2);
 
             z-index: 900;
 
             transition: 0.3s ease;
         }
-
 
         .floating-whatsapp:hover {
             transform: scale(1.1);
@@ -1099,11 +1067,9 @@
                 min-height: 78px;
             }
 
-
             .top-logo {
                 width: 150px;
             }
-
 
             .home-button {
                 padding: 9px 13px;
@@ -1111,28 +1077,25 @@
                 font-size: 12px;
             }
 
-
             .order-type {
                 grid-template-columns: 1fr;
             }
-
 
             .page-heading {
                 margin-top: 20px;
             }
 
-
             .page-heading h1 {
                 font-size: 36px;
             }
 
-
             .order-item {
-                grid-template-columns: minmax(0, 1fr) auto;
+                grid-template-columns:
+                    minmax(0, 1fr)
+                    auto;
 
                 gap: 8px;
             }
-
 
             .order-item-price {
                 grid-column: 2;
@@ -1140,13 +1103,11 @@
                 grid-row: 1;
             }
 
-
             .quantity-controls {
                 grid-column: 2;
 
                 grid-row: 2;
             }
-
 
             .remove-button {
                 grid-column: 1;
@@ -1156,11 +1117,9 @@
                 justify-self: start;
             }
 
-
             .footer-inner {
                 grid-template-columns: 1fr;
             }
-
 
             .floating-whatsapp {
                 width: 50px;
@@ -1180,16 +1139,13 @@
                 width: 90%;
             }
 
-
             .top-logo {
                 width: 125px;
             }
 
-
             .home-button span {
                 display: none;
             }
-
 
             .home-button {
                 width: 42px;
@@ -1199,9 +1155,12 @@
                 padding: 0;
             }
 
-
             .page-heading h1 {
                 font-size: 32px;
+            }
+
+            .payment-qr {
+                width: 100%;
             }
         }
 
@@ -1221,8 +1180,6 @@
 
         <div class="header-inner">
 
-            <!-- LEFT: BACK TO HOME -->
-
             <a
                 href="index.html"
                 class="home-button"
@@ -1234,8 +1191,6 @@
 
             </a>
 
-
-            <!-- RIGHT: LOGO -->
 
             <a
                 href="index.html"
@@ -1255,19 +1210,16 @@
     </header>
 
 
+
     <!-- =====================================================
          PAGE HEADING
     ====================================================== -->
 
     <section class="page-heading">
 
-        <span>
-            GUNTUR GONGURA
-        </span>
+        <span>GUNTUR GONGURA</span>
 
-        <h1>
-            Your Orders
-        </h1>
+        <h1>Your Orders</h1>
 
         <p>
             Review your selected dishes, choose your delivery option
@@ -1275,6 +1227,7 @@
         </p>
 
     </section>
+
 
 
     <!-- =====================================================
@@ -1293,8 +1246,6 @@
             <div class="order-type">
 
 
-                <!-- STUDENT -->
-
                 <div
                     class="type-card active"
                     id="studentType"
@@ -1303,9 +1254,7 @@
 
                     <i class="fa-solid fa-graduation-cap"></i>
 
-                    <h3>
-                        Students
-                    </h3>
+                    <h3>Students</h3>
 
                     <p>
                         Special delivery options for selected colleges
@@ -1313,8 +1262,6 @@
 
                 </div>
 
-
-                <!-- NORMAL -->
 
                 <div
                     class="type-card"
@@ -1324,9 +1271,7 @@
 
                     <i class="fa-solid fa-utensils"></i>
 
-                    <h3>
-                        Normal Order
-                    </h3>
+                    <h3>Normal Order</h3>
 
                     <p>
                         Regular customer delivery
@@ -1334,7 +1279,9 @@
 
                 </div>
 
+
             </div>
+
 
 
             <!-- =================================================
@@ -1390,6 +1337,7 @@
             </div>
 
 
+
             <!-- =================================================
                  NORMAL DELIVERY
             ================================================== -->
@@ -1397,7 +1345,7 @@
             <div
                 class="delivery-panel"
                 id="normalDelivery"
-                style="display: none;"
+                style="display:none;"
             >
 
                 <h3>
@@ -1420,16 +1368,17 @@
             </div>
 
 
+
             <!-- =================================================
-                 ORDERS + CUSTOMER DETAILS
+                 ORDERS + SUMMARY
             ================================================== -->
 
             <div class="orders-layout">
 
 
-                <!-- =================================================
-                     SELECTED ORDERS
-                ================================================== -->
+                <!-- =============================================
+                     SELECTED ITEMS
+                ============================================== -->
 
                 <section class="orders-box">
 
@@ -1450,18 +1399,16 @@
                     <div
                         class="orders-list"
                         id="ordersList"
-                    >
+                    ></div>
 
-                        <!-- JavaScript loads orders here -->
-
-                    </div>
 
                 </section>
 
 
-                <!-- =================================================
-                     CART SUMMARY
-                ================================================== -->
+
+                <!-- =============================================
+                     ORDER SUMMARY
+                ============================================== -->
 
                 <aside class="cart-box">
 
@@ -1480,6 +1427,7 @@
                         </div>
 
                     </div>
+
 
 
                     <!-- SUMMARY -->
@@ -1525,16 +1473,20 @@
 
                         </div>
 
+
                     </div>
+
 
 
                     <!-- CUSTOMER FORM -->
 
                     <div class="customer-form">
 
+
                         <h3>
                             Delivery Details
                         </h3>
+
 
 
                         <div class="form-group">
@@ -1552,6 +1504,7 @@
                         </div>
 
 
+
                         <div class="form-group">
 
                             <label for="customerPhone">
@@ -1565,6 +1518,7 @@
                             >
 
                         </div>
+
 
 
                         <div class="form-group">
@@ -1581,6 +1535,7 @@
                         </div>
 
 
+
                         <div class="form-group">
 
                             <label for="orderNote">
@@ -1595,6 +1550,67 @@
                         </div>
 
 
+
+                        <!-- =====================================
+                             PAYMENT
+                        ====================================== -->
+
+                        <div class="payment-section">
+
+
+                            <h3>
+
+                                <i class="fa-solid fa-qrcode"></i>
+
+                                Pay Online
+
+                            </h3>
+
+
+                            <p class="payment-text">
+
+                                Scan the QR code below using
+                                the Paytm app to make your payment.
+
+                            </p>
+
+
+                            <div class="qr-container">
+
+                                <img
+                                    src="images/scanner.jpeg"
+                                    alt="Guntur Gongura Paytm QR Code"
+                                    class="payment-qr"
+                                >
+
+                            </div>
+
+
+                            <p class="upi-id">
+
+                                <strong>UPI ID:</strong>
+                                paytmqr6qyvI4@ptys
+
+                            </p>
+
+
+                            <p class="payment-note">
+
+                                After completing the payment, click
+                                the button below to send your order
+                                details on WhatsApp.
+
+                            </p>
+
+
+                        </div>
+
+
+
+                        <!-- =====================================
+                             WHATSAPP ORDER
+                        ====================================== -->
+
                         <button
                             class="whatsapp-button"
                             onclick="placeOrder()"
@@ -1607,6 +1623,9 @@
                         </button>
 
 
+
+                        <!-- CLEAR ORDERS -->
+
                         <button
                             class="clear-orders"
                             onclick="clearOrders()"
@@ -1618,13 +1637,17 @@
 
                         </button>
 
+
                     </div>
 
+
                 </aside>
+
 
             </div>
 
         </div>
+
 
 
         <!-- =====================================================
@@ -1659,11 +1682,17 @@
                     Every order will take approximately 15 to 20 minutes.
                 </li>
 
+                <li>
+                    Please complete payment using the displayed
+                    Paytm QR code before sending the order.
+                </li>
+
             </ul>
 
         </div>
 
     </main>
+
 
 
     <!-- =====================================================
@@ -1672,10 +1701,14 @@
 
     <footer>
 
+
         <div class="footer-inner">
 
 
+            <!-- FOOTER ABOUT -->
+
             <div class="footer-column">
+
 
                 <div class="footer-logo">
 
@@ -1686,19 +1719,35 @@
 
                 </div>
 
+
                 <p>
-                    Authentic Andhra flavours and traditional South Indian
-                    cuisine in Chennai.
+
+                    Authentic Andhra flavours and traditional
+                    South Indian cuisine in Chennai.
+
                 </p>
+
+
+                <div class="footer-gst">
+
+                    GSTIN: 33GFLPS8842N1ZG
+
+                </div>
+
 
             </div>
 
 
+
+            <!-- QUICK LINKS -->
+
             <div class="footer-column">
+
 
                 <h3>
                     Quick Links
                 </h3>
+
 
                 <a href="index.html">
                     Home
@@ -1728,27 +1777,39 @@
                     Contact
                 </a>
 
+
             </div>
 
 
+
+            <!-- CONTACT -->
+
             <div class="footer-column">
+
 
                 <h3>
                     Contact
                 </h3>
 
+
                 <p>
+
                     N.No. 12, Old No. 34,
                     Rajiv Gandhi Salai, OMR,
                     Egattur, Chennai,
                     Tamil Nadu 600130
+
                 </p>
 
+
                 <p>
+
                     <a href="tel:+919047566665">
                         +91 90475 66665
                     </a>
+
                 </p>
+
 
                 <p>
 
@@ -1762,9 +1823,19 @@
 
                 </p>
 
+
+                <p class="footer-gst">
+
+                    GSTIN: 33GFLPS8842N1ZG
+
+                </p>
+
+
             </div>
 
+
         </div>
+
 
 
         <div class="footer-bottom">
@@ -1773,7 +1844,9 @@
 
         </div>
 
+
     </footer>
+
 
 
     <!-- =====================================================
@@ -1793,22 +1866,19 @@
     </a>
 
 
+
     <!-- =====================================================
          JAVASCRIPT
     ====================================================== -->
 
     <script>
 
+
         /* =====================================================
-           STORAGE KEY
+           STORAGE
         ====================================================== */
 
         const ORDERS_KEY = "gunturGonguraOrders";
-
-
-        /* =====================================================
-           ORDER TYPE
-        ====================================================== */
 
         let orderType = "student";
 
@@ -1877,8 +1947,8 @@
                 return;
             }
 
-
-            orders[index].quantity += change;
+            orders[index].quantity =
+                Number(orders[index].quantity) + change;
 
 
             if (orders[index].quantity <= 0) {
@@ -1913,7 +1983,7 @@
 
 
         /* =====================================================
-           CLEAR ORDERS
+           CLEAR ALL ORDERS
         ====================================================== */
 
         function clearOrders() {
@@ -1925,10 +1995,9 @@
             }
 
 
-            const confirmClear =
-                confirm(
-                    "Are you sure you want to clear all orders?"
-                );
+            const confirmClear = confirm(
+                "Are you sure you want to clear all orders?"
+            );
 
 
             if (!confirmClear) {
@@ -1966,6 +2035,27 @@
 
 
         /* =====================================================
+           ESCAPE HTML
+        ====================================================== */
+
+        function escapeHTML(value) {
+
+            return String(value)
+
+                .replace(/&/g, "&amp;")
+
+                .replace(/</g, "&lt;")
+
+                .replace(/>/g, "&gt;")
+
+                .replace(/"/g, "&quot;")
+
+                .replace(/'/g, "&#039;");
+
+        }
+
+
+        /* =====================================================
            RENDER ORDERS
         ====================================================== */
 
@@ -1973,20 +2063,26 @@
 
             const orders = getOrders();
 
+
             const ordersList =
                 document.getElementById("ordersList");
+
 
             const cartCount =
                 document.getElementById("cartCount");
 
+
             const itemCountText =
                 document.getElementById("itemCountText");
+
 
             const subtotalElement =
                 document.getElementById("subtotal");
 
+
             const deliveryElement =
                 document.getElementById("deliveryCharge");
+
 
             const totalElement =
                 document.getElementById("total");
@@ -1997,11 +2093,11 @@
             let totalQuantity = 0;
 
 
-            /* =================================================
-               EMPTY
-            ================================================== */
+
+            /* EMPTY */
 
             if (orders.length === 0) {
+
 
                 ordersList.innerHTML = `
 
@@ -2018,20 +2114,30 @@
                         </p>
 
                         <a href="menu.html">
+
                             <i class="fa-solid fa-utensils"></i>
+
                             Go to Menu
+
                         </a>
 
                     </div>
 
                 `;
 
-            } else {
+
+            }
+
+            /* HAS ORDERS */
+
+            else {
+
 
                 ordersList.innerHTML = "";
 
 
                 orders.forEach((item, index) => {
+
 
                     const price =
                         Number(item.price) || 0;
@@ -2050,10 +2156,13 @@
                     totalQuantity += quantity;
 
 
+
                     const element =
                         document.createElement("div");
 
-                    element.className = "order-item";
+
+                    element.className =
+                        "order-item";
 
 
                     element.innerHTML = `
@@ -2073,6 +2182,7 @@
 
 
                         <div class="quantity-controls">
+
 
                             <button
                                 type="button"
@@ -2100,6 +2210,7 @@
 
                             </button>
 
+
                         </div>
 
 
@@ -2123,10 +2234,6 @@
             }
 
 
-            /* =================================================
-               UPDATE TOTALS
-            ================================================== */
-
             const delivery =
                 getDeliveryCharge();
 
@@ -2135,36 +2242,55 @@
                 subtotal + delivery;
 
 
+
             cartCount.textContent =
                 totalQuantity;
 
 
             itemCountText.textContent =
                 totalQuantity +
-                (totalQuantity === 1 ? " ITEM" : " ITEMS");
+                (
+                    totalQuantity === 1
+                        ? " ITEM"
+                        : " ITEMS"
+                );
 
 
             subtotalElement.textContent =
-                "₹" + subtotal;
+                "₹" +
+                subtotal.toLocaleString("en-IN");
 
+
+
+            /* NORMAL ORDER */
 
             if (orderType === "normal") {
+
 
                 deliveryElement.textContent =
                     "To confirm";
 
 
                 totalElement.textContent =
-                    "₹" + subtotal;
+                    "₹" +
+                    subtotal.toLocaleString("en-IN");
 
-            } else {
+            }
+
+
+            /* STUDENT ORDER */
+
+            else {
+
 
                 deliveryElement.textContent =
-                    "₹" + delivery;
+                    "₹" +
+                    delivery.toLocaleString("en-IN");
 
 
                 totalElement.textContent =
-                    "₹" + total;
+                    "₹" +
+                    total.toLocaleString("en-IN");
 
             }
 
@@ -2172,7 +2298,7 @@
 
 
         /* =====================================================
-           ORDER TYPE
+           SELECT ORDER TYPE
         ====================================================== */
 
         function selectOrderType(type) {
@@ -2183,6 +2309,7 @@
             const studentType =
                 document.getElementById("studentType");
 
+
             const normalType =
                 document.getElementById("normalType");
 
@@ -2190,30 +2317,41 @@
             const studentDelivery =
                 document.getElementById("studentDelivery");
 
+
             const normalDelivery =
                 document.getElementById("normalDelivery");
 
 
+
             if (type === "student") {
+
 
                 studentType.classList.add("active");
 
                 normalType.classList.remove("active");
 
+
                 studentDelivery.style.display =
                     "block";
+
 
                 normalDelivery.style.display =
                     "none";
 
-            } else {
+            }
+
+
+            else {
+
 
                 normalType.classList.add("active");
 
                 studentType.classList.remove("active");
 
+
                 studentDelivery.style.display =
                     "none";
+
 
                 normalDelivery.style.display =
                     "block";
@@ -2236,22 +2374,6 @@
                 "change",
                 renderOrders
             );
-
-
-        /* =====================================================
-           ESCAPE HTML
-        ====================================================== */
-
-        function escapeHTML(value) {
-
-            return String(value)
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;");
-
-        }
 
 
         /* =====================================================
@@ -2312,6 +2434,7 @@
                     .trim();
 
 
+
             /* VALIDATION */
 
             if (!customerName) {
@@ -2347,9 +2470,8 @@
             }
 
 
-            /* =================================================
-               CALCULATE SUBTOTAL
-            ================================================== */
+
+            /* CALCULATE SUBTOTAL */
 
             let subtotal = 0;
 
@@ -2371,6 +2493,7 @@
                 subtotal + delivery;
 
 
+
             /* =================================================
                WHATSAPP MESSAGE
             ================================================== */
@@ -2383,9 +2506,11 @@
                 "━━━━━━━━━━━━━━━━━━\n\n";
 
 
-            /* ORDER TYPE */
+
+            /* STUDENT */
 
             if (orderType === "student") {
+
 
                 const college =
                     document
@@ -2408,7 +2533,13 @@
                     delivery +
                     "\n\n";
 
-            } else {
+            }
+
+
+            /* NORMAL */
+
+            else {
+
 
                 message +=
                     "🍴 *Order Type:* Normal\n";
@@ -2420,7 +2551,8 @@
             }
 
 
-            /* ITEMS */
+
+            /* ORDER ITEMS */
 
             message +=
                 "🛒 *ORDER ITEMS*\n";
@@ -2431,6 +2563,7 @@
 
 
             orders.forEach(item => {
+
 
                 const itemTotal =
                     Number(item.price) *
@@ -2449,7 +2582,8 @@
             });
 
 
-            /* TOTALS */
+
+            /* SUBTOTAL */
 
             message +=
                 "\n💰 *Subtotal:* ₹" +
@@ -2457,7 +2591,11 @@
                 "\n";
 
 
+
+            /* STUDENT TOTAL */
+
             if (orderType === "student") {
+
 
                 message +=
                     "🚚 *Delivery:* ₹" +
@@ -2470,7 +2608,13 @@
                     total +
                     "\n";
 
-            } else {
+            }
+
+
+            /* NORMAL TOTAL */
+
+            else {
+
 
                 message +=
                     "🚚 *Delivery:* To be confirmed\n";
@@ -2482,6 +2626,7 @@
                     "\n";
 
             }
+
 
 
             /* CUSTOMER DETAILS */
@@ -2512,6 +2657,9 @@
                 "\n";
 
 
+
+            /* NOTE */
+
             if (orderNote) {
 
                 message +=
@@ -2522,12 +2670,31 @@
             }
 
 
+
+            /* PAYMENT */
+
+            message +=
+                "\n💳 *Payment:* Paytm QR\n";
+
+
+            message +=
+                "UPI ID: paytmqr6qyvI4@ptys\n";
+
+
+
+            /* GST */
+
+            message +=
+                "\n🏷️ *Restaurant GSTIN:* 33GFLPS8842N1ZG\n";
+
+
             message +=
                 "\nThank you! 🙏";
 
 
+
             /* =================================================
-               RESTAURANT WHATSAPP
+               WHATSAPP
             ================================================== */
 
             const restaurantWhatsApp =
@@ -2550,12 +2717,33 @@
 
 
         /* =====================================================
-           INITIAL LOAD
+           STORAGE CHANGE
+        ====================================================== */
+
+        window.addEventListener(
+            "storage",
+            function(event) {
+
+                if (
+                    event.key === ORDERS_KEY
+                ) {
+
+                    renderOrders();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           INITIAL RENDER
         ====================================================== */
 
         renderOrders();
 
     </script>
+
 
 </body>
 
